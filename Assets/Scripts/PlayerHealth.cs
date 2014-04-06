@@ -3,20 +3,17 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public bool hasTimer; // Does this particular level have a timer. (NB needs to be moved to the gameController)
-	public float timeToDie; // Same as above. Place holder for levels defined timer, in gameController.
-
+	public Texture healthBarTexture;
 	public float timer; // The amount of time taken
 	public int healthTakeOffset = 5; // The amount of time between health time damage hits.
-	
+
 	private float playerHealth;
 	private float timeDamage;
+	private float timeTemp; // Temparary time variable
 
 	private float screenWidth;
 	private float screenHeight;
 
-	private float timeTemp; // Temparary time variable
-	
 	void Start () {
 		// On Start set player health to 100
 		playerHealth = 100;
@@ -31,18 +28,19 @@ public class PlayerHealth : MonoBehaviour {
 		// Set temp to 0
 		timeTemp = 0;
 		timer = 0;
-
-		// hasTimerDefault
-		hasTimer = true;
-
-
 	}
 
 	// Health Display // Needs to be overhalled with the art department. JOSH
 	void OnGUI ()
 	{
-		GUI.Box(new Rect((screenHeight / 2)-(100), 10, 200 , 20), "");
-		GUI.Box(new Rect((screenHeight / 2)-(100), 10, (2 * playerHealth), 20), "Health");
+		if(!healthBarTexture)
+		{
+			Debug.LogError("Assign a Texture in the inspector.");
+			return;
+		}
+
+
+		GUI.DrawTexture(new Rect(0, 0, screenWidth, screenHeight), healthBarTexture, ScaleMode.StretchToFill, true);
 	}
 
 	// Update is called once per frame
@@ -56,7 +54,7 @@ public class PlayerHealth : MonoBehaviour {
 			dead();
 		}
 
-		if(timeTemp >= healthTakeOffset && hasTimer)
+		if(timeTemp >= healthTakeOffset)
 		{
 			timeTemp = 0;
 			DamageFromTime();
