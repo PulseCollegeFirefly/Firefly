@@ -3,26 +3,22 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public Texture healthBarTexture;
-	public float timer; // The amount of time taken
+	public Texture healthBarTexture; // Health Bar Texture
 	public int healthTakeOffset = 5; // The amount of time between health time damage hits.
+	public float fadeSpeed = 2f; // The Speed of the lerp.
 
-	public float fadeSpeed = 2f;
-	public float highIntensity = 1f;
-	public float lowIntensity = 0.05f;
-	public float targetIntensity;
-	public float changeMargin = 0.01f;
-	public float healthBarOn;
-
+	// Private Variable
+	private float highIntensity = 1f;
+	private float lowIntensity = 0.02f;
+	private float targetIntensity;
+	private float changeMargin = 0.01f;
 
 	private float playerHealth;
 	private Color guiColor;
 
-
-
 	// Temparary Variables
 	private float timeDamage;
-	private float timeTemp; // Temparary time variable
+	private float timeTemp;
 
 	private float screenWidth;
 	private float screenHeight;
@@ -34,7 +30,7 @@ public class PlayerHealth : MonoBehaviour {
 		// Calculate Damage
 		timeDamage = playerHealth / (300 / healthTakeOffset);
 
-		// Set guiColor
+		// Set GUIColor
 		guiColor = Color.white;
 		guiColor.a = 0;
 
@@ -44,7 +40,6 @@ public class PlayerHealth : MonoBehaviour {
 
 		// Set temp to 0
 		timeTemp = 0;
-		timer = 0;
 	}
 
 	// Health Display // Needs to be overhalled with the art department. JOSH
@@ -57,14 +52,12 @@ public class PlayerHealth : MonoBehaviour {
 			return;
 		}
 
-
-		HealthBarTextureDraw();
+		GUI.DrawTexture(new Rect(0, 0, screenWidth, screenHeight), healthBarTexture, ScaleMode.StretchToFill, true);
 	}
 
 	// Update is called once per frame
 	void Update() {
 
-		timer += Time.deltaTime;
 		timeTemp += Time.deltaTime;
 
 		// Change intensity of Lerp
@@ -100,10 +93,6 @@ public class PlayerHealth : MonoBehaviour {
 		Debug.Log ("Player has died.");
 	}
 
-	void HealthBarTextureDraw(){
-		GUI.DrawTexture(new Rect(0, 0, screenWidth, screenHeight), healthBarTexture, ScaleMode.StretchToFill, true);
-	}
-
 	void CheckTargetIntensity()
 	{
 		if(Mathf.Abs (targetIntensity - guiColor.a) < changeMargin)
@@ -123,6 +112,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	void CheckTargetSpeed()
 	{
-		return;
+		if(playerHealth < 30 )
+		{
+			fadeSpeed = 3f;
+		}
 	}
 }
