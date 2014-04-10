@@ -15,7 +15,6 @@ public class PlayerObjectPickUp : MonoBehaviour {
 	void Start () {
 		pickupDistance = handLocation.transform.localPosition.z;
 		rayLocation = new Vector3(Screen.width/2, Screen.height/2, handLocation.transform.localPosition.z);
-		Debug.Log (pickupDistance);
 	}
 
 	// Update is called once per frame
