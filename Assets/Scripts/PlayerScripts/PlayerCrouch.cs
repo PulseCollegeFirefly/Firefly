@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerAddBehaviours : MonoBehaviour {
+public class PlayerCrouch : MonoBehaviour {
 
 
 	public float crouchDeltaHeight = 0.1f;
