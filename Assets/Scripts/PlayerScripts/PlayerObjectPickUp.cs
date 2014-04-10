@@ -4,14 +4,17 @@ using System.Collections;
 public class PlayerObjectPickUp : MonoBehaviour {
 
 	public float pickupDistance;
+	public GameObject handLocation;
 
 	private bool holding = false;
-
 	private RaycastHit hit;
 	private GameObject hitObject;
 
 	// Update is called once per frame
 	void Update () {
+
+		//Raycast to the centre mouse position
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 		//
 		// Put Down
@@ -34,9 +37,6 @@ public class PlayerObjectPickUp : MonoBehaviour {
 		// Pick Up
 		//
 
-		//Raycast to the centre mouse position
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
 		if(Physics.Raycast(ray, out hit))
 		{
 			// Distance is less then the pickupDistance
@@ -46,13 +46,18 @@ public class PlayerObjectPickUp : MonoBehaviour {
 			{
 				if(hit.distance < pickupDistance && hit.collider.tag == "Interactable")
 				{
-					// Make object a child object of player
 					hitObject = hit.collider.gameObject;
-					hitObject.transform.parent = gameObject.transform;
 
 					// Turn Off Gravity
 					hitObject.rigidbody.useGravity = false;
 					hitObject.rigidbody.isKinematic = true;
+
+					// Make object a child object of player
+					hitObject.transform.parent = gameObject.transform;
+
+					//
+					// (Optional)
+					hitObject.transform.position = handLocation.transform.position;
 
 					// Set Holding to true
 					holding = true;
