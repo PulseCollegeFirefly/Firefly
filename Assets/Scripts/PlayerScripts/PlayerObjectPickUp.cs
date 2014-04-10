@@ -3,50 +3,38 @@ using System.Collections;
 
 public class PlayerObjectPickUp : MonoBehaviour {
 
-	public float pickupDistance;
 	public GameObject handLocation;
 
+	private Vector3 rayLocation;
+	private float pickupDistance;
 	private bool holding = false;
 	private RaycastHit hit;
 	private GameObject hitObject;
+	private GameObject cachedObject;
+
+	void Start () {
+		pickupDistance = handLocation.transform.localPosition.z;
+		rayLocation = new Vector3(Screen.width/2, Screen.height/2, handLocation.transform.localPosition.z);
+		Debug.Log (pickupDistance);
+	}
 
 	// Update is called once per frame
 	void Update () {
 
 		//Raycast to the centre mouse position
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		Ray ray = Camera.main.ScreenPointToRay(rayLocation);
 
-		//
-		// Put Down
-		//
-		
-		if(Input.GetButtonDown("Interact") && holding == true)
+		if(Physics.Raycast(ray, out hit) && holding == false)
 		{
-			// Turn Gravity and kinematic back
-			hitObject.rigidbody.useGravity = true;
-			hitObject.rigidbody.isKinematic = false;
-			
-			// Release the object
-			hitObject.transform.parent = null;
-			hitObject = null;
-			
-			holding = false;
-		}
-
-		//
-		// Pick Up
-		//
-
-		if(Physics.Raycast(ray, out hit))
-		{
-			// Distance is less then the pickupDistance
-			// The Tag is Interactable
-			// The Interact button is pressed
-			if(Input.GetButtonDown("Interact") && holding == false)
+			//
+			// Pick Up
+			//
+			if(Input.GetButtonDown("Interact"))
 			{
-				if(hit.distance < pickupDistance && hit.collider.tag == "Interactable")
+				if(hit.distance <= pickupDistance && hit.collider.tag == "Interactable")
 				{
 					hitObject = hit.collider.gameObject;
+					cachedObject = hitObject;
 
 					// Turn Off Gravity
 					hitObject.rigidbody.useGravity = false;
@@ -65,8 +53,27 @@ public class PlayerObjectPickUp : MonoBehaviour {
 				}
 			}
 		}
+		else
+		{
+			//
+			// Put Down
+			//
+			if(Input.GetButtonDown("Interact") && holding == true)
+			{
+				// Turn Gravity and kinematic back
+				cachedObject.rigidbody.useGravity = true;
+				cachedObject.rigidbody.isKinematic = false;
+			
+				// Release the object
+				cachedObject.transform.parent = null;
+				cachedObject = null;
+			
+				holding = false;
+				Debug.Log ("Put Down");
+			}
 
-		// Show Raycast in Debug.
-		Debug.DrawLine (ray.origin, hit.point);
+			// Show Raycast in Debug.
+			Debug.DrawLine (ray.origin, hit.point);
+		}
 	}
 }
