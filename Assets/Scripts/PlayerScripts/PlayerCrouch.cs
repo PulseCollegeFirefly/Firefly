@@ -9,11 +9,9 @@ public class PlayerCrouch : MonoBehaviour {
 	public float standardCamHeight = 0f;
 
 	private Vector3 cameraTmp;
-
-
+	
 	private bool crouching;
 	private GameObject mainCamera;
-	
 
 	void Awake() {
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -33,7 +31,6 @@ public class PlayerCrouch : MonoBehaviour {
 			
 			if(!crouching)
 				crouch();
-			Debug.Log(mainCamera.transform.localPosition.y);
 		}
 
 

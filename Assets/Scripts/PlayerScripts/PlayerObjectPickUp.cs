@@ -30,25 +30,38 @@ public class PlayerObjectPickUp : MonoBehaviour {
 			//
 			if(Input.GetButtonDown("Interact"))
 			{
-				if(hit.distance <= pickupDistance && hit.collider.tag == "Interactable")
+				if(hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp"))
 				{
-					hitObject = hit.collider.gameObject;
-					cachedObject = hitObject;
 
-					// Turn Off Gravity
-					hitObject.rigidbody.useGravity = false;
-					hitObject.rigidbody.isKinematic = true;
+					// If Item is collectable
+					if(hit.collider.tag == "PickUp")
+					{
+						// Destroy Object
+						GameObject.Find("Inventory").GetComponent<PlayerInventory>().AddItem(hit.collider.gameObject);
+						//Destroy(hit.collider.gameObject);
 
-					// Make object a child object of player
-					hitObject.transform.parent = gameObject.transform;
+						// Add to Inventory
+						// Display to user
+					}
 
-					//
-					// (Optional)
-					hitObject.transform.position = handLocation.transform.position;
+					// If Item is interactable
+					else
+					{
+						hitObject = hit.collider.gameObject;
+						cachedObject = hitObject;
 
-					// Set Holding to true
-					holding = true;
-					Debug.Log ("Pick Up.");
+						// Turn Off Gravity
+						hitObject.rigidbody.useGravity = false;
+						hitObject.rigidbody.isKinematic = true;
+
+						// Make object a child object of player
+						hitObject.transform.parent = gameObject.transform;
+
+						hitObject.transform.position = handLocation.transform.position;
+
+						// Set Holding to true
+						holding = true;
+					}
 				}
 			}
 		}
@@ -68,7 +81,6 @@ public class PlayerObjectPickUp : MonoBehaviour {
 				cachedObject = null;
 			
 				holding = false;
-				Debug.Log ("Put Down");
 			}
 
 			// Show Raycast in Debug.

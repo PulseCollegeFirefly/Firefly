@@ -35,6 +35,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		grounded = true;
 		Screen.lockCursor = lockCursor;
 		rayHitComparer = new RayHitComparer();
+		renderer.enabled = false;
 	}
 
 	void OnDisable()
