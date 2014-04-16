@@ -2448,6 +2448,10 @@ Prefab:
       propertyPath: headBobFrequency
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
+      propertyPath: healthBarTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 17c79ba6b2fb8e943a2cc48b0e4e161c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
   m_RootGameObject: {fileID: 1217396947}
@@ -5913,11 +5917,11 @@ Light:
   m_GameObject: {fileID: 1147207545}
   m_Enabled: 1
   serializedVersion: 3
-  m_Type: 1
+  m_Type: 0
   m_Color: {r: 1, g: 1, b: .870588243, a: 1}
-  m_Intensity: .850000024
-  m_Range: 20
-  m_SpotAngle: 30
+  m_Intensity: .100000001
+  m_Range: 200
+  m_SpotAngle: 108
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -6101,7 +6105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f857a08006a904d924c546c7a41dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarTexture: {fileID: 2800000, guid: d8cdf29bdef8dd646b90f25a2468cd1f, type: 3}
+  healthBarTexture: {fileID: 2800000, guid: 17c79ba6b2fb8e943a2cc48b0e4e161c, type: 3}
   healthTakeOffset: 5
   fadeSpeed: 2
 --- !u!114 &1217396953
