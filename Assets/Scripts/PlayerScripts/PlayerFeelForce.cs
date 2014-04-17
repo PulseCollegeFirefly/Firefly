@@ -3,20 +3,32 @@ using System.Collections;
 
 public class PlayerFeelForce : MonoBehaviour {
 
-	private float externalForceAmount;
+	public Transform headJoint;
+	public float shakeStrength = 5;
+
+	private float shake;
+	private Vector3 originalPosition;
 
 	void Awake ()
 	{
-//		forceAmount = 0;
+		originalPosition = headJoint.localPosition;
+		shake = 0;
 	}
 	
-	// Update is called once per frame
-	//void FixedUpdate () {
-	//	rigidbody.AddExplosionForce
-	//}
+	void LateUpdate()
+	{
+		headJoint.localPosition = originalPosition + (Random.insideUnitSphere * shake);
+		
+		shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * shakeStrength);
+		
+		if(shake == 0)
+		{
+			headJoint.localPosition = originalPosition;
+		}
+	}
 
-	//public addForce (float amount, string where)
-	//{
-
-	//}
+	public void shakeHead()
+	{
+		shake = shakeStrength;
+	}
 }
