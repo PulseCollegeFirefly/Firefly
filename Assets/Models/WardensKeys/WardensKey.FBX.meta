@@ -1,37 +1,13 @@
 fileFormatVersion: 2
-guid: 628c41a51b02b4e4187ea5cf92689090
+guid: fc5db598fcdaa904b939a2e94f743f8b
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Tube001
-    100004: Tube002
-    100006: Tube003
-    100008: Tube004
-    100010: Tube005
     400000: //RootNode
-    400002: Tube001
-    400004: Tube002
-    400006: Tube003
-    400008: Tube004
-    400010: Tube005
-    2300000: Tube001
-    2300002: Tube002
-    2300004: Tube003
-    2300006: Tube004
-    2300008: Tube005
-    2300010: //RootNode
-    3300000: Tube001
-    3300002: Tube002
-    3300004: Tube003
-    3300006: Tube004
-    3300008: Tube005
-    3300010: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Tube001
-    4300002: Tube002
-    4300004: Tube003
-    4300006: Tube004
-    4300008: Tube005
     9500000: //RootNode
   materials:
     importMaterials: 1

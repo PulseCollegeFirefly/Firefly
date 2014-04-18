@@ -619,7 +619,7 @@ GameObject:
   - 114: {fileID: 47939139}
   m_Layer: 0
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,7 @@ Transform:
   m_PrefabInternal: {fileID: 1274743589}
   m_GameObject: {fileID: 47939137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -.747146726, y: 0, z: -4.32058764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1110801114}
@@ -11308,6 +11308,7 @@ GameObject:
   - 114: {fileID: 1110801117}
   - 114: {fileID: 1110801116}
   - 114: {fileID: 1110801115}
+  - 114: {fileID: 1110801125}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -11501,6 +11502,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1274743589}
   m_GameObject: {fileID: 1110801113}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1110801125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400016, guid: 6f2ac11babf10ba44a8f78c32f4e4454,
+    type: 2}
+  m_PrefabInternal: {fileID: 1274743589}
+  m_GameObject: {fileID: 1110801113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce65b1d7265d444ca89443a35e24178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headJoint: {fileID: 802503897}
+  shakeStrength: 5
 --- !u!1 &1147207545
 GameObject:
   m_ObjectHideFlags: 0
@@ -11701,7 +11716,7 @@ Transform:
   m_PrefabInternal: {fileID: 1274743589}
   m_GameObject: {fileID: 1169460106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.464865446, y: .317053914, z: 1.54198217}
+  m_LocalPosition: {x: -1.07106638, y: .317053914, z: 1.64681113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1110801114}
