@@ -75,6 +75,7 @@ public class PlayerInventory : MonoBehaviour {
 				if(hasItem[i])
 				{
 					GUI.Label(new Rect( (((screenWidth-20)/4)*j), ((screenHeight-20)/3)*k, (screenWidth-20)/4, (screenWidth-20)/4 ), inventorys[i].transform.GetComponentInChildren<GUILoader>().ObjectGUITexture);
+					GUI.Box(new Rect( (((screenWidth-20)/4)*j), (((screenHeight-20)/3)*k)+(screenWidth-20)/4, (screenWidth-20)/4, 50 ), inventorys[i].name);
 
 					j++;
 					if(j == 4)
