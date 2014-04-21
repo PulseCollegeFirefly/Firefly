@@ -36,12 +36,8 @@ public class PlayerObjectPickUp : MonoBehaviour {
 					// If Item is collectable
 					if(hit.collider.tag == "PickUp")
 					{
-						// Destroy Object
-						GameObject.Find("Inventory").GetComponent<PlayerInventory>().AddItem(hit.collider.gameObject);
-						//Destroy(hit.collider.gameObject);
-
 						// Add to Inventory
-						// Display to user
+						GameObject.Find("Inventory").GetComponent<PlayerInventory>().AddItem(hit.collider.gameObject);
 					}
 
 					// If Item is interactable
