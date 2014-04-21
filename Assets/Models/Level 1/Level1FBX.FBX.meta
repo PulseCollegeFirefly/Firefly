@@ -110,6 +110,12 @@ ModelImporter:
     100208: Wall 047
     100210: Wall 048
     100212: Wall 049
+    100214: Wall 050
+    100216: Wall 051
+    100218: Wall 052
+    100220: Wall 053
+    100222: Wall 054
+    100224: Wall 055
     400000: Air Vent Wall
     400002: AirVent
     400004: AirVent001
@@ -217,6 +223,12 @@ ModelImporter:
     400208: Wall 047
     400210: Wall 048
     400212: Wall 049
+    400214: Wall 050
+    400216: Wall 051
+    400218: Wall 052
+    400220: Wall 053
+    400222: Wall 054
+    400224: Wall 055
     2300000: Air Vent Wall
     2300002: AirVent
     2300004: AirVent001
@@ -323,6 +335,12 @@ ModelImporter:
     2300206: Wall 047
     2300208: Wall 048
     2300210: Wall 049
+    2300212: Wall 050
+    2300214: Wall 051
+    2300216: Wall 052
+    2300218: Wall 053
+    2300220: Wall 054
+    2300222: Wall 055
     3300000: Air Vent Wall
     3300002: AirVent
     3300004: AirVent001
@@ -429,6 +447,12 @@ ModelImporter:
     3300206: Wall 047
     3300208: Wall 048
     3300210: Wall 049
+    3300212: Wall 050
+    3300214: Wall 051
+    3300216: Wall 052
+    3300218: Wall 053
+    3300220: Wall 054
+    3300222: Wall 055
     4300000: Floor1
     4300002: Air Vent Wall
     4300004: Wall 4
@@ -535,6 +559,12 @@ ModelImporter:
     4300206: Wall 047
     4300208: Wall 048
     4300210: Wall 049
+    4300212: Wall 050
+    4300214: Wall 051
+    4300216: Wall 052
+    4300218: Wall 053
+    4300220: Wall 054
+    4300222: Wall 055
     9500000: //RootNode
   materials:
     importMaterials: 1
