@@ -5585,9 +5585,9 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 0f973b6b257b0b445941080f05d7eaef, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .349999994
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -5745,7 +5745,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 41ffc49e19c83944ab987b355cc2a898, type: 2}
+  - {fileID: 2100000, guid: 3b38264a0c855a94aaba7be28e16fae8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8504,7 +8504,7 @@ Transform:
   m_PrefabInternal: {fileID: 920026602}
   m_GameObject: {fileID: 738072541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.872152328, y: 0, z: .101054192}
+  m_LocalPosition: {x: 13.0572443, y: 1.00000334, z: 5.40441608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2138165604}
@@ -8520,7 +8520,7 @@ Transform:
   - {fileID: 1162906646}
   - {fileID: 104600592}
   - {fileID: 1245909321}
-  m_Father: {fileID: 1293900773}
+  m_Father: {fileID: 0}
 --- !u!95 &738072543
 Animator:
   serializedVersion: 2
@@ -9200,19 +9200,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1293900773}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400026, guid: 9ab1dc7f66a55fd4f9938dad67db7855, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.872152328
+      value: 13.0572443
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 9ab1dc7f66a55fd4f9938dad67db7855, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.00000334
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 9ab1dc7f66a55fd4f9938dad67db7855, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .101054192
+      value: 5.40441608
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 9ab1dc7f66a55fd4f9938dad67db7855, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9535,14 +9535,6 @@ Prefab:
     - target: {fileID: 100000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
       propertyPath: m_Name
       value: Fire1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200002, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200002, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
-      propertyPath: m_Volume
-      value: .349999994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
@@ -14208,7 +14200,6 @@ Transform:
   - {fileID: 825587942}
   - {fileID: 1659579641}
   - {fileID: 48482319}
-  - {fileID: 738072542}
   m_Father: {fileID: 0}
 --- !u!95 &1293900774
 Animator:
@@ -15534,10 +15525,6 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.65142107
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 41ffc49e19c83944ab987b355cc2a898, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
   m_RootGameObject: {fileID: 157604481}

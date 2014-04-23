@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: b2dc02cb0d424a74987041582b186894
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: Air Vent Wall
     100002: AirVent
@@ -110,6 +110,19 @@ ModelImporter:
     100208: Wall 047
     100210: Wall 048
     100212: Wall 049
+    100214: Wall 050
+    100216: Wall 051
+    100218: Wall 052
+    100220: Wall 053
+    100222: Wall 054
+    100224: Wall 055
+    100226: Wall 056
+    100228: Wall 057
+    100230: Wall 058
+    100232: Wall 059
+    100234: Wall 060
+    100236: Wall 061
+    100238: Wall 062
     400000: Air Vent Wall
     400002: AirVent
     400004: AirVent001
@@ -217,6 +230,19 @@ ModelImporter:
     400208: Wall 047
     400210: Wall 048
     400212: Wall 049
+    400214: Wall 050
+    400216: Wall 051
+    400218: Wall 052
+    400220: Wall 053
+    400222: Wall 054
+    400224: Wall 055
+    400226: Wall 056
+    400228: Wall 057
+    400230: Wall 058
+    400232: Wall 059
+    400234: Wall 060
+    400236: Wall 061
+    400238: Wall 062
     2300000: Air Vent Wall
     2300002: AirVent
     2300004: AirVent001
@@ -323,6 +349,19 @@ ModelImporter:
     2300206: Wall 047
     2300208: Wall 048
     2300210: Wall 049
+    2300212: Wall 050
+    2300214: Wall 051
+    2300216: Wall 052
+    2300218: Wall 053
+    2300220: Wall 054
+    2300222: Wall 055
+    2300224: Wall 056
+    2300226: Wall 057
+    2300228: Wall 058
+    2300230: Wall 059
+    2300232: Wall 060
+    2300234: Wall 061
+    2300236: Wall 062
     3300000: Air Vent Wall
     3300002: AirVent
     3300004: AirVent001
@@ -429,6 +468,19 @@ ModelImporter:
     3300206: Wall 047
     3300208: Wall 048
     3300210: Wall 049
+    3300212: Wall 050
+    3300214: Wall 051
+    3300216: Wall 052
+    3300218: Wall 053
+    3300220: Wall 054
+    3300222: Wall 055
+    3300224: Wall 056
+    3300226: Wall 057
+    3300228: Wall 058
+    3300230: Wall 059
+    3300232: Wall 060
+    3300234: Wall 061
+    3300236: Wall 062
     4300000: Floor1
     4300002: Air Vent Wall
     4300004: Wall 4
@@ -535,6 +587,19 @@ ModelImporter:
     4300206: Wall 047
     4300208: Wall 048
     4300210: Wall 049
+    4300212: Wall 050
+    4300214: Wall 051
+    4300216: Wall 052
+    4300218: Wall 053
+    4300220: Wall 054
+    4300222: Wall 055
+    4300224: Wall 056
+    4300226: Wall 057
+    4300228: Wall 058
+    4300230: Wall 059
+    4300232: Wall 060
+    4300234: Wall 061
+    4300236: Wall 062
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -587,5 +652,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 

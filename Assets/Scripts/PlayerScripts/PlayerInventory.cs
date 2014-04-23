@@ -9,6 +9,9 @@ public class PlayerInventory : MonoBehaviour {
 	private int screenHeight;
 	private int screenWidth;
 
+	public GUIStyle largeFont;
+	public GUIStyle smallFont;
+
 	void Awake ()
 	{
 		// Make a List of all objects tagged Pick Up
@@ -17,7 +20,7 @@ public class PlayerInventory : MonoBehaviour {
 		// Make a list of the same exact size as above to reference having Item
 		hasItem = new bool[inventorys.Length];
 
-		//Cache screen size
+		// Cache screen size
 		screenHeight = Screen.height;
 		screenWidth = Screen.width;
 	}
@@ -63,9 +66,9 @@ public class PlayerInventory : MonoBehaviour {
 		{
 			// Begin Inventory Display
 			GUI.BeginGroup(new Rect(10, 10, screenWidth-20, screenHeight-20));
-			GUI.Box(new Rect(0, 0, screenWidth-20, screenHeight-20), "Inventory");
+			GUI.Box(new Rect(0, 0, screenWidth-20, screenHeight-20), "Inventory", largeFont);
 
-			// Display Currently Held Items.
+			// Display Enclosing Box
 			GUI.BeginGroup(new Rect(0, 100, screenWidth, screenHeight-120));
 			int j = 0;
 			int k = 0;
@@ -74,8 +77,12 @@ public class PlayerInventory : MonoBehaviour {
 			{
 				if(hasItem[i])
 				{
-					GUI.Label(new Rect( (((screenWidth-20)/4)*j), ((screenHeight-20)/3)*k, (screenWidth-20)/4, (screenWidth-20)/4 ), inventorys[i].transform.GetComponentInChildren<GUILoader>().ObjectGUITexture);
-					GUI.Box(new Rect( (((screenWidth-20)/4)*j), (((screenHeight-20)/3)*k)+(screenWidth-20)/4, (screenWidth-20)/4, 50 ), inventorys[i].name);
+					// Display Item
+					GUI.BeginGroup(new Rect( (((screenWidth-20)/4)*j), ((screenHeight-20)/3)*k, (screenWidth-20)/4, (screenHeight-20)/4 ));
+					GUI.Label(new Rect( 0, 0, (screenWidth-20)/4, (screenHeight-20)/4 ), inventorys[i].transform.GetComponentInChildren<GUILoader>().ObjectGUITexture);
+					GUI.Box(new Rect( 20, (screenHeight-60)/5, (screenWidth-20)/5, 30 ), inventorys[i].name, smallFont);
+					GUI.EndGroup();
+					// End Item Display
 
 					j++;
 					if(j == 4)
