@@ -494,6 +494,7 @@ GameObject:
   - 4: {fileID: 29709067}
   - 33: {fileID: 29709066}
   - 23: {fileID: 29709065}
+  - 64: {fileID: 29709068}
   m_Layer: 0
   m_Name: Box002
   m_TagString: Untagged
@@ -542,6 +543,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 68018616}
+--- !u!64 &29709068
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29709064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 724ef85148741d743867930f7067d3e9, type: 3}
 --- !u!1 &33375431
 GameObject:
   m_ObjectHideFlags: 0
@@ -20674,6 +20688,7 @@ GameObject:
   - 33: {fileID: 1104071575}
   - 23: {fileID: 1104071574}
   - 95: {fileID: 1104071573}
+  - 64: {fileID: 1104071577}
   m_Layer: 0
   m_Name: LockerBloodyFBX
   m_TagString: Untagged
@@ -20738,6 +20753,19 @@ Transform:
   m_LocalScale: {x: 4.68866014, y: 4.68866014, z: 4.68866014}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!64 &1104071577
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104071572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 325f9c34cdb044e43907c0250c77fd8d, type: 3}
 --- !u!1 &1105990476
 GameObject:
   m_ObjectHideFlags: 0
