@@ -3,6 +3,11 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
+	// Whole Script rewrite soon
+	// Needs to be split into two seperate scripts
+	// One for GUI control and one for actual health control
+	//
+
 	public Texture healthBarTexture; // Health Bar Texture
 	public int healthTakeOffset = 5; // The amount of time between health time damage hits.
 	public float fadeSpeed = 2f; // The Speed of the lerp.
