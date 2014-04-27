@@ -7,6 +7,7 @@ public class PlayerTorch : MonoBehaviour {
 	private GameObject player;
 
 	void Awake () {
+
 		// Reference Torch and turn it off
 		torch = this.gameObject.GetComponent<Light>();
 		torch.enabled = false;
@@ -18,6 +19,7 @@ public class PlayerTorch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		// Check if the player has the torch in the inventory
 		if(Input.GetButtonUp("Torch"))
 		{
 			if(player.GetComponentInChildren<PlayerInventory>().findItem("Torch"))

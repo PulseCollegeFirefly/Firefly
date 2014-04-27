@@ -12,8 +12,8 @@ public class PlayerInventory : MonoBehaviour {
 	public GUIStyle largeFont;
 	public GUIStyle smallFont;
 
-	void Awake ()
-	{
+	void Awake () {
+
 		// Make a List of all objects tagged Pick Up
 		inventorys = GameObject.FindGameObjectsWithTag("PickUp");
 
@@ -25,8 +25,8 @@ public class PlayerInventory : MonoBehaviour {
 		screenWidth = Screen.width;
 	}
 
-	public void AddItem (GameObject itemPickup)
-	{
+	public void AddItem (GameObject itemPickup) {
+
 		// Make Child off the player
 		itemPickup.transform.parent = this.gameObject.transform;
 
@@ -48,20 +48,23 @@ public class PlayerInventory : MonoBehaviour {
 		}
 	}
 
-	public bool findItem (string item)
-	{
+	public bool findItem (string item) {
+
+		// Foreach child item in the Inventory
 		foreach (Transform child in this.gameObject.transform)
 		{
+			// If it equals the the string search return true
 			if(child.name == item)
 			{
 				return true;
 			}
 		}
+		// Else return false
 		return false;
 	}
 
-	void OnGUI ()
-	{
+	void OnGUI () {
+
 		if(Input.GetButton ("Inventory"))
 		{
 			// Begin Inventory Display
