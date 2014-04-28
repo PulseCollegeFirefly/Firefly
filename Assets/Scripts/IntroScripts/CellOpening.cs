@@ -26,8 +26,8 @@ public class CellOpening : MonoBehaviour
 		yield return new WaitForSeconds(2.0f);
 		explode.SetActive (true);
 		yield return new WaitForSeconds(1.0f);
-		rigidbody.AddForce(transform.forward * 1400);
-		rigidbody.AddForce(transform.up * 1400);
+		rigidbody.AddForce(transform.forward * sideForce);
+		rigidbody.AddForce(transform.up * upForce);
 		rigidbody.useGravity = true;
 	}
 }
