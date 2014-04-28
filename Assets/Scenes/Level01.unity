@@ -47700,7 +47700,6 @@ GameObject:
   - 33: {fileID: 1715613595}
   - 23: {fileID: 1715613594}
   - 64: {fileID: 1715613596}
-  - 54: {fileID: 1715613597}
   m_Layer: 0
   m_Name: Wall 045
   m_TagString: Untagged
@@ -47762,21 +47761,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300192, guid: b2dc02cb0d424a74987041582b186894, type: 3}
---- !u!54 &1715613597
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1715613592}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1715803156
 GameObject:
   m_ObjectHideFlags: 0
