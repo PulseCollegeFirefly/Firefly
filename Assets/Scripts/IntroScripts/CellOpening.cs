@@ -34,6 +34,8 @@ public class CellOpening : MonoBehaviour
 	{	
 		//Turns off the FirstPersonCharacter Script, prevents movement using the keys, but the mouse still looks around
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = false;
+		thePlayer.GetComponent<Rigidbody>().detectCollisions = false;
+		thePlayer.GetComponent<Rigidbody>().useGravity = false;
 		//Wait for two seconds
 		yield return new WaitForSeconds(2.0f);
 		//Turn on the Explosion particle effect
@@ -49,6 +51,8 @@ public class CellOpening : MonoBehaviour
 		yield return new WaitForSeconds (2.0f);
 		//Turn back on movement
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
+		thePlayer.GetComponent<Rigidbody>().detectCollisions = true;
+		thePlayer.GetComponent<Rigidbody>().useGravity = true;
 	}
 
 	// Release mouse lock
