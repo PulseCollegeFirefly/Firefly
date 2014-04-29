@@ -3,14 +3,22 @@ using System.Collections;
 
 public class PlayerTorch : MonoBehaviour {
 
-	private Light torch;
+	// Torch Parts
+	private GameObject torch;
+	private Light torchLight;
+
+	// Player
 	private GameObject player;
 
 	void Awake () {
 
-		// Reference Torch and turn it off
-		torch = this.gameObject.GetComponent<Light>();
-		torch.enabled = false;
+		// Reference Torch light and turn it off
+		torchLight = this.gameObject.GetComponentInChildren<Light>();
+		torchLight.enabled = false;
+
+		// Reference Torch Model and turn render off
+		torch = this.gameObject;
+		torch.renderer.enabled = false;
 
 		// Reference the player
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -24,7 +32,9 @@ public class PlayerTorch : MonoBehaviour {
 		{
 			if(player.GetComponentInChildren<PlayerInventory>().findItem("Torch"))
 			{
-				torch.enabled = !torch.enabled;
+				// Swap
+				torchLight.enabled = !torchLight.enabled;
+				torch.renderer.enabled = !torch.renderer.enabled;
 			}
 		}
 	}
