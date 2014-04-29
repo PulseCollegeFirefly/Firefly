@@ -3,77 +3,38 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-	// Whole Script rewrite soon
-	// Needs to be split into two seperate scripts
-	// One for GUI control and one for actual health control
-	//
-
-	public Texture healthBarTexture; // Health Bar Texture
-	public int healthTakeOffset = 5; // The amount of time between health time damage hits.
-	public float fadeSpeed = 2f; // The Speed of the lerp.
-
-	// Private Variable
-	private float highIntensity = 1f;
-	private float lowIntensity = 0.02f;
-	private float targetIntensity;
-	private float changeMargin = 0.01f;
-
+	// Player Health
 	private float playerHealth;
-	private Color guiColor;
+	private GameObject GameCon;
+
+	// Set Time Between time damage hits
+	public int generalDamageOffset = 8; // The amount of time between health time damage hits.
+	private int addDamageOffset = 0;
 
 	// Temparary Variables
-	private float timeDamage;
+	private float damage;
+	private float addDamage;
 	private float timeTemp;
 
-	private float screenWidth;
-	private float screenHeight;
+	void Awake () {
 
-	void Start() {
-		// On Start set player health to 100
-		playerHealth = 100;
+		// On Start set player health (Set in Game Controller)
+		GameCon = GameObject.FindGameObjectWithTag("GameController");
+		playerHealth = GameCon.GetComponent<GameController>().getHealth();
+		Debug.Log (playerHealth);
 
-		// Calculate Damage
-		timeDamage = playerHealth / (300 / healthTakeOffset);
-
-		// Set GUIColor
-		guiColor = Color.white;
-		guiColor.a = 0;
-
-		// Cache screen width and height. 
-		screenWidth = Screen.width;
-		screenHeight = Screen.height;
+		// Calculate time Damage
+		damage = playerHealth / (300 / generalDamageOffset);
 
 		// Set temp to 0
 		timeTemp = 0;
 	}
 
-	// Health Display // Needs to be overhalled with the art department. JOSH
-	void OnGUI()
-	{
-		GUI.color = guiColor;
-		if(!healthBarTexture)
-		{
-			Debug.LogError("Assign a Texture in the inspector.");
-			return;
-		}
-
-		GUI.DrawTexture(new Rect(0, 0, screenWidth, screenHeight), healthBarTexture, ScaleMode.StretchToFill, true);
-	}
-
-	// Update is called once per frame
 	void Update() {
 
+		// Update Players Current Health and Timer.
+		playerHealth = GameCon.GetComponent<GameController>().getHealth();
 		timeTemp += Time.deltaTime;
-
-		// Change intensity of Lerp
-		if(playerHealth < 90)
-			guiColor.a = Mathf.Lerp(guiColor.a, targetIntensity, fadeSpeed * Time.deltaTime);
-
-		// Check Target Intensity
-		CheckTargetIntensity();
-
-		// Check Target Speed
-		CheckTargetSpeed();
 
 		// If player died
 		if(playerHealth <= 0)
@@ -81,45 +42,35 @@ public class PlayerHealth : MonoBehaviour {
 			dead();
 		}
 
-		if(timeTemp >= healthTakeOffset)
+		// If Additional damage due to Triggers
+		if(timeTemp >= addDamageOffset && addDamageOffset != 0)
 		{
 			timeTemp = 0;
-			DamageFromTime();
+			DoDamage (addDamage);
+			Debug.Log (playerHealth);
+		}
+
+		// Else smoke damage
+		if(timeTemp >= generalDamageOffset)
+		{
+			timeTemp = 0;
+			DoDamage (damage);
+			Debug.Log (playerHealth);
 		}
 
 	}
 
-	void DamageFromTime() {
-		playerHealth -= timeDamage;
-		Debug.Log(timeDamage + " Damage has been done.");
+	void DoDamage(float d) {
+		float h = playerHealth - d;
+		GameCon.GetComponent<GameController>().setHealth(h);
+	}
+
+	public void SetEvDamage(float d, int a) {
+		addDamage = d;
+		addDamageOffset = a;
 	}
 
 	void dead () {
 		Debug.Log ("Player has died.");
-	}
-
-	void CheckTargetIntensity()
-	{
-		if(Mathf.Abs (targetIntensity - guiColor.a) < changeMargin)
-		{
-			highIntensity = 1 - (playerHealth / 100);
-
-			if(targetIntensity == highIntensity)
-			{
-				targetIntensity = lowIntensity;
-			}
-			else
-			{
-				targetIntensity = highIntensity;
-			}
-		}
-	}
-
-	void CheckTargetSpeed()
-	{
-		if(playerHealth < 30 )
-		{
-			fadeSpeed = 3f;
-		}
 	}
 }

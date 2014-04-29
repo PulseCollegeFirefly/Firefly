@@ -20596,6 +20596,44 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1408317651}
   m_GameObject: {fileID: 559762284}
   m_Mesh: {fileID: 4300276, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!1 &568246130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 568246132}
+  - 114: {fileID: 568246131}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &568246131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568246130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15bef165ab5c634aa8939d313b75772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &568246132
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568246130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.44937587, y: 1.61810744, z: 2.14963555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &568950408
 GameObject:
   m_ObjectHideFlags: 0
@@ -35605,6 +35643,7 @@ GameObject:
   - 114: {fileID: 1110801115}
   - 114: {fileID: 1110801125}
   - 82: {fileID: 1110801126}
+  - 114: {fileID: 1110801127}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -35718,9 +35757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f857a08006a904d924c546c7a41dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarTexture: {fileID: 2800000, guid: 3884dde58e00834499696f919caddd09, type: 3}
-  healthTakeOffset: 5
-  fadeSpeed: 2
+  generalDamageOffset: 8
 --- !u!114 &1110801120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35871,6 +35908,19 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1110801127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110801113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6ade1e63563a043b977c2fd7e20afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarTexture: {fileID: 2800000, guid: 3884dde58e00834499696f919caddd09, type: 3}
+  fadeSpeed: 2
 --- !u!1 &1121742457
 GameObject:
   m_ObjectHideFlags: 0

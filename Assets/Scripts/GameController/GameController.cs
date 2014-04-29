@@ -3,15 +3,25 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 	
-	private float health; 
+	private float health=100; 
 	private float timer;
 
-	void Awake () {
+	void Start ()
+	{
 		DontDestroyOnLoad(this.gameObject);
+
+		// This Value Controls Health
+		setHealth (100);
+	}
+
+	void Update ()
+	{
+		// Game Timer
+		timer += Time.deltaTime;
 	}
 
 	// Get and Set Health
-	void setHealth (float h) {
+	public void setHealth (float h) {
 		health = h;
 	}
 
@@ -19,11 +29,7 @@ public class GameController : MonoBehaviour {
 		return health;
 	}
 
-	// Get and Set Timer
-	void setTimer (float t) {
-		timer = t;
-	}
-
+	// Get Timer
 	public float getTimer () {
 		return timer;
 	}
