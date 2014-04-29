@@ -240,6 +240,23 @@ ModelImporter:
     100468: Tube044
     100470: Tube045
     100472: WindowFrame
+    100474: Bracket
+    100476: Bracket001
+    100478: Bracket002
+    100480: Bracket003
+    100482: Bracket004
+    100484: Bracket005
+    100486: Bracket006
+    100488: Bracket008
+    100490: Bracket009
+    100492: Bracket010
+    100494: Bracket012
+    100496: Bracket013
+    100498: Bracket014
+    100500: Bracket015
+    100502: Bracket016
+    100504: Tube046
+    100506: Tube047
     400000: Air Vent Wall
     400002: AirVent
     400004: AirVent001
@@ -477,6 +494,23 @@ ModelImporter:
     400468: Tube044
     400470: Tube045
     400472: WindowFrame
+    400474: Bracket
+    400476: Bracket001
+    400478: Bracket002
+    400480: Bracket003
+    400482: Bracket004
+    400484: Bracket005
+    400486: Bracket006
+    400488: Bracket008
+    400490: Bracket009
+    400492: Bracket010
+    400494: Bracket012
+    400496: Bracket013
+    400498: Bracket014
+    400500: Bracket015
+    400502: Bracket016
+    400504: Tube046
+    400506: Tube047
     2300000: Air Vent Wall
     2300002: AirVent
     2300004: AirVent001
@@ -713,6 +747,23 @@ ModelImporter:
     2300466: Tube044
     2300468: Tube045
     2300470: WindowFrame
+    2300472: Bracket
+    2300474: Bracket001
+    2300476: Bracket002
+    2300478: Bracket003
+    2300480: Bracket004
+    2300482: Bracket005
+    2300484: Bracket006
+    2300486: Bracket008
+    2300488: Bracket009
+    2300490: Bracket010
+    2300492: Bracket012
+    2300494: Bracket013
+    2300496: Bracket014
+    2300498: Bracket015
+    2300500: Bracket016
+    2300502: Tube046
+    2300504: Tube047
     3300000: Air Vent Wall
     3300002: AirVent
     3300004: AirVent001
@@ -949,6 +1000,23 @@ ModelImporter:
     3300466: Tube044
     3300468: Tube045
     3300470: WindowFrame
+    3300472: Bracket
+    3300474: Bracket001
+    3300476: Bracket002
+    3300478: Bracket003
+    3300480: Bracket004
+    3300482: Bracket005
+    3300484: Bracket006
+    3300486: Bracket008
+    3300488: Bracket009
+    3300490: Bracket010
+    3300492: Bracket012
+    3300494: Bracket013
+    3300496: Bracket014
+    3300498: Bracket015
+    3300500: Bracket016
+    3300502: Tube046
+    3300504: Tube047
     4300000: Floor1
     4300002: Air Vent Wall
     4300004: Wall 4
@@ -1185,6 +1253,23 @@ ModelImporter:
     4300466: PipeConnection005
     4300468: Tube044
     4300470: Tube045
+    4300472: Bracket
+    4300474: Bracket001
+    4300476: Bracket002
+    4300478: Bracket003
+    4300480: Bracket004
+    4300482: Bracket005
+    4300484: Bracket006
+    4300486: Bracket008
+    4300488: Bracket009
+    4300490: Bracket010
+    4300492: Bracket012
+    4300494: Bracket013
+    4300496: Bracket014
+    4300498: Bracket015
+    4300500: Bracket016
+    4300502: Tube046
+    4300504: Tube047
     9500000: //RootNode
   materials:
     importMaterials: 1
