@@ -307,6 +307,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .764983118
       objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
+      propertyPath: m_Size.z
+      value: .74000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
+      propertyPath: m_Center.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
   m_RootGameObject: {fileID: 1712167114}
@@ -1370,8 +1378,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .310000002, y: .313338012, z: 1.39999998}
-  m_Center: {x: -9.53674316e-07, y: 0, z: .49000001}
+  m_Size: {x: .310000002, y: .313338012, z: .74000001}
+  m_Center: {x: -9.53674316e-07, y: 0, z: 1}
 --- !u!1 &1212230540
 GameObject:
   m_ObjectHideFlags: 0

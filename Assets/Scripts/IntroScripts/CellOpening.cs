@@ -17,11 +17,16 @@ public class CellOpening : MonoBehaviour
 	void Start () 
 	{
 		//Sets the Player FPC to the GameObject
-		thePlayer = GameObject.Find ("Player");
+		thePlayer = GameObject.FindGameObjectWithTag("Player");
 		//Ensures Explosions begins as "off"
 		explode.SetActive (false);
 		//Call the Coroutine, required due to timings involved
 		StartCoroutine(DoorCoroutine ());
+	}
+
+	void Update ()
+	{
+		Screen.lockCursor = true;
 	}
 
 
@@ -44,5 +49,11 @@ public class CellOpening : MonoBehaviour
 		yield return new WaitForSeconds (2.0f);
 		//Turn back on movement
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
+	}
+
+	// Release mouse lock
+	void OnDisable()
+	{
+		Screen.lockCursor = false;
 	}
 }
