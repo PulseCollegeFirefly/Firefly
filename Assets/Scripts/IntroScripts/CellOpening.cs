@@ -40,6 +40,8 @@ public class CellOpening : MonoBehaviour
 		yield return new WaitForSeconds(2.0f);
 		//Turn on the Explosion particle effect
 		explode.SetActive (true);
+		//Shake the Camera
+		thePlayer.GetComponent<PlayerFeelForce>().shakeHead();
 		//Wait another second
 		yield return new WaitForSeconds(1.0f);
 
