@@ -12,16 +12,16 @@ public class PlayerTorch : MonoBehaviour {
 
 	void Awake () {
 
+		// Reference the player
+		player = GameObject.FindGameObjectWithTag("Player");
+
 		// Reference Torch light and turn it off
-		torchLight = this.gameObject.GetComponentInChildren<Light>();
+		torchLight = player.GetComponentInChildren<Light>();
 		torchLight.enabled = false;
 
 		// Reference Torch Model and turn render off
 		torch = this.gameObject;
 		torch.renderer.enabled = false;
-
-		// Reference the player
-		player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
