@@ -22,6 +22,7 @@ public class PlayerTorch : MonoBehaviour {
 		// Reference Torch Model and turn render off
 		torch = this.gameObject;
 		torch.renderer.enabled = false;
+		torch.GetComponent<BoxCollider> ().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -35,6 +36,7 @@ public class PlayerTorch : MonoBehaviour {
 				// Swap
 				torchLight.enabled = !torchLight.enabled;
 				torch.renderer.enabled = !torch.renderer.enabled;
+				torch.GetComponent<BoxCollider> ().enabled = !torch.GetComponent<BoxCollider> ().enabled;
 			}
 		}
 	}
