@@ -8,23 +8,44 @@ ModelImporter:
     100004: Cylinder001
     100006: Cylinder002
     100008: Cylinder003
+    100010: fragname001
+    100012: fragname002
+    100014: fragname003
     400000: Box001
     400002: //RootNode
     400004: Cylinder001
     400006: Cylinder002
     400008: Cylinder003
+    400010: fragname001
+    400012: fragname002
+    400014: fragname003
     2300000: Box001
     2300002: Cylinder001
     2300004: Cylinder002
     2300006: Cylinder003
+    2300008: fragname001
+    2300010: fragname002
+    2300012: fragname003
     3300000: Box001
     3300002: Cylinder001
     3300004: Cylinder002
     3300006: Cylinder003
+    3300008: fragname001
+    3300010: fragname002
+    3300012: fragname003
     4300000: Box001
     4300002: Cylinder001
     4300004: Cylinder002
     4300006: Cylinder003
+    4300008: fragname001
+    4300010: fragname002
+    4300012: fragname003
+    6400000: Cylinder001
+    6400002: Cylinder002
+    6400004: Cylinder003
+    6400006: fragname001
+    6400008: fragname002
+    6400010: fragname003
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -46,7 +67,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
