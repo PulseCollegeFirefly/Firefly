@@ -11,6 +11,10 @@ public class CellOpening : MonoBehaviour
 	public GameObject explode;
 	//A GameObject for the Player, can be Public and dragged or declared as down below
 	GameObject thePlayer;
+	//Same as Explosion except for Door fragments
+	public GameObject doorFire1;
+	public GameObject doorFire2;
+	public GameObject doorFire3;
 
 	//An array of Rigidbodies for the Children of the door
 	Rigidbody [] doorParts;
@@ -25,6 +29,9 @@ public class CellOpening : MonoBehaviour
 		doorParts = GetComponentsInChildren<Rigidbody>();
 		//Ensures Explosions begins as "off"
 		explode.SetActive (false);
+		doorFire1.SetActive (false);
+		doorFire2.SetActive (false);
+		doorFire3.SetActive (false);
 		//Call the Coroutine, required due to timings involved
 		StartCoroutine(DoorCoroutine ());
 	}
@@ -60,6 +67,10 @@ public class CellOpening : MonoBehaviour
 		}
 		//Wait another two seconds
 		yield return new WaitForSeconds (2.0f);
+		//Turn on Fragment Fires
+		doorFire1.SetActive (true);
+		doorFire2.SetActive (true);
+		doorFire3.SetActive (true);
 		//Turn back on movement
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
 		thePlayer.GetComponent<Rigidbody>().detectCollisions = true;
