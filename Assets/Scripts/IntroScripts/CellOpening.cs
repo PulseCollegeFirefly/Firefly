@@ -12,12 +12,17 @@ public class CellOpening : MonoBehaviour
 	//A GameObject for the Player, can be Public and dragged or declared as down below
 	GameObject thePlayer;
 
+	//An array of Rigidbodies for the Children of the door
+	Rigidbody [] doorParts;
+
 	// Use this for initialization
 
 	void Start () 
 	{
 		//Sets the Player FPC to the GameObject
 		thePlayer = GameObject.FindGameObjectWithTag("Player");
+		//Defines all the rigidbodies in the doorParts array
+		doorParts = GetComponentsInChildren<Rigidbody>();
 		//Ensures Explosions begins as "off"
 		explode.SetActive (false);
 		//Call the Coroutine, required due to timings involved
@@ -42,13 +47,17 @@ public class CellOpening : MonoBehaviour
 		explode.SetActive (true);
 		//Shake the Camera
 		thePlayer.GetComponent<PlayerFeelForce>().shakeHead();
-		//Wait another second
-		yield return new WaitForSeconds(1.0f);
 
 		//Explode the door, turn on the gravity (the door is a little above the floor).
-		rigidbody.AddForce(transform.forward * sideForce);
-		rigidbody.AddForce(transform.up * upForce);
-		rigidbody.useGravity = true;
+
+		//Loop that checks number of child objects with rigidbodies and modifies appropriate stats, I started with IsKinematic on so they dont react to each other on launch.
+		for(var i=0; i< doorParts.Length; i++)
+		{
+			doorParts[i].isKinematic = false;
+			doorParts[i].AddForce(transform.forward * sideForce);
+			doorParts[i].AddForce(transform.up * upForce);
+			doorParts[i].useGravity = true;
+		}
 		//Wait another two seconds
 		yield return new WaitForSeconds (2.0f);
 		//Turn back on movement
