@@ -721,8 +721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6ade1e63563a043b977c2fd7e20afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarTexture: {fileID: 2800000, guid: 3884dde58e00834499696f919caddd09, type: 3}
+  healthBarTexture: {fileID: 2800000, guid: 235f16318aee6924fb1fc34726e0cead, type: 3}
   fadeSpeed: 2
+  flash: 0
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
