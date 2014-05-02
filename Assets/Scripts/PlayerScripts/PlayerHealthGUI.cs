@@ -5,6 +5,7 @@ public class PlayerHealthGUI : MonoBehaviour {
 
 	public Texture healthBarTexture; // Health Bar Texture
 	public float fadeSpeed = 2f; // The Speed of the lerp.
+	public bool flash;
 
 	private float playerHealth;
 	private GameObject GameCon;
@@ -37,15 +38,26 @@ public class PlayerHealthGUI : MonoBehaviour {
 	{
 		playerHealth = GameCon.GetComponent<GameController>().getHealth();
 
+		// Intense flash
+		if(flash)
+		{
+			guiColor.a = Mathf.Lerp(guiColor.a, targetIntensity, fadeSpeed * Time.deltaTime);
+		}
+
 		// Change intensity of Lerp
 		if(playerHealth < 90)
 			guiColor.a = Mathf.Lerp(guiColor.a, targetIntensity, fadeSpeed * Time.deltaTime);
-		
+
+
+
 		// Check Target Intensity
 		CheckTargetIntensity();
 		
 		// Check Target Speed
-		CheckTargetSpeed();
+		if(flash)
+			fadeSpeed = 6;
+		else
+			CheckTargetSpeed();
 	}
 
 	void OnGUI ()
@@ -65,7 +77,10 @@ public class PlayerHealthGUI : MonoBehaviour {
 	{
 		if(Mathf.Abs (targetIntensity - guiColor.a) < changeMargin)
 		{
-			highIntensity = 1 - (playerHealth / 100);
+			if(flash)
+				highIntensity = 1;
+			else
+				highIntensity = 1 - (playerHealth / 100);
 			
 			if(targetIntensity == highIntensity)
 			{
@@ -80,9 +95,14 @@ public class PlayerHealthGUI : MonoBehaviour {
 
 	void CheckTargetSpeed()
 	{
+		// Target Speed Chart
+		if(playerHealth <= 100)
+			fadeSpeed = 1f;
+
+		if(playerHealth <= 70)
+			fadeSpeed = 2f;
+
 		if(playerHealth < 30 )
-		{
 			fadeSpeed = 3f;
-		}
 	}
 }

@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour {
 	private GameObject GameCon;
 
 	// Set Time Between time damage hits
-	public int generalDamageOffset = 8; // The amount of time between health time damage hits.
+	public int generalDamageOffset = 8; // The amount of time between health time damage hits // general
 	private int addDamageOffset = 0;
 
 	// Temparary Variables
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 		Debug.Log (playerHealth);
 
 		// Calculate time Damage
-		damage = playerHealth / (300 / generalDamageOffset);
+		damage = playerHealth / (500 / generalDamageOffset);
 
 		// Set temp to 0
 		timeTemp = 0;
@@ -34,7 +34,6 @@ public class PlayerHealth : MonoBehaviour {
 
 		// Update Players Current Health and Timer.
 		playerHealth = GameCon.GetComponent<GameController>().getHealth();
-		timeTemp += Time.deltaTime;
 
 		// If player died
 		if(playerHealth <= 0)
@@ -47,7 +46,7 @@ public class PlayerHealth : MonoBehaviour {
 		{
 			timeTemp = 0;
 			DoDamage (addDamage);
-			Debug.Log (playerHealth);
+			Debug.Log (playerHealth + " - " + addDamageOffset + " - " + addDamage);
 		}
 
 		// Else smoke damage
@@ -58,13 +57,10 @@ public class PlayerHealth : MonoBehaviour {
 			Debug.Log (playerHealth);
 		}
 
+		timeTemp += Time.deltaTime;
 	}
 
-	void DoDamage(float d) {
-		float h = playerHealth - d;
-		GameCon.GetComponent<GameController>().setHealth(h);
-	}
-
+	// Set the Environmental Damage and time between hits
 	public void SetEvDamage(float d, int a) {
 		addDamage = d;
 		addDamageOffset = a;
@@ -72,5 +68,10 @@ public class PlayerHealth : MonoBehaviour {
 
 	void dead () {
 		Debug.Log ("Player has died.");
+	}
+
+	void DoDamage(float d) {
+		float h = playerHealth - d;
+		GameCon.GetComponent<GameController>().setHealth(h);
 	}
 }
