@@ -4,17 +4,17 @@ using System.Collections;
 public class PlayerObjectPickUp : MonoBehaviour {
 
 	public GameObject handLocation;
+	public float pickupDistance;
 
 	private Vector3 rayLocation;
-	private float pickupDistance;
 	private bool holding = false;
 	private RaycastHit hit;
 	private GameObject hitObject;
 	private GameObject cachedObject;
 
 	void Start () {
-		pickupDistance = handLocation.transform.localPosition.z;
-		rayLocation = new Vector3(Screen.width/2, Screen.height/2, handLocation.transform.localPosition.z);
+
+		rayLocation = new Vector3(Screen.width/2, Screen.height/2, pickupDistance);
 	}
 
 	// Update is called once per frame
@@ -25,9 +25,16 @@ public class PlayerObjectPickUp : MonoBehaviour {
 
 		if(Physics.Raycast(ray, out hit) && holding == false)
 		{
+			// Set GUI Texture to Active
+			if(hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp"))
+				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(true);
+			else
+				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(false);
+
 			//
 			// Pick Up
 			//
+
 			if(Input.GetButtonDown("Interact"))
 			{
 				if(hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp"))
