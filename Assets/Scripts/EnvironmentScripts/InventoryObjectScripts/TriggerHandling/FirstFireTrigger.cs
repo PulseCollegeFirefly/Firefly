@@ -6,11 +6,13 @@ public class FirstFireTrigger : MonoBehaviour {
 	//Declares GameObject, I dragged the Explosion1 GameObject onto this instead of declaring it
 
 	public GameObject explode;
+	public GameObject npc;
 
 	void Start()
 	{
 		//Ensures Explosion is set of off on launch
 		explode.SetActive (false);
+		npc.SetActive (false);
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -23,6 +25,7 @@ public class FirstFireTrigger : MonoBehaviour {
 
 			//Turns on Explosion Particle Effect and then Destroys the Trigger so it can't be re-used
 			explode.SetActive (true);
+			npc.SetActive (true);
 			Destroy(this.gameObject);
 		}
 	}
