@@ -1,0 +1,50 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class OpenDoor : MonoBehaviour {
+
+	// Key Required
+	public string keyRequired;
+	
+	public float offset;
+	public float speed = 1f;
+
+	private Vector3 newPosition;
+	private bool moveDoor;
+	private float startTime;
+	private float journeyLength;
+
+	void Awake ()
+	{
+		newPosition = new Vector3(transform.position.x-offset, transform.position.y, transform.position.z);
+		journeyLength = Vector3.Distance(transform.position, newPosition);
+		startTime = Time.time;
+		moveDoor = false;
+	}
+
+	void OnTriggerStay (Collider other)
+	{
+		if(other.tag == "Player")
+		{
+			if(Input.GetButtonDown("Interact"))
+			{
+				Debug.Log ("Interacted");
+				if(GameObject.Find("Inventory").GetComponent<PlayerInventory>().findItem(keyRequired))
+				{
+					moveDoor = true;
+					Debug.Log ("Moving Door");
+				}
+			}
+		}
+	}
+
+	void Update ()
+	{
+		if(moveDoor)
+		{
+			float distCovered = (Time.time - startTime) * speed;
+			float fracJourney = distCovered / journeyLength;
+			transform.position = Vector3.Lerp (transform.position, newPosition, fracJourney);
+		}
+	}
+}

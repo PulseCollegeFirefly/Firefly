@@ -55,7 +55,7 @@ public class PlayerHealthGUI : MonoBehaviour {
 		
 		// Check Target Speed
 		if(flash)
-			fadeSpeed = 6;
+			fadeSpeed = 5;
 		else
 			CheckTargetSpeed();
 	}
@@ -78,7 +78,7 @@ public class PlayerHealthGUI : MonoBehaviour {
 		if(Mathf.Abs (targetIntensity - guiColor.a) < changeMargin)
 		{
 			if(flash)
-				highIntensity = 1;
+				highIntensity = 0.8f;
 			else
 				highIntensity = 1 - (playerHealth / 100);
 			
