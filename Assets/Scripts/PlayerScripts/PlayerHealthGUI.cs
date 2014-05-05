@@ -39,12 +39,17 @@ public class PlayerHealthGUI : MonoBehaviour {
 		playerHealth = GameCon.GetComponent<GameController>().getHealth();
 
 		// Intense flash
-		if(flash)
+		if(flash || targetIntensity == highIntensity)
 		{
+			// If player leaves hit collider reduce the fade speed.
+			if(!flash)
+				fadeSpeed = 2;
+
+			// Change intensity of Lerp
 			guiColor.a = Mathf.Lerp(guiColor.a, targetIntensity, fadeSpeed * Time.deltaTime);
 		}
 
-		// Change intensity of Lerp
+		// Change intensity of Lerp after health falls below 90
 		if(playerHealth < 90)
 			guiColor.a = Mathf.Lerp(guiColor.a, targetIntensity, fadeSpeed * Time.deltaTime);
 
