@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: b2dc02cb0d424a74987041582b186894
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Air Vent Wall
     100002: AirVent
@@ -260,6 +260,8 @@ ModelImporter:
     100508: PrisonDoor
     100510: PrisonDoorGuideRail
     100512: PrisonWalkway
+    100514: HiddenTunnel
+    100516: Window
     400000: Air Vent Wall
     400002: AirVent
     400004: AirVent001
@@ -517,6 +519,8 @@ ModelImporter:
     400508: PrisonDoor
     400510: PrisonDoorGuideRail
     400512: PrisonWalkway
+    400514: HiddenTunnel
+    400516: Window
     2300000: Air Vent Wall
     2300002: AirVent
     2300004: AirVent001
@@ -773,6 +777,8 @@ ModelImporter:
     2300506: PrisonDoor
     2300508: PrisonDoorGuideRail
     2300510: PrisonWalkway
+    2300512: HiddenTunnel
+    2300514: Window
     3300000: Air Vent Wall
     3300002: AirVent
     3300004: AirVent001
@@ -1029,6 +1035,8 @@ ModelImporter:
     3300506: PrisonDoor
     3300508: PrisonDoorGuideRail
     3300510: PrisonWalkway
+    3300512: HiddenTunnel
+    3300514: Window
     4300000: Floor1
     4300002: Air Vent Wall
     4300004: Wall 4
@@ -1285,6 +1293,8 @@ ModelImporter:
     4300506: PrisonWalkway
     4300508: PrisonDoor
     4300510: PrisonDoorGuideRail
+    4300512: HiddenTunnel
+    4300514: Window
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -1337,4 +1347,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 

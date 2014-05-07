@@ -113,7 +113,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100012
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -140,7 +140,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400010}
+  - {fileID: 400012}
   m_Father: {fileID: 400002}
 --- !u!4 &400002
 Transform:
@@ -160,14 +160,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: -.222785994, z: 0, w: -.974867404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.09221148, y: 1.81303835, z: 2.06831312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400006}
   - {fileID: 400008}
-  - {fileID: 400012}
   m_Father: {fileID: 0}
 --- !u!4 &400006
 Transform:
@@ -197,22 +196,23 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
-  m_LocalRotation: {x: .0433806628, y: .104428977, z: -.993575394, w: .00455965102}
-  m_LocalPosition: {x: .378757, y: -.795436978, z: .677407265}
+  m_LocalRotation: {x: -.104528472, y: -1.35822148e-07, z: -1.82531377e-08, w: .994521976}
+  m_LocalPosition: {x: -.0566040948, y: -.0658627599, z: .927448153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400000}
+  m_Father: {fileID: 400012}
 --- !u!4 &400012
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
-  m_LocalRotation: {x: .0433805957, y: .104428969, z: -.993575335, w: .0045596445}
-  m_LocalPosition: {x: .458893538, y: 0, z: -.238552719}
+  m_LocalRotation: {x: .0436197668, y: -7.10656245e-09, z: -.999048233, w: 1.62765616e-07}
+  m_LocalPosition: {x: .403201044, y: -.688909173, z: .398007691}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400004}
+  m_Children:
+  - {fileID: 400010}
+  m_Father: {fileID: 400000}
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -411,8 +411,8 @@ Light:
   m_Type: 0
   m_Color: {r: .779411793, g: .601751745, b: .601751745, a: 1}
   m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 119
+  m_Range: 15.0500002
+  m_SpotAngle: 109
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
