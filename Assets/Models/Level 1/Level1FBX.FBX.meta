@@ -262,6 +262,8 @@ ModelImporter:
     100512: PrisonWalkway
     100514: HiddenTunnel
     100516: Window
+    100518: AirVentCover
+    100520: AirVentCover001
     400000: Air Vent Wall
     400002: AirVent
     400004: AirVent001
@@ -521,6 +523,8 @@ ModelImporter:
     400512: PrisonWalkway
     400514: HiddenTunnel
     400516: Window
+    400518: AirVentCover
+    400520: AirVentCover001
     2300000: Air Vent Wall
     2300002: AirVent
     2300004: AirVent001
@@ -779,6 +783,8 @@ ModelImporter:
     2300510: PrisonWalkway
     2300512: HiddenTunnel
     2300514: Window
+    2300516: AirVentCover
+    2300518: AirVentCover001
     3300000: Air Vent Wall
     3300002: AirVent
     3300004: AirVent001
@@ -1037,6 +1043,8 @@ ModelImporter:
     3300510: PrisonWalkway
     3300512: HiddenTunnel
     3300514: Window
+    3300516: AirVentCover
+    3300518: AirVentCover001
     4300000: Floor1
     4300002: Air Vent Wall
     4300004: Wall 4
@@ -1295,6 +1303,8 @@ ModelImporter:
     4300510: PrisonDoorGuideRail
     4300512: HiddenTunnel
     4300514: Window
+    4300516: AirVentCover
+    4300518: AirVentCover001
     9500000: //RootNode
   materials:
     importMaterials: 1
