@@ -46,7 +46,6 @@ public class PlayerHealth : MonoBehaviour {
 		{
 			timeTemp = 0;
 			DoDamage (addDamage);
-			Debug.Log (playerHealth + " - " + addDamageOffset + " - " + addDamage);
 		}
 
 		// Else smoke damage
@@ -54,9 +53,9 @@ public class PlayerHealth : MonoBehaviour {
 		{
 			timeTemp = 0;
 			DoDamage (damage);
-			Debug.Log (playerHealth);
 		}
 
+		// Increase timer
 		timeTemp += Time.deltaTime;
 	}
 

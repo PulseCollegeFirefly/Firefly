@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRange: {x: 100, y: 0}
+  rotationRange: {x: 170, y: 0}
   rotationSpeed: 5
   dampingTime: .100000001
   autoZeroVerticalOnMobile: 1
