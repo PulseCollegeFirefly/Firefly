@@ -34276,7 +34276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &557967179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45123,6 +45123,7 @@ MonoBehaviour:
   xSpeed: .400000006
   ySpeed: 0
   zSpeed: 2.5
+  drops: {fileID: 557967178}
 --- !u!1001 &864685301
 Prefab:
   m_ObjectHideFlags: 0
@@ -87393,6 +87394,10 @@ Prefab:
     - target: {fileID: 100000, guid: 628c41a51b02b4e4187ea5cf92689090, type: 3}
       propertyPath: m_TagString
       value: PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 628c41a51b02b4e4187ea5cf92689090, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 628c41a51b02b4e4187ea5cf92689090, type: 3}
