@@ -34269,6 +34269,7 @@ GameObject:
   - 33: {fileID: 557967181}
   - 23: {fileID: 557967180}
   - 65: {fileID: 557967179}
+  - 54: {fileID: 557967183}
   m_Layer: 0
   m_Name: Guards Keys
   m_TagString: PickUp
@@ -34335,6 +34336,21 @@ Transform:
   m_Children:
   - {fileID: 442000003}
   m_Father: {fileID: 0}
+--- !u!54 &557967183
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557967178}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &559762284
 GameObject:
   m_ObjectHideFlags: 0
@@ -99549,6 +99565,9 @@ GameObject:
   - 4: {fileID: 2050164309}
   - 33: {fileID: 2050164311}
   - 23: {fileID: 2050164310}
+  - 65: {fileID: 2050164313}
+  - 114: {fileID: 2050164312}
+  - 64: {fileID: 2050164314}
   m_Layer: 0
   m_Name: PrisonDoor
   m_TagString: Untagged
@@ -99596,6 +99615,45 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 900823974}
   m_GameObject: {fileID: 2050164308}
+  m_Mesh: {fileID: 4300508, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!114 &2050164312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2050164308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bf455c9dcd3c342bbefafc9d239ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyRequired: Guards Keys
+  offset: .949999988
+  speed: .0500000007
+--- !u!65 &2050164313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2050164308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.8800001, y: 16.066906, z: 7.00000191}
+  m_Center: {x: .0893944427, y: -7.12845087, z: 3.50003123}
+--- !u!64 &2050164314
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2050164308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300508, guid: b2dc02cb0d424a74987041582b186894, type: 3}
 --- !u!1 &2051805139
 GameObject:
