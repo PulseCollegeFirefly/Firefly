@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: b2dc02cb0d424a74987041582b186894
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: Air Vent Wall
     100002: AirVent
@@ -1372,5 +1372,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 

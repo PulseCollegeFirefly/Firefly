@@ -6,6 +6,8 @@ public class PlayerObjectPickUp : MonoBehaviour {
 	public GameObject handLocation;
 	public float pickupDistance;
 
+	public bool interact {get; private set;} 
+
 	private Vector3 rayLocation;
 	private bool holding = false;
 	private RaycastHit hit;
@@ -25,8 +27,11 @@ public class PlayerObjectPickUp : MonoBehaviour {
 
 		if(Physics.Raycast(ray, out hit) && holding == false)
 		{
+			// Set interact
+			interact = hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp");
+
 			// Set GUI Texture to Active
-			if(hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp"))
+			if(interact)
 				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(true);
 			else
 				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(false);
@@ -37,7 +42,7 @@ public class PlayerObjectPickUp : MonoBehaviour {
 
 			if(Input.GetButtonDown("Interact"))
 			{
-				if(hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp"))
+				if(interact)
 				{
 
 					// If Item is collectable

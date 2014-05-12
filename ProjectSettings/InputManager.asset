@@ -377,9 +377,9 @@ InputManager:
     descriptiveName: Player Interact
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: f
+    positiveButton: mouse 0
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: f
     gravity: 0
     dead: .189999998
     sensitivity: 1

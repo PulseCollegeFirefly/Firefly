@@ -15,6 +15,8 @@ public class CellOpening : MonoBehaviour
 	public GameObject doorFire1;
 	public GameObject doorFire2;
 	public GameObject doorFire3;
+	GameObject MainLight;
+	public GameObject spawningKeys;
 
 	//An array of Rigidbodies for the Children of the door
 	Rigidbody [] doorParts;
@@ -25,6 +27,7 @@ public class CellOpening : MonoBehaviour
 	{
 		//Sets the Player FPC to the GameObject
 		thePlayer = GameObject.FindGameObjectWithTag("Player");
+		MainLight = GameObject.Find ("MainLight");
 		//Defines all the rigidbodies in the doorParts array
 		doorParts = GetComponentsInChildren<Rigidbody>();
 		//Ensures Explosions begins as "off"
@@ -50,6 +53,8 @@ public class CellOpening : MonoBehaviour
 		thePlayer.GetComponent<Rigidbody>().useGravity = false;
 		//Wait for two seconds
 		yield return new WaitForSeconds(2.0f);
+		//Turns off the Keys
+		spawningKeys.SetActive (false);
 		//Turn on the Explosion particle effect
 		explode.SetActive (true);
 		//Shake the Camera
@@ -66,6 +71,7 @@ public class CellOpening : MonoBehaviour
 			doorParts[i].useGravity = true;
 		}
 		//Wait another two seconds
+		MainLight.SetActive (false);
 		yield return new WaitForSeconds (2.0f);
 		//Turn on Fragment Fires
 		doorFire1.SetActive (true);
