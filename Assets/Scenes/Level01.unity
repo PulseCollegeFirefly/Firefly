@@ -34269,7 +34269,6 @@ GameObject:
   - 33: {fileID: 557967181}
   - 23: {fileID: 557967180}
   - 65: {fileID: 557967179}
-  - 54: {fileID: 557967183}
   m_Layer: 0
   m_Name: Guards Keys
   m_TagString: PickUp
@@ -34287,7 +34286,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .209937811, y: .562988043, z: .160133183}
+  m_Size: {x: .519999981, y: 1.00999999, z: .519999981}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &557967180
 Renderer:
@@ -34336,21 +34335,6 @@ Transform:
   m_Children:
   - {fileID: 442000003}
   m_Father: {fileID: 0}
---- !u!54 &557967183
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 557967178}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &559762284
 GameObject:
   m_ObjectHideFlags: 0
@@ -45253,6 +45237,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1005466934}
   m_GameObject: {fileID: 880909514}
   m_Mesh: {fileID: 4300002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
+--- !u!1 &881191873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 881191875}
+  - 108: {fileID: 881191874}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &881191874
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881191873}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: .5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &881191875
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881191873}
+  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381661, w: .875426114}
+  m_LocalPosition: {x: 12.0281601, y: 11.9280491, z: 10.0359755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &882007831
 GameObject:
   m_ObjectHideFlags: 0
@@ -55260,6 +55306,7 @@ GameObject:
   - 4: {fileID: 1074163382}
   - 33: {fileID: 1074163384}
   - 23: {fileID: 1074163383}
+  - 64: {fileID: 1074163385}
   m_Layer: 0
   m_Name: Air Vent Wall
   m_TagString: Untagged
@@ -55307,6 +55354,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 900823974}
   m_GameObject: {fileID: 1074163381}
+  m_Mesh: {fileID: 4300002, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!64 &1074163385
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1074163381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: b2dc02cb0d424a74987041582b186894, type: 3}
 --- !u!1001 &1075126159
 Prefab:
@@ -63747,6 +63807,7 @@ GameObject:
   - 4: {fileID: 1256243955}
   - 33: {fileID: 1256243957}
   - 23: {fileID: 1256243956}
+  - 64: {fileID: 1256243958}
   m_Layer: 0
   m_Name: Ceiling001
   m_TagString: Untagged
@@ -63794,6 +63855,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 900823974}
   m_GameObject: {fileID: 1256243954}
+  m_Mesh: {fileID: 4300186, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!64 &1256243958
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256243954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300186, guid: b2dc02cb0d424a74987041582b186894, type: 3}
 --- !u!1 &1258640728
 GameObject:
@@ -74804,6 +74878,7 @@ GameObject:
   - 4: {fileID: 1483188298}
   - 33: {fileID: 1483188300}
   - 23: {fileID: 1483188299}
+  - 64: {fileID: 1483188301}
   m_Layer: 0
   m_Name: AirVentCover
   m_TagString: Untagged
@@ -74851,6 +74926,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 900823974}
   m_GameObject: {fileID: 1483188297}
+  m_Mesh: {fileID: 4300516, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!64 &1483188301
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483188297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300516, guid: b2dc02cb0d424a74987041582b186894, type: 3}
 --- !u!1 &1484325843
 GameObject:

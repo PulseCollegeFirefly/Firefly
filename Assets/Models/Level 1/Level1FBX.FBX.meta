@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: b2dc02cb0d424a74987041582b186894
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: Air Vent Wall
     100002: AirVent
@@ -264,6 +264,9 @@ ModelImporter:
     100516: Window
     100518: AirVentCover
     100520: AirVentCover001
+    100522: DetachedFace
+    100524: Light
+    100526: Pillar007
     400000: Air Vent Wall
     400002: AirVent
     400004: AirVent001
@@ -525,6 +528,9 @@ ModelImporter:
     400516: Window
     400518: AirVentCover
     400520: AirVentCover001
+    400522: DetachedFace
+    400524: Light
+    400526: Pillar007
     2300000: Air Vent Wall
     2300002: AirVent
     2300004: AirVent001
@@ -785,6 +791,9 @@ ModelImporter:
     2300514: Window
     2300516: AirVentCover
     2300518: AirVentCover001
+    2300520: DetachedFace
+    2300522: Light
+    2300524: Pillar007
     3300000: Air Vent Wall
     3300002: AirVent
     3300004: AirVent001
@@ -1045,6 +1054,9 @@ ModelImporter:
     3300514: Window
     3300516: AirVentCover
     3300518: AirVentCover001
+    3300520: DetachedFace
+    3300522: Light
+    3300524: Pillar007
     4300000: Floor1
     4300002: Air Vent Wall
     4300004: Wall 4
@@ -1305,6 +1317,9 @@ ModelImporter:
     4300514: Window
     4300516: AirVentCover
     4300518: AirVentCover001
+    4300520: Light
+    4300522: DetachedFace
+    4300524: Pillar007
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -1357,5 +1372,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 
