@@ -65240,9 +65240,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1275458584}
   - 108: {fileID: 1275458583}
-  - 114: {fileID: 1275458585}
   m_Layer: 0
-  m_Name: Spotlight
+  m_Name: Light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65258,9 +65257,9 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.32000005
+  m_Intensity: 2.1500001
   m_Range: 10
-  m_SpotAngle: 65
+  m_SpotAngle: 45
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -65272,7 +65271,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
+  m_Flare: {fileID: 12100000, guid: 9bdb18c49d114cb4300035184241aa39, type: 2}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
@@ -65289,26 +65288,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1275458582}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: .882304788, y: 5.50868607, z: 5.65348148}
+  m_LocalRotation: {x: .624073386, y: 0, z: 0, w: .781365812}
+  m_LocalPosition: {x: .943572879, y: 4.23592424, z: .935866594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1275458585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1275458582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f0d24f793f7c8488df0c93facbb58a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minFlickerSpeed: .00999999978
-  maxFlickerSpeed: .800000012
-  minLightIntensity: .0500000007
-  maxLightIntensity: .949999988
 --- !u!1 &1277072809
 GameObject:
   m_ObjectHideFlags: 0
