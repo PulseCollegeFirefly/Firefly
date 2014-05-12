@@ -45247,7 +45247,7 @@ GameObject:
   - 4: {fileID: 881191875}
   - 108: {fileID: 881191874}
   m_Layer: 0
-  m_Name: Directional light
+  m_Name: MainLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65224,6 +65224,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1275458584}
   - 108: {fileID: 1275458583}
+  - 114: {fileID: 1275458585}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -65277,6 +65278,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1275458585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275458582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f0d24f793f7c8488df0c93facbb58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: .00999999978
+  maxFlickerSpeed: .800000012
+  minLightIntensity: .0500000007
+  maxLightIntensity: .949999988
 --- !u!1 &1277072809
 GameObject:
   m_ObjectHideFlags: 0
