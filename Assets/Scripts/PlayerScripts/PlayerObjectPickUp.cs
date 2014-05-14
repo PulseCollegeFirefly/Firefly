@@ -44,55 +44,14 @@ public class PlayerObjectPickUp : MonoBehaviour {
 			{
 				if(interact)
 				{
-
 					// If Item is collectable
 					if(hit.collider.tag == "PickUp")
 					{
 						// Add to Inventory
 						GameObject.Find("Inventory").GetComponent<PlayerInventory>().AddItem(hit.collider.gameObject);
 					}
-
-					// If Item is interactable
-					else
-					{
-						hitObject = hit.collider.gameObject;
-						cachedObject = hitObject;
-
-						// Turn Off Gravity
-						hitObject.rigidbody.useGravity = false;
-						hitObject.rigidbody.isKinematic = true;
-
-						// Make object a child object of player
-						hitObject.transform.parent = gameObject.transform;
-
-						hitObject.transform.position = handLocation.transform.position;
-
-						// Set Holding to true
-						holding = true;
-					}
 				}
 			}
-		}
-		else
-		{
-			//
-			// Put Down
-			//
-			if(Input.GetButtonDown("Interact") && holding == true)
-			{
-				// Turn Gravity and kinematic back
-				cachedObject.rigidbody.useGravity = true;
-				cachedObject.rigidbody.isKinematic = false;
-			
-				// Release the object
-				cachedObject.transform.parent = null;
-				cachedObject = null;
-			
-				holding = false;
-			}
-
-			// Show Raycast in Debug.
-			Debug.DrawLine (ray.origin, hit.point);
 		}
 	}
 }

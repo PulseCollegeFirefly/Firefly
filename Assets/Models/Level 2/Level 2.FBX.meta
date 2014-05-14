@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: 821d6c310e89a2646a360927790eb164
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Ceiling
+    100004: Cylinder001
+    100006: Cylinder002
+    100008: Cylinder003
+    100010: Cylinder004
+    100012: Cylinder005
+    100014: Cylinder006
+    100016: Cylinder007
+    100018: Floor
+    100020: //RootNode
+    100022: Object001
+    100024: Pillar001
+    100026: Pillar002
+    100028: Pillar003
+    100030: Pillar004
+    100032: Pillar005
+    100034: Pillar006
+    100036: Pillar011
+    100038: Pillar08
+    100040: Pillar09
+    100042: Pillar10
+    100044: PrisonDoor
+    100046: PrisonDoorGuideRail
+    100048: PrisonWalkway
+    100050: Stairs001
+    100052: Stairs002
+    100054: Stairs003
+    100056: Stairs004
+    100058: Stairs005
+    100060: Stairs006
+    100062: Stairs007
+    100064: Stairs008
+    100066: Stairs009
+    100068: Stairs010
+    100070: Wall
+    100072: Wall 002
+    100074: Wall 003
+    100076: Wall 005
+    100078: Wall 006
+    100080: Wall 007
+    100082: Wall 008
+    100084: Wall 010
+    100086: Wall 011
+    100088: Wall 012
+    100090: Wall 013
+    100092: Wall 014
+    100094: Wall 015
+    100096: Wall 016
+    100098: Wall 017
+    100100: Wall 018
+    100102: Wall001
+    100104: Wall002
+    100106: Wall003
+    100108: WindowFrame
+    400000: Box001
+    400002: Ceiling
+    400004: Cylinder001
+    400006: Cylinder002
+    400008: Cylinder003
+    400010: Cylinder004
+    400012: Cylinder005
+    400014: Cylinder006
+    400016: Cylinder007
+    400018: Floor
+    400020: //RootNode
+    400022: Object001
+    400024: Pillar001
+    400026: Pillar002
+    400028: Pillar003
+    400030: Pillar004
+    400032: Pillar005
+    400034: Pillar006
+    400036: Pillar011
+    400038: Pillar08
+    400040: Pillar09
+    400042: Pillar10
+    400044: PrisonDoor
+    400046: PrisonDoorGuideRail
+    400048: PrisonWalkway
+    400050: Stairs001
+    400052: Stairs002
+    400054: Stairs003
+    400056: Stairs004
+    400058: Stairs005
+    400060: Stairs006
+    400062: Stairs007
+    400064: Stairs008
+    400066: Stairs009
+    400068: Stairs010
+    400070: Wall
+    400072: Wall 002
+    400074: Wall 003
+    400076: Wall 005
+    400078: Wall 006
+    400080: Wall 007
+    400082: Wall 008
+    400084: Wall 010
+    400086: Wall 011
+    400088: Wall 012
+    400090: Wall 013
+    400092: Wall 014
+    400094: Wall 015
+    400096: Wall 016
+    400098: Wall 017
+    400100: Wall 018
+    400102: Wall001
+    400104: Wall002
+    400106: Wall003
+    400108: WindowFrame
+    2300000: Box001
+    2300002: Ceiling
+    2300004: Cylinder001
+    2300006: Cylinder002
+    2300008: Cylinder003
+    2300010: Cylinder004
+    2300012: Cylinder005
+    2300014: Cylinder006
+    2300016: Cylinder007
+    2300018: Floor
+    2300020: Object001
+    2300022: Pillar001
+    2300024: Pillar002
+    2300026: Pillar003
+    2300028: Pillar004
+    2300030: Pillar005
+    2300032: Pillar006
+    2300034: Pillar011
+    2300036: Pillar08
+    2300038: Pillar09
+    2300040: Pillar10
+    2300042: PrisonDoor
+    2300044: PrisonDoorGuideRail
+    2300046: PrisonWalkway
+    2300048: Stairs001
+    2300050: Stairs002
+    2300052: Stairs003
+    2300054: Stairs004
+    2300056: Stairs005
+    2300058: Stairs006
+    2300060: Stairs007
+    2300062: Stairs008
+    2300064: Stairs009
+    2300066: Stairs010
+    2300068: Wall
+    2300070: Wall 002
+    2300072: Wall 003
+    2300074: Wall 005
+    2300076: Wall 006
+    2300078: Wall 007
+    2300080: Wall 008
+    2300082: Wall 010
+    2300084: Wall 011
+    2300086: Wall 012
+    2300088: Wall 013
+    2300090: Wall 014
+    2300092: Wall 015
+    2300094: Wall 016
+    2300096: Wall 017
+    2300098: Wall 018
+    2300100: Wall001
+    2300102: Wall002
+    2300104: Wall003
+    2300106: WindowFrame
+    3300000: Box001
+    3300002: Ceiling
+    3300004: Cylinder001
+    3300006: Cylinder002
+    3300008: Cylinder003
+    3300010: Cylinder004
+    3300012: Cylinder005
+    3300014: Cylinder006
+    3300016: Cylinder007
+    3300018: Floor
+    3300020: Object001
+    3300022: Pillar001
+    3300024: Pillar002
+    3300026: Pillar003
+    3300028: Pillar004
+    3300030: Pillar005
+    3300032: Pillar006
+    3300034: Pillar011
+    3300036: Pillar08
+    3300038: Pillar09
+    3300040: Pillar10
+    3300042: PrisonDoor
+    3300044: PrisonDoorGuideRail
+    3300046: PrisonWalkway
+    3300048: Stairs001
+    3300050: Stairs002
+    3300052: Stairs003
+    3300054: Stairs004
+    3300056: Stairs005
+    3300058: Stairs006
+    3300060: Stairs007
+    3300062: Stairs008
+    3300064: Stairs009
+    3300066: Stairs010
+    3300068: Wall
+    3300070: Wall 002
+    3300072: Wall 003
+    3300074: Wall 005
+    3300076: Wall 006
+    3300078: Wall 007
+    3300080: Wall 008
+    3300082: Wall 010
+    3300084: Wall 011
+    3300086: Wall 012
+    3300088: Wall 013
+    3300090: Wall 014
+    3300092: Wall 015
+    3300094: Wall 016
+    3300096: Wall 017
+    3300098: Wall 018
+    3300100: Wall001
+    3300102: Wall002
+    3300104: Wall003
+    3300106: WindowFrame
+    4300000: Floor
+    4300002: Wall
+    4300004: Stairs001
+    4300006: Stairs002
+    4300008: Stairs003
+    4300010: Stairs004
+    4300012: PrisonWalkway
+    4300014: Stairs005
+    4300016: Stairs006
+    4300018: Stairs007
+    4300020: Stairs008
+    4300022: Wall001
+    4300024: Stairs009
+    4300026: Stairs010
+    4300028: Wall002
+    4300030: Wall 002
+    4300032: Wall 003
+    4300034: Wall 005
+    4300036: Wall 006
+    4300038: Wall 007
+    4300040: Wall 008
+    4300042: Wall 010
+    4300044: Pillar001
+    4300046: Pillar002
+    4300048: Pillar003
+    4300050: Pillar004
+    4300052: Wall 011
+    4300054: Wall 012
+    4300056: Wall 013
+    4300058: Wall 014
+    4300060: Pillar005
+    4300062: Pillar006
+    4300064: Wall 015
+    4300066: Ceiling
+    4300068: Wall 016
+    4300070: Wall 017
+    4300072: PrisonDoor
+    4300074: PrisonDoorGuideRail
+    4300076: WindowFrame
+    4300078: Box001
+    4300080: Cylinder001
+    4300082: Cylinder002
+    4300084: Cylinder003
+    4300086: Cylinder004
+    4300088: Cylinder005
+    4300090: Cylinder006
+    4300092: Cylinder007
+    4300094: Wall003
+    4300096: Wall 018
+    4300098: Object001
+    4300100: Pillar08
+    4300102: Pillar09
+    4300104: Pillar10
+    4300106: Pillar011
+    6400000: Box001
+    6400002: Ceiling
+    6400004: Cylinder001
+    6400006: Cylinder002
+    6400008: Cylinder003
+    6400010: Cylinder004
+    6400012: Cylinder005
+    6400014: Cylinder006
+    6400016: Cylinder007
+    6400018: Floor
+    6400020: Object001
+    6400022: Pillar001
+    6400024: Pillar002
+    6400026: Pillar003
+    6400028: Pillar004
+    6400030: Pillar005
+    6400032: Pillar006
+    6400034: Pillar011
+    6400036: Pillar08
+    6400038: Pillar09
+    6400040: Pillar10
+    6400042: PrisonDoor
+    6400044: PrisonDoorGuideRail
+    6400046: PrisonWalkway
+    6400048: Stairs001
+    6400050: Stairs002
+    6400052: Stairs003
+    6400054: Stairs004
+    6400056: Stairs005
+    6400058: Stairs006
+    6400060: Stairs007
+    6400062: Stairs008
+    6400064: Stairs009
+    6400066: Stairs010
+    6400068: Wall
+    6400070: Wall 002
+    6400072: Wall 003
+    6400074: Wall 005
+    6400076: Wall 006
+    6400078: Wall 007
+    6400080: Wall 008
+    6400082: Wall 010
+    6400084: Wall 011
+    6400086: Wall 012
+    6400088: Wall 013
+    6400090: Wall 014
+    6400092: Wall 015
+    6400094: Wall 016
+    6400096: Wall 017
+    6400098: Wall 018
+    6400100: Wall001
+    6400102: Wall002
+    6400104: Wall003
+    6400106: WindowFrame
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00100000005
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -81,9 +81,9 @@ public class PlayerInventory : MonoBehaviour {
 				if(hasItem[i])
 				{
 					// Display Item
-					GUI.BeginGroup(new Rect( (((screenWidth-20)/4)*j), (((screenHeight-20)/3)*k), (screenWidth-20)/4, ((screenHeight)/4)+10 ));
+					GUI.BeginGroup(new Rect( (((screenWidth-20)/4)*j), (((screenHeight-20)/3)*k), (screenWidth-20)/4, ((screenHeight)/4)+25 ));
 					GUI.DrawTexture(new Rect( 0, 0, (screenWidth-20)/4, (screenHeight-20)/4 ), inventorys[i].transform.GetComponentInChildren<GUILoader>().ObjectGUITexture, ScaleMode.StretchToFill, true);
-					GUI.Box(new Rect( 0, ((screenHeight-20)/5)+20, (screenWidth)/4, 30 ), inventorys[i].name, smallFont);
+					GUI.Box(new Rect( 0, ((screenHeight-20)/5)+50, (screenWidth)/4, 30 ), inventorys[i].name, smallFont);
 					GUI.EndGroup();
 					// End Item Display
 

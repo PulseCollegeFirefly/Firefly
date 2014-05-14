@@ -45768,6 +45768,10 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100508, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2dc02cb0d424a74987041582b186894, type: 3}
   m_RootGameObject: {fileID: 94618662}
@@ -99875,7 +99879,7 @@ GameObject:
   - 135: {fileID: 2050164314}
   m_Layer: 0
   m_Name: PrisonDoor
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
