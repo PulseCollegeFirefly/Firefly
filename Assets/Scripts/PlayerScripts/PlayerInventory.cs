@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerInventory : MonoBehaviour {
 
-	private GameObject[] inventorys;
-	private bool[] hasItem;
+	public GameObject[] inventorys { get; private set;}
+	public bool[] hasItem { get; private set; }
 
 	private int screenHeight;
 	private int screenWidth;
