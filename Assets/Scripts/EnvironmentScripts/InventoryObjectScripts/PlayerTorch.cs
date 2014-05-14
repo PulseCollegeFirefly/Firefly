@@ -7,10 +7,8 @@ public class PlayerTorch : MonoBehaviour {
 	private GameObject torch;
 	private Light torchLight;
 
-	// Player
-	private GameObject player;
 
-	// GameController
+	private GameObject player;
 	private GameObject gameInventory;
 
 	void Awake () {

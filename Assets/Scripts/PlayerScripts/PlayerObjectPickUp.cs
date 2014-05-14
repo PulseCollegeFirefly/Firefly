@@ -37,7 +37,7 @@ public class PlayerObjectPickUp : MonoBehaviour {
 				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(false);
 
 			//
-			// Pick Up
+			// Interact
 			//
 
 			if(Input.GetButtonDown("Interact"))

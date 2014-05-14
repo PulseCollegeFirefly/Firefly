@@ -21,7 +21,6 @@ public class PlayerHealth : MonoBehaviour {
 		// On Start set player health (Set in Game Controller)
 		GameCon = GameObject.FindGameObjectWithTag("GameController");
 		playerHealth = GameCon.GetComponent<GameController>().getHealth();
-		Debug.Log (playerHealth);
 
 		// Calculate time Damage
 		damage = playerHealth / (500 / generalDamageOffset);
