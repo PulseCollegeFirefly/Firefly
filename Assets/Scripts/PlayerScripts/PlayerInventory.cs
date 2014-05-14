@@ -6,6 +6,8 @@ public class PlayerInventory : MonoBehaviour {
 	public GameObject[] inventorys { get; private set;}
 	public bool[] hasItem { get; private set; }
 
+	private GameObject gameController;
+
 	private int screenHeight;
 	private int screenWidth;
 
@@ -16,7 +18,7 @@ public class PlayerInventory : MonoBehaviour {
 
 		// Make a List of all objects tagged Pick Up
 		inventorys = GameObject.FindGameObjectsWithTag("PickUp");
-
+			
 		// Make a list of the same exact size as above to reference having Item
 		hasItem = new bool[inventorys.Length];
 

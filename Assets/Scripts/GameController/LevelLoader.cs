@@ -7,7 +7,6 @@ public class LevelLoader : MonoBehaviour {
 
 	private GameObject player;
 	private GameObject fader;
-	private GameObject gameController;
 	
 	private bool sceneEnding = false;
 
@@ -15,16 +14,11 @@ public class LevelLoader : MonoBehaviour {
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
 		fader = GameObject.FindGameObjectWithTag("Fader");
-		gameController = GameObject.FindGameObjectWithTag("GameControllera");
 	}
 
 	void OnTriggerEnter (Collider other) {
 		if(other.tag == "Player")
 		{
-			// Cache Items held by the player
-			gameController.GetComponent<GameController> ().setInventorys(player.GetComponent<PlayerInventory> ().inventorys);
-			gameController.GetComponent<GameController> ().setHasItems(player.GetComponent<PlayerInventory> ().hasItem);
-
 			// Enable the fader.
 			fader.guiTexture.enabled = true;
 			fader.GetComponent<SceneFadeInOut> ().levelToLoad = levelToLoad;
