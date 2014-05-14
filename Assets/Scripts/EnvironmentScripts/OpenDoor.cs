@@ -18,7 +18,6 @@ public class OpenDoor : MonoBehaviour {
 	{
 		newPosition = new Vector3(transform.position.x-offset, transform.position.y, transform.position.z);
 		journeyLength = Vector3.Distance(transform.position, newPosition);
-		startTime = Time.time;
 		moveDoor = false;
 	}
 
@@ -28,11 +27,10 @@ public class OpenDoor : MonoBehaviour {
 		{
 			if(Input.GetButtonDown("Interact"))
 			{
-				Debug.Log ("Interacted");
 				if(GameObject.Find("Inventory").GetComponent<PlayerInventory>().findItem(keyRequired))
 				{
 					moveDoor = true;
-					Debug.Log ("Moving Door");
+					startTime = Time.time;
 				}
 			}
 		}

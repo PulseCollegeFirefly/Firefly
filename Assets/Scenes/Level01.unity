@@ -99872,7 +99872,7 @@ GameObject:
   - 23: {fileID: 2050164310}
   - 65: {fileID: 2050164313}
   - 114: {fileID: 2050164312}
-  - 64: {fileID: 2050164314}
+  - 135: {fileID: 2050164314}
   m_Layer: 0
   m_Name: PrisonDoor
   m_TagString: Untagged
@@ -99934,21 +99934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyRequired: Guards Keys
   offset: .949999988
-  speed: .0500000007
+  speed: .100000001
 --- !u!65 &2050164313
 BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2050164308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.8800001, y: 16.066906, z: 7.00000191}
-  m_Center: {x: .0893944427, y: -7.12845087, z: 3.50003123}
---- !u!64 &2050164314
-MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -99957,9 +99945,20 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300508, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+  m_Size: {x: 3, y: 16.3400002, z: 7.00000191}
+  m_Center: {x: -.99000001, y: -6.98999977, z: 3.50003123}
+--- !u!135 &2050164314
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2050164308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8.03345299
+  m_Center: {x: .0893944427, y: -7.12845087, z: 3.50003123}
 --- !u!1 &2051805139
 GameObject:
   m_ObjectHideFlags: 0

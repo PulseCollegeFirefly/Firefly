@@ -4,6 +4,7 @@ using System.Collections;
 public class IntroSelect : MonoBehaviour {
 
 	public float offset;
+	public Texture introTexture;
 
 	private float screenHeight;
 	private float screenWidth;
@@ -18,13 +19,12 @@ public class IntroSelect : MonoBehaviour {
 	void OnGUI () {
 
 		// Start new GUI Group
-		GUI.BeginGroup( new Rect(offset,offset,screenWidth-(offset*2),screenHeight-(offset*2)));
+		GUI.BeginGroup( new Rect(0, 0, screenWidth, screenHeight));
 
-		// Title Bar
-		GUI.Box( new Rect(0,0, 100, 100), "Project Firefly.");
+		GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), introTexture, ScaleMode.StretchToFill, true);
 
 		// Load First Level
-		if (GUI.Button(new Rect(100, 100, 200, 30), "Start"))
+		if (GUI.Button(new Rect((screenWidth/2)-50, (screenHeight/2)+offset, 100, 50), "Start"))
 			Application.LoadLevel("Level01");
 
 		// End GUI Group
