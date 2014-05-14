@@ -27,7 +27,7 @@ public class OpenDoor : MonoBehaviour {
 		{
 			if(Input.GetButtonDown("Interact"))
 			{
-				if(GameObject.Find("Inventory").GetComponent<PlayerInventory>().findItem(keyRequired))
+				if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired))
 				{
 					moveDoor = true;
 					startTime = Time.time;

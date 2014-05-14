@@ -48,7 +48,7 @@ public class PlayerObjectPickUp : MonoBehaviour {
 					if(hit.collider.tag == "PickUp")
 					{
 						// Add to Inventory
-						GameObject.Find("Inventory").GetComponent<PlayerInventory>().AddItem(hit.collider.gameObject);
+						GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().AddItem(hit.collider.gameObject);
 					}
 				}
 			}

@@ -10,10 +10,16 @@ public class PlayerTorch : MonoBehaviour {
 	// Player
 	private GameObject player;
 
+	// GameController
+	private GameObject gameInventory;
+
 	void Awake () {
 
 		// Reference the player
 		player = GameObject.FindGameObjectWithTag("Player");
+
+		// Reference the Game Controller
+		gameInventory = GameObject.FindGameObjectWithTag("GameController");
 
 		// Reference Torch light and turn it off
 		torchLight = player.GetComponentInChildren<Light>();
@@ -31,7 +37,7 @@ public class PlayerTorch : MonoBehaviour {
 		// Check if the player has the torch in the inventory
 		if(Input.GetButtonUp("Torch"))
 		{
-			if(player.GetComponentInChildren<PlayerInventory>().findItem("Torch"))
+			if(gameInventory.GetComponentInChildren<GameInventory>().findItem("Torch"))
 			{
 				// Swap
 				torchLight.enabled = !torchLight.enabled;

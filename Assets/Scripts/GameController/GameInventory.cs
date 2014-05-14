@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInventory : MonoBehaviour {
+public class GameInventory : MonoBehaviour {
 
 	public GameObject[] inventorys { get; private set;}
 	public bool[] hasItem { get; private set; }
@@ -15,6 +15,8 @@ public class PlayerInventory : MonoBehaviour {
 	public GUIStyle smallFont;
 
 	void Awake () {
+
+		DontDestroyOnLoad(this.gameObject);
 
 		// Make a List of all objects tagged Pick Up
 		inventorys = GameObject.FindGameObjectsWithTag("PickUp");
