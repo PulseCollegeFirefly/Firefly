@@ -2284,7 +2284,7 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5615386}
-  m_Material: {fileID: 13400000, guid: cf63880488ec29f43a759ecd9c6c5123, type: 2}
+  m_Material: {fileID: 13400000, guid: ae51c2b8a2d62f74a917726ce1c0af2c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -10083,6 +10083,10 @@ Prefab:
     - target: {fileID: 400000, guid: debb1de6daf2cf34686ade61dbdb4f2f, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: debb1de6daf2cf34686ade61dbdb4f2f, type: 2}
+      propertyPath: creditNames.Array.data[3]
+      value: David Mulhall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: debb1de6daf2cf34686ade61dbdb4f2f, type: 2}
@@ -66174,7 +66178,7 @@ MonoBehaviour:
   - Stephen Callaghan
   - Conor Brien
   - Owen McGovern
-  - David Mulhal
+  - David Mulhall
   - Josh Meade
   fadeSpeed: 2
 --- !u!4 &1307755532
