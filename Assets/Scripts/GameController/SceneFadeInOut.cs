@@ -4,7 +4,6 @@ using System.Collections;
 public class SceneFadeInOut : MonoBehaviour {
 
 	public float fadeSpeed = 0.2f;
-	public string levelToLoad;
 
 	private bool sceneStarting = true;
 
@@ -49,7 +48,7 @@ public class SceneFadeInOut : MonoBehaviour {
 		}
 	}
 
-	public void EndScene()
+	public void EndScene(string levelToLoad)
 	{
 		// FadeToBlack :)
 		FadeToBlack();
