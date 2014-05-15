@@ -78,14 +78,14 @@ public class CellOpening : MonoBehaviour
 		doorFire2.SetActive (true);
 		doorFire3.SetActive (true);
 		//Turn back on movement
-		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
-		thePlayer.GetComponent<Rigidbody>().detectCollisions = true;
-		thePlayer.GetComponent<Rigidbody>().useGravity = true;
 		for(var i=0; i< doorParts.Length; i++)
 		{
 			doorParts[i].isKinematic = true;
 			doorParts[i].useGravity = false;
 		}
+		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
+		thePlayer.GetComponent<Rigidbody>().detectCollisions = true;
+		thePlayer.GetComponent<Rigidbody>().useGravity = true;
 	}
 
 	// Release mouse lock
