@@ -46,7 +46,7 @@ public class PlayerInventoryGUI : MonoBehaviour {
 					GUI.BeginGroup(new Rect((screenWidth/4)*j, ((screenHeight-(screenHeight/10))/2)*k, screenWidth/4, screenHeight/2), texture);
 					GUI.DrawTexture(new Rect( 0, 0, screenWidth/4, ((screenHeight-(screenHeight/10))/2)-(screenHeight/10)), item.gameObject.GetComponentInChildren<GUILoader>().ObjectGUITexture, ScaleMode.StretchToFill, true);
 
-
+					// If an active object highlight in active font
 					if(GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem != null && item.name == GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem.name)
 						tempStyle = activeFont;
 					else

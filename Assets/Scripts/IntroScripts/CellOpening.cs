@@ -11,6 +11,7 @@ public class CellOpening : MonoBehaviour
 	public GameObject explode;
 	//A GameObject for the Player, can be Public and dragged or declared as down below
 	GameObject thePlayer;
+	GameObject gameController;
 	//Same as Explosion except for Door fragments
 	public GameObject doorFire1;
 	public GameObject doorFire2;
@@ -25,6 +26,8 @@ public class CellOpening : MonoBehaviour
 
 	void Start () 
 	{
+		gameController = GameObject.FindGameObjectWithTag("GameController");
+
 		//Sets the Player FPC to the GameObject
 		thePlayer = GameObject.FindGameObjectWithTag("Player");
 		MainLight = GameObject.Find ("MainLight");
@@ -36,7 +39,9 @@ public class CellOpening : MonoBehaviour
 		doorFire2.SetActive (false);
 		doorFire3.SetActive (false);
 		//Call the Coroutine, required due to timings involved
-		StartCoroutine(DoorCoroutine ());
+		// if the lvl is the first time round
+		if(gameController.GetComponent<GameController> ().lvlCount == 0)
+			StartCoroutine(DoorCoroutine ());
 	}
 
 	void Update ()
