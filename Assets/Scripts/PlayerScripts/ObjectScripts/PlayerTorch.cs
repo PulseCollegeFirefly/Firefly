@@ -10,8 +10,11 @@ public class PlayerTorch : MonoBehaviour {
 
 	private GameObject player;
 	private GameObject gameInventory;
+	private GameObject activeItem;
 
 	void Awake () {
+		// Reference Active Item
+
 
 		// Reference the player
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -28,20 +31,29 @@ public class PlayerTorch : MonoBehaviour {
 		torch.renderer.enabled = false;
 		torch.GetComponent<BoxCollider> ().enabled = false;
 	}
+
+	void CheckActiveItem ()
+	{
+		activeItem = GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem;
+	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		// Check if the player has the torch in the inventory
-		if(Input.GetButtonUp("Torch"))
+		CheckActiveItem ();
+
+		// Check if the player has the torch in their hand
+		if(activeItem != null && this.gameObject.name == activeItem.name)
 		{
-			if(gameInventory.GetComponentInChildren<GameInventory>().findItem("Torch"))
-			{
-				// Swap
-				torchLight.enabled = !torchLight.enabled;
-				torch.renderer.enabled = !torch.renderer.enabled;
-				torch.GetComponent<BoxCollider> ().enabled = !torch.GetComponent<BoxCollider> ().enabled;
-			}
+			torchLight.enabled = true;
+			torch.renderer.enabled = true;
+			torch.GetComponent<BoxCollider> ().enabled = true;
+		}
+		else
+		{
+			torchLight.enabled = false;
+			torch.renderer.enabled = false;
+			torch.GetComponent<BoxCollider> ().enabled = false;
 		}
 	}
 }

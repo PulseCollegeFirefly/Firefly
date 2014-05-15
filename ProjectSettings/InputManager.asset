@@ -405,13 +405,13 @@ InputManager:
     axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Torch
-    descriptiveName: Player Torch
+    m_Name: SwitchItem
+    descriptiveName: Player Item Switch
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: t
+    negativeButton: q
+    positiveButton: e
     altNegativeButton: 
-    altPositiveButton: t
+    altPositiveButton: 
     gravity: 0
     dead: .189999998
     sensitivity: 1

@@ -49,6 +49,7 @@ public class PlayerObjectPickUp : MonoBehaviour {
 					{
 						// Add to Inventory
 						GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().AddItem(hit.collider.gameObject);
+						GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl>().UpdateObjects();
 					}
 				}
 			}

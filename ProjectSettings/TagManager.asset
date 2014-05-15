@@ -11,6 +11,7 @@ TagManager:
   - PickUp
   - Inventory
   - Fader
+  - ActiveItem
   - soldier
   - 
   Builtin Layer 0: Default
