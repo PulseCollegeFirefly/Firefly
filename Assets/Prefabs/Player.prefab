@@ -542,9 +542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   largeFont:
-    m_Name: 
+    m_Name: LargeInventoryFont
     m_Normal:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: 94774bca848610c42a9de37ece4c6820, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
@@ -578,19 +578,19 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
+      m_Left: 10
+      m_Right: 10
+      m_Top: 10
+      m_Bottom: 10
     m_Overflow:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_Alignment: 4
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   smallFont:
-    m_Name: 
+    m_Name: SmallInventoryFont
     m_Normal:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -647,9 +647,9 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_Alignment: 4
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -659,6 +659,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  texture: {fileID: 2800000, guid: 94774bca848610c42a9de37ece4c6820, type: 3}
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1

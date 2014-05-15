@@ -6,6 +6,8 @@ public class PlayerInventoryGUI : MonoBehaviour {
 	public GUIStyle largeFont;
 	public GUIStyle smallFont;
 
+	public Texture texture;
+
 	private GameObject gameInventory;
 	private float screenHeight;
 	private float screenWidth;
@@ -25,11 +27,11 @@ public class PlayerInventoryGUI : MonoBehaviour {
 		if(Input.GetButton ("Inventory"))
 		{
 			// Begin Inventory Display
-			GUI.BeginGroup(new Rect(10, 10, screenWidth-20, screenHeight-20));
-			GUI.Box(new Rect(0, 0, screenWidth-20, screenHeight-20), "Inventory", largeFont);
+			GUI.BeginGroup(new Rect(0, 0, screenWidth, screenHeight));
+			GUI.Box(new Rect(0, 0, screenWidth, screenHeight/10), "Inventory", largeFont);
 			
 			// Display Enclosing Box
-			GUI.BeginGroup(new Rect(0, 100, screenWidth, screenHeight-120));
+			GUI.BeginGroup(new Rect(0, screenHeight/10, screenWidth, screenHeight-(screenHeight/10)));
 			int j = 0;
 			int k = 0;
 
@@ -38,18 +40,18 @@ public class PlayerInventoryGUI : MonoBehaviour {
 			{
 				if(item.tag == "PickUp")
 				{
-					GUI.BeginGroup(new Rect( (((screenWidth-20)/4)*j), (((screenHeight-20)/3)*k), (screenWidth-20)/4, ((screenHeight)/4)+25 ));
-					GUI.DrawTexture(new Rect( 0, 0, (screenWidth-20)/4, (screenHeight-20)/4 ), item.gameObject.GetComponentInChildren<GUILoader>().ObjectGUITexture, ScaleMode.StretchToFill, true);
-					GUI.Box(new Rect( 0, ((screenHeight-20)/5)+50, (screenWidth)/4, 30 ), item.name, smallFont);
+					GUI.BeginGroup(new Rect((screenWidth/4)*j, ((screenHeight-(screenHeight/10))/2)*k, screenWidth/4, screenHeight/2), texture);
+					GUI.DrawTexture(new Rect( 0, 0, screenWidth/4, ((screenHeight-(screenHeight/10))/2)-(screenHeight/10)), item.gameObject.GetComponentInChildren<GUILoader>().ObjectGUITexture, ScaleMode.StretchToFill, true);
+					GUI.Box(new Rect( 0, ((screenHeight-(screenHeight/10))/2)-(screenHeight/10), screenWidth/4, screenHeight/10), item.name, smallFont);
 					GUI.EndGroup();
 					// End Item Display
-				}
-					
-				j++;
-				if(j == 4)
-				{
-					k++;
-					j = 0;
+
+					j++;
+					if(j == 4)
+					{
+						k++;
+						j = 0;
+					}
 				}
 			}
 			GUI.EndGroup();
