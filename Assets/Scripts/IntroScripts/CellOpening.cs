@@ -58,7 +58,7 @@ public class CellOpening : MonoBehaviour
 		//Turn on the Explosion particle effect
 		explode.SetActive (true);
 		//Shake the Camera
-		thePlayer.GetComponent<PlayerFeelForce>().shakeHead();
+		thePlayer.GetComponent<PlayerHeadShake>().shakeHead();
 
 		//Explode the door, turn on the gravity (the door is a little above the floor).
 

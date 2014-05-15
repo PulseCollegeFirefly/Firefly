@@ -287,7 +287,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &6500000
 BoxCollider:
@@ -670,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce65b1d7265d444ca89443a35e24178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headJoint: {fileID: 400002}
+  head: {fileID: 100002}
   shakeStrength: 3
 --- !u!114 &11400018
 MonoBehaviour:

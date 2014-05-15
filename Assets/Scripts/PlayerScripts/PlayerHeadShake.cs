@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerFeelForce : MonoBehaviour {
+public class PlayerHeadShake: MonoBehaviour {
 
-	public Transform headJoint;
-	public float shakeStrength = 5;
+	public GameObject head;
+	public float shakeStrength = 3;
 
 	private float shake;
 	private Vector3 originalPosition;
@@ -12,14 +12,14 @@ public class PlayerFeelForce : MonoBehaviour {
 	void Awake ()
 	{
 		// Set Orginal Position and start shake value
-		originalPosition = headJoint.localPosition;
+		originalPosition = head.transform.localPosition;
 		shake = 0;
 	}
 	
 	void LateUpdate()
 	{
 		// Set head joint to the orginal Position + some random unit * shake in the unit shere
-		headJoint.localPosition = originalPosition + (Random.insideUnitSphere * shake);
+		head.transform.localPosition = originalPosition + (Random.insideUnitSphere * shake);
 
 		// Set shake to tend towards zero over time * shake strenght
 		shake = Mathf.MoveTowards(shake, 0, Time.deltaTime * shakeStrength);
@@ -27,7 +27,7 @@ public class PlayerFeelForce : MonoBehaviour {
 		// Set head joint to orginal position when shake == 0
 		if(shake == 0)
 		{
-			headJoint.localPosition = originalPosition;
+			head.transform.localPosition = originalPosition;
 		}
 	}
 
