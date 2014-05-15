@@ -28,7 +28,7 @@ public class FirstFireTrigger : MonoBehaviour {
 		{
 			//Causes stumble
 
-			other.GetComponent<PlayerFeelForce>().shakeHead();
+			other.GetComponent<PlayerHeadShake>().shakeHead();
 
 			//Turns on Explosion Particle Effect and then Destroys the Trigger so it can't be re-used
 			explode.SetActive (true);
