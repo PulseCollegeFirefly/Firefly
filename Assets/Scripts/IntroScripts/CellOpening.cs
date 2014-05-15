@@ -81,6 +81,11 @@ public class CellOpening : MonoBehaviour
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
 		thePlayer.GetComponent<Rigidbody>().detectCollisions = true;
 		thePlayer.GetComponent<Rigidbody>().useGravity = true;
+		for(var i=0; i< doorParts.Length; i++)
+		{
+			doorParts[i].isKinematic = true;
+			doorParts[i].useGravity = false;
+		}
 	}
 
 	// Release mouse lock
