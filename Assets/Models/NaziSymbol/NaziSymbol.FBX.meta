@@ -1,55 +1,13 @@
 fileFormatVersion: 2
-guid: d021d313b40be1848adcb3bbdae67dc9
+guid: 0d2843d599f08b446b360b9a2e6cf1ea
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Base
-    100002: ChamferCyl004
-    100004: ChamferCyl005
-    100006: ChamferCyl006
-    100008: Cylinder001
-    100010: //RootNode
-    100012: Torus001
-    100014: Torus002
-    100016: Torus003
-    100018: Torus004
-    400000: Base
-    400002: ChamferCyl004
-    400004: ChamferCyl005
-    400006: ChamferCyl006
-    400008: Cylinder001
-    400010: //RootNode
-    400012: Torus001
-    400014: Torus002
-    400016: Torus003
-    400018: Torus004
-    2300000: Base
-    2300002: ChamferCyl004
-    2300004: ChamferCyl005
-    2300006: ChamferCyl006
-    2300008: Cylinder001
-    2300010: Torus001
-    2300012: Torus002
-    2300014: Torus003
-    2300016: Torus004
-    3300000: Base
-    3300002: ChamferCyl004
-    3300004: ChamferCyl005
-    3300006: ChamferCyl006
-    3300008: Cylinder001
-    3300010: Torus001
-    3300012: Torus002
-    3300014: Torus003
-    3300016: Torus004
-    4300000: Cylinder001
-    4300002: Torus001
-    4300004: Torus002
-    4300006: Torus003
-    4300008: Torus004
-    4300010: Base
-    4300012: ChamferCyl004
-    4300014: ChamferCyl005
-    4300016: ChamferCyl006
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Plane002
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -69,7 +27,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .00100000005
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

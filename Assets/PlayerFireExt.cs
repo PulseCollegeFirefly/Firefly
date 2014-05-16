@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerGuardsKeys : MonoBehaviour {
+public class PlayerFireExt : MonoBehaviour {
 	
 	// Key Parts
-	private GameObject key;
+	private GameObject fireExt;
 
 	private GameObject activeItem;
 	
 	void Awake () {
 		
 		// Reference Torch Model and turn render off
-		key = this.gameObject;
-		key.renderer.enabled = false;
-		key.GetComponent<BoxCollider> ().enabled = false;
+		fireExt = this.gameObject;
+		fireExt.renderer.enabled = false;
+		fireExt.GetComponent<BoxCollider> ().enabled = false;
 	}
 	
 	void CheckActiveItem ()
@@ -29,13 +29,13 @@ public class PlayerGuardsKeys : MonoBehaviour {
 		// Check if the player has the torch in their hand
 		if(activeItem != null && this.gameObject.name == activeItem.name)
 		{
-			key.renderer.enabled = true;
-			key.GetComponent<BoxCollider> ().enabled = true;
+			fireExt.renderer.enabled = true;
+			fireExt.GetComponent<BoxCollider> ().enabled = true;
 		}
 		else
 		{
-			key.renderer.enabled = false;
-			key.GetComponent<BoxCollider> ().enabled = false;
+			fireExt.renderer.enabled = false;
+			fireExt.GetComponent<BoxCollider> ().enabled = false;
 		}
 	}
 }
