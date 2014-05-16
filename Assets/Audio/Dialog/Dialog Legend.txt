@@ -21,6 +21,7 @@ Player:
 
 
 
+
 51. This torch will come in handy
 52. I need keys to open this
 53. The guard has to have keys
@@ -33,6 +34,8 @@ Player:
 60. Keep it together, Mal.
 61. Think of Zoe and the kids.
 62. Just keep going
+63. Is that a Teapot village?
+64. What the fuck was that?
 
 
 
