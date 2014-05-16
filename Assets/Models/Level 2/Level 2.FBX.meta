@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 821d6c310e89a2646a360927790eb164
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Box001
     100002: Ceiling
@@ -58,6 +58,12 @@ ModelImporter:
     100104: Wall002
     100106: Wall003
     100108: WindowFrame
+    100110: Ceiling001
+    100112: Ceiling003
+    100114: Ceiling004
+    100116: Ceiling005
+    100118: Ceiling006
+    100120: Ceiling006 1
     400000: Box001
     400002: Ceiling
     400004: Cylinder001
@@ -113,6 +119,12 @@ ModelImporter:
     400104: Wall002
     400106: Wall003
     400108: WindowFrame
+    400110: Ceiling001
+    400112: Ceiling003
+    400114: Ceiling004
+    400116: Ceiling005
+    400118: Ceiling006
+    400120: Ceiling006 1
     2300000: Box001
     2300002: Ceiling
     2300004: Cylinder001
@@ -167,6 +179,11 @@ ModelImporter:
     2300102: Wall002
     2300104: Wall003
     2300106: WindowFrame
+    2300108: Ceiling001
+    2300110: Ceiling003
+    2300112: Ceiling004
+    2300114: Ceiling005
+    2300116: Ceiling006 1
     3300000: Box001
     3300002: Ceiling
     3300004: Cylinder001
@@ -221,6 +238,11 @@ ModelImporter:
     3300102: Wall002
     3300104: Wall003
     3300106: WindowFrame
+    3300108: Ceiling001
+    3300110: Ceiling003
+    3300112: Ceiling004
+    3300114: Ceiling005
+    3300116: Ceiling006 1
     4300000: Floor
     4300002: Wall
     4300004: Stairs001
@@ -275,6 +297,11 @@ ModelImporter:
     4300102: Pillar09
     4300104: Pillar10
     4300106: Pillar011
+    4300108: Ceiling001
+    4300110: Ceiling003
+    4300112: Ceiling004
+    4300114: Ceiling005
+    4300116: Ceiling006
     6400000: Box001
     6400002: Ceiling
     6400004: Cylinder001
@@ -329,6 +356,11 @@ ModelImporter:
     6400102: Wall002
     6400104: Wall003
     6400106: WindowFrame
+    6400108: Ceiling001
+    6400110: Ceiling003
+    6400112: Ceiling004
+    6400114: Ceiling005
+    6400116: Ceiling006 1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -381,4 +413,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 
