@@ -12,6 +12,7 @@ TagManager:
   - Inventory
   - Fader
   - ActiveItem
+  - Steam
   - soldier
   - 
   Builtin Layer 0: Default

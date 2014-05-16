@@ -34,7 +34,7 @@ public class WardensOfficeEntry : MonoBehaviour {
 			}
 		}
 
-		this.gameObject.collider.isTrigger = false;
+		this.gameObject.GetComponent<BoxCollider> ().isTrigger = false;
 	}
 
 	private void Switch(GameObject a)

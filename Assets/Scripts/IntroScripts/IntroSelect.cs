@@ -18,16 +18,8 @@ public class IntroSelect : MonoBehaviour {
 	
 	void OnGUI () {
 
-		// Start new GUI Group
-		GUI.BeginGroup( new Rect(0, 0, screenWidth, screenHeight));
-
-		GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), introTexture, ScaleMode.StretchToFill, true);
-
 		// Load First Level
 		if (GUI.Button(new Rect((screenWidth/2)-50, (screenHeight/2)+offset, 100, 50), "Start"))
 			Application.LoadLevel("Level01");
-
-		// End GUI Group
-		GUI.EndGroup();
 	}
 }

@@ -2,10 +2,9 @@
 using System.Collections;
 
 public class PlayerFireExt : MonoBehaviour {
-	
+
 	// Key Parts
 	private GameObject fireExt;
-
 	private GameObject activeItem;
 	
 	void Awake () {
@@ -31,6 +30,11 @@ public class PlayerFireExt : MonoBehaviour {
 		{
 			fireExt.renderer.enabled = true;
 			fireExt.GetComponent<BoxCollider> ().enabled = true;
+
+			if(Input.GetButtonDown("Interact") && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObjectPickUp> ().interact)
+			{
+				Destroy (GameObject.Find("EnterWardinsOffice"));
+			}
 		}
 		else
 		{

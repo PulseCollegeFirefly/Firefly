@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour {
 		playerHealth = GameCon.GetComponent<GameController>().getHealth();
 
 		// Calculate time Damage
-		damage = playerHealth / (500 / generalDamageOffset);
+		damage = playerHealth / (100 / generalDamageOffset);
 
 		// Set temp to 0
 		timeTemp = 0;
@@ -65,7 +65,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void dead () {
-		Debug.Log ("Player has died.");
+		Application.LoadLevel ("DeadScene");
 	}
 
 	void DoDamage(float d) {
