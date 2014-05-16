@@ -1,0 +1,61 @@
+Player:
+
+1. What the hell was that?
+2. Hello? (*Banging*) Hello? (*Banging*) What the hell is going on out there?
+3. FUCK!!!
+4. That was close.
+5. What the hell is going on here?
+6. I think theres some one still in that cell...
+7. Shit,(1,2) hey buddy,(1,2,3) i cant open the door! (1,2,3) I cant open the door!! .... Shit!
+8. Whow 
+9. I have to get out of here, quick!
+10. Jesus, a burning Nazi.. now thats ironic.
+11. ou we, warden has it fancy.
+12. Shit! i better get the fire extingusher
+13. i hope this thing works.
+14. sweet.
+15. Im sure these will come in handy.
+16. A wrench? this has to be useful.
+17. A screwdriver? could have done with this at shower time.
+
+
+
+
+51. This torch will come in handy
+52. I need keys to open this
+53. The guard has to have keys
+54. Its getting hot in here fast!
+55. Where the hell is this switch?
+56. Shit, thats hot!
+57. I need to find the switch for this
+58. Hmm, locked.
+59. Ah its broken, I need something to  turn this valve.
+60. Keep it together, Mal.
+61. Think of Zoe and the kids.
+62. Just keep going
+
+
+
+
+
+SFX:
+
+1. *Cough*
+2. *heavy breathing*
+3. ouch
+4. Burn screams
+
+
+
+
+
+NPC:
+
+1. Burning Screams
+2. Help!
+3. Someone Help!
+4. Its Burning!
+5. *Cough*
+6. Agh!!!
+7. Mommy
+8. The switch is in the wardens office
