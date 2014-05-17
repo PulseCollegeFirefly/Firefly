@@ -21,21 +21,6 @@ public class OpenDoor : MonoBehaviour {
 		moveDoor = false;
 	}
 
-	void OnTriggerStay (Collider other)
-	{
-		if(other.tag == "Player")
-		{
-			if(Input.GetButtonDown("Interact"))
-			{
-				if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired))
-				{
-					moveDoor = true;
-					startTime = Time.time;
-				}
-			}
-		}
-	}
-
 	void Update ()
 	{
 		if(moveDoor)
@@ -44,5 +29,7 @@ public class OpenDoor : MonoBehaviour {
 			float fracJourney = distCovered / journeyLength;
 			transform.position = Vector3.Lerp (transform.position, newPosition, fracJourney);
 		}
+		else
+			startTime = Time.deltaTime;
 	}
 }
