@@ -93520,8 +93520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fa26b1650dd2a41ba837c34efef235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 35
-  sideForce: 35
+  upForce: 27
+  sideForce: 28
   explode: {fileID: 1082586828}
   doorFire1: {fileID: 2082351541}
   doorFire2: {fileID: 816694064}
@@ -101634,15 +101634,15 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7.63000011
-  m_Range: 10
-  m_SpotAngle: 65.3000031
+  m_Intensity: 1.92999995
+  m_Range: 6.23999977
+  m_SpotAngle: 136
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
+    m_Strength: .419999987
+    m_Bias: .00999999978
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 0}
@@ -101665,8 +101665,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1939114902}
-  m_LocalRotation: {x: .655518055, y: .265134186, z: .265134156, w: .655518055}
-  m_LocalPosition: {x: 1.57089031, y: 3.62425041, z: 4.35468483}
+  m_LocalRotation: {x: .641026378, y: -.0260625444, z: .111742705, w: .758893669}
+  m_LocalPosition: {x: 1.90616083, y: 3.11719251, z: 4.1388979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
