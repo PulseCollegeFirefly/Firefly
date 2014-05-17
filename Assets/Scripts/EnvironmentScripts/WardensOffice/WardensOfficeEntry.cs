@@ -4,6 +4,7 @@ using System.Collections;
 public class WardensOfficeEntry : MonoBehaviour {
 
 	public GameObject[] rubbles;
+	public GameObject fire;
 
 	// Use this for initialization
 	void Awake () {
@@ -32,6 +33,7 @@ public class WardensOfficeEntry : MonoBehaviour {
 
 				Switch (rubble);
 			}
+			fire.SetActive (true);
 		}
 
 		this.gameObject.GetComponent<BoxCollider> ().isTrigger = false;
