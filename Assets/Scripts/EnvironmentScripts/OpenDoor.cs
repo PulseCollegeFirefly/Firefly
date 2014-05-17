@@ -3,9 +3,6 @@ using System.Collections;
 
 public class OpenDoor : MonoBehaviour {
 
-	// Key Required
-	public string keyRequired;
-	
 	public float offset;
 	public float speed = 1f;
 
@@ -31,5 +28,10 @@ public class OpenDoor : MonoBehaviour {
 		}
 		else
 			startTime = Time.deltaTime;
+	}
+
+	public void MoveDoor()
+	{
+		moveDoor = true;
 	}
 }

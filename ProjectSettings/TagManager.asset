@@ -13,6 +13,8 @@ TagManager:
   - Fader
   - ActiveItem
   - Steam
+  - Switch1
+  - Switch2
   - soldier
   - 
   Builtin Layer 0: Default

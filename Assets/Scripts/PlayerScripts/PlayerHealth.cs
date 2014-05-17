@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour {
 		playerHealth = GameCon.GetComponent<GameController>().getHealth();
 
 		// Calculate time Damage
-		damage = playerHealth / (100 / generalDamageOffset);
+		damage = playerHealth / (200 / generalDamageOffset);
 
 		// Set temp to 0
 		timeTemp = 0;

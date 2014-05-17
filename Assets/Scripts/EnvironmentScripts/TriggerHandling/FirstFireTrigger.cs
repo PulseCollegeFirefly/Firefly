@@ -27,7 +27,6 @@ public class FirstFireTrigger : MonoBehaviour {
 		if(other.tag == "Player")
 		{
 			//Causes stumble
-
 			other.GetComponent<PlayerHeadShake>().shakeHead();
 
 			//Turns on Explosion Particle Effect and then Destroys the Trigger so it can't be re-used
@@ -39,6 +38,14 @@ public class FirstFireTrigger : MonoBehaviour {
 				rubble.rigidbody.useGravity = true;
 				rubble.rigidbody.isKinematic = false;
 			}
+
+			audio.Play();
+		}
+	}
+
+	void OnTriggerExit (Collider other)
+	{
+		if (other.tag == "Player") {
 			Destroy(this.gameObject);
 		}
 	}

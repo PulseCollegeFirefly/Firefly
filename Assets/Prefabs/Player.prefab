@@ -940,15 +940,15 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: .779411793, g: .601751745, b: .601751745, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.20000005
   m_Range: 15.0500002
   m_SpotAngle: 109
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: -1
+    m_Resolution: 3
     m_Strength: 1
-    m_Bias: .0799999982
+    m_Bias: .00999999978
     m_Softness: 4
     m_SoftnessFade: 1
   m_Cookie: {fileID: 2800000, guid: 2c29c08dd1c0b6749b7cd0fcff7a29fd, type: 3}
