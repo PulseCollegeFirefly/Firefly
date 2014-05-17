@@ -14,9 +14,9 @@ SceneSettings:
 RenderSettings:
   m_Fog: 1
   m_FogColor: {r: .5, g: .5, b: .5, a: 1}
-  m_FogMode: 1
-  m_FogDensity: .340000004
-  m_LinearFogStart: 0
+  m_FogMode: 2
+  m_FogDensity: .289999992
+  m_LinearFogStart: 2
   m_LinearFogEnd: 18
   m_AmbientLight: {r: .0147058964, g: .0147058964, b: .0147058964, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 5ba172cd3918d7c44aa6d04446119a00, type: 2}
@@ -8521,7 +8521,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 173410034}
-  - 95: {fileID: 173410036}
+  - 65: {fileID: 173410035}
   m_Layer: 0
   m_Name: AirVentFan001
   m_TagString: Untagged
@@ -8548,21 +8548,18 @@ Transform:
   - {fileID: 1105990477}
   - {fileID: 1525492467}
   m_Father: {fileID: 709200129}
---- !u!95 &173410036
-Animator:
-  serializedVersion: 2
+--- !u!65 &173410035
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 119f19bead678124897a44466ccd93cc,
-    type: 3}
-  m_PrefabInternal: {fileID: 1492735525}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173410033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 119f19bead678124897a44466ccd93cc, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0999999, y: 1, z: 4.94999981}
+  m_Center: {x: 0, y: .129999995, z: -.209999993}
 --- !u!1 &173812053
 GameObject:
   m_ObjectHideFlags: 0
@@ -37342,7 +37339,8 @@ Prefab:
       propertyPath: m_Name
       value: AirVentFan002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 119f19bead678124897a44466ccd93cc, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 119f19bead678124897a44466ccd93cc, type: 3}
   m_RootGameObject: {fileID: 2053220041}
   m_IsPrefabParent: 0
@@ -82397,7 +82395,8 @@ Prefab:
       propertyPath: m_Name
       value: AirVentFan001
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 119f19bead678124897a44466ccd93cc, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 119f19bead678124897a44466ccd93cc, type: 3}
   m_RootGameObject: {fileID: 173410033}
   m_IsPrefabParent: 0
@@ -107978,7 +107977,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2053220042}
-  - 95: {fileID: 2053220043}
+  - 65: {fileID: 2053220043}
   m_Layer: 0
   m_Name: AirVentFan002
   m_TagString: Untagged
@@ -108005,21 +108004,18 @@ Transform:
   - {fileID: 865185086}
   - {fileID: 803489142}
   m_Father: {fileID: 709200129}
---- !u!95 &2053220043
-Animator:
-  serializedVersion: 2
+--- !u!65 &2053220043
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 119f19bead678124897a44466ccd93cc,
-    type: 3}
-  m_PrefabInternal: {fileID: 601755748}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2053220041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 119f19bead678124897a44466ccd93cc, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
+  serializedVersion: 2
+  m_Size: {x: 5.44999981, y: .280000001, z: 4.80000019}
+  m_Center: {x: 0, y: -.629999995, z: 0}
 --- !u!1 &2054141634
 GameObject:
   m_ObjectHideFlags: 0
