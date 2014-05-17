@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41de631ffc495b1448b8146eae0b2c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crouchDeltaHeight: .150000006
+  crouchDeltaHeight: .800000012
   crouchingCamHeight: -.75
   standardCamHeight: 0
 --- !u!114 &11400012
