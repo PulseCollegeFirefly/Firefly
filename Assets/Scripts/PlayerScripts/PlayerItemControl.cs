@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerItemControl : MonoBehaviour {
 
-	public GameObject activeItem;
+	public GameObject activeItem { get; private set; }
 	public GameObject[] heldItems;
 
 	private GameObject gameInventory;
@@ -13,6 +13,7 @@ public class PlayerItemControl : MonoBehaviour {
 	void Start () {
 		activeItem = null;
 		numObjects = 0;
+		currentObject = 0;
 		gameInventory = GameObject.FindGameObjectWithTag("Inventory");
 
 		UpdateObjects();
@@ -26,11 +27,11 @@ public class PlayerItemControl : MonoBehaviour {
 		{
 			// Set current Object number, reset when over max.
 			currentObject++;
-			if(currentObject > numObjects)
+			if(currentObject > numObjects-1)
 				currentObject = 0;
 
 			// Find current Object inside the heldItems array, else set it to null
-			if(currentObject != 0)
+			if(currentObject > 0)
 				activeItem = heldItems[currentObject-1];
 			else
 				activeItem = null;

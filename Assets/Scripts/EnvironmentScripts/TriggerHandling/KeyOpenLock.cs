@@ -23,9 +23,12 @@ public class KeyOpenLock : MonoBehaviour {
 		{
 			if(Input.GetButtonDown("Interact"))
 			{
-				if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired))
+				if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired) && GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem != null)
 				{
-					moveDoor = true;
+					if(GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem.name == keyRequired)
+					{
+						moveDoor = true;
+					}
 				}
 			}
 		}
