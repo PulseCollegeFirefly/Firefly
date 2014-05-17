@@ -34045,7 +34045,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .0512201227
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 029e7419e3eb5cf458bcaaf2abe0100a, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 029e7419e3eb5cf458bcaaf2abe0100a, type: 3}
   m_RootGameObject: {fileID: 1828426313}
   m_IsPrefabParent: 0
@@ -96618,7 +96619,6 @@ GameObject:
   - 4: {fileID: 1828426317}
   - 33: {fileID: 1828426316}
   - 23: {fileID: 1828426315}
-  - 95: {fileID: 1828426314}
   m_Layer: 0
   m_Name: NewspaperFBX
   m_TagString: Untagged
@@ -96626,21 +96626,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1828426314
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 029e7419e3eb5cf458bcaaf2abe0100a,
-    type: 3}
-  m_PrefabInternal: {fileID: 491804522}
-  m_GameObject: {fileID: 1828426313}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 029e7419e3eb5cf458bcaaf2abe0100a, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!23 &1828426315
 Renderer:
   m_ObjectHideFlags: 0
