@@ -38,8 +38,6 @@ public class FirstFireTrigger : MonoBehaviour {
 				rubble.rigidbody.useGravity = true;
 				rubble.rigidbody.isKinematic = false;
 			}
-
-			audio.Play();
 		}
 	}
 
