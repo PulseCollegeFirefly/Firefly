@@ -18,6 +18,8 @@ public class CellOpening : MonoBehaviour
 	public GameObject doorFire3;
 	GameObject MainLight;
 	public GameObject spawningKeys;
+	public AudioClip audio1;
+	public AudioClip audio2;
 
 	//An array of Rigidbodies for the Children of the door
 	Rigidbody [] doorParts;
@@ -56,8 +58,10 @@ public class CellOpening : MonoBehaviour
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = false;
 		thePlayer.GetComponent<Rigidbody>().detectCollisions = false;
 		thePlayer.GetComponent<Rigidbody>().useGravity = false;
+		thePlayer.audio.clip = audio1;
+		thePlayer.audio.Play ();
 		//Wait for two seconds
-		yield return new WaitForSeconds(2.0f);
+		yield return new WaitForSeconds(6.0f);
 		//Turns off the Keys
 		spawningKeys.SetActive (false);
 		//Turn on the Explosion particle effect
@@ -91,6 +95,8 @@ public class CellOpening : MonoBehaviour
 		thePlayer.GetComponent<FirstPersonCharacter> ().enabled = true;
 		thePlayer.GetComponent<Rigidbody>().detectCollisions = true;
 		thePlayer.GetComponent<Rigidbody>().useGravity = true;
+		thePlayer.audio.clip = audio2;
+		thePlayer.audio.Play ();
 	}
 
 	// Release mouse lock
