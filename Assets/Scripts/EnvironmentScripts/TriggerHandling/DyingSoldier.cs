@@ -33,10 +33,15 @@ public class DyingSoldier : MonoBehaviour {
 	{
 		animation.Play ("soldierDieBack", PlayMode.StopAll);
 		isDead = true;
-		drop.SetActive (true);
-		drop.GetComponent<AudioSource>().enabled = true;
-		yield return new WaitForSeconds(2.0f);
-		drop.GetComponent<Rigidbody>().detectCollisions = false;
-		drop.GetComponent<Rigidbody>().useGravity = false;
+		if(GameObject.Find ("GameController").GetComponent<LevelState>().DyingSoldier == false)
+		{		
+			drop.SetActive (true);
+			drop.GetComponent<AudioSource>().enabled = true;
+			yield return new WaitForSeconds(2.0f);
+			drop.GetComponent<Rigidbody>().detectCollisions = false;
+			drop.GetComponent<Rigidbody>().useGravity = false;
+			GameObject.Find ("GameController").GetComponent<LevelState>().DyingSoldier = true;
+		}
+
 	}
 }

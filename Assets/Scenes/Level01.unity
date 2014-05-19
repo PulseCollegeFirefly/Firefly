@@ -6775,11 +6775,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentLevel: 
-  GuardsKeys: 0
   PrisonDoor: 0
+  PrisonDoorOff: 0
   DyingSoldier: 0
   CellOpening: 0
-  Torch: 0
+  CellOpeningOff: 0
 --- !u!1 &125705806
 GameObject:
   m_ObjectHideFlags: 0

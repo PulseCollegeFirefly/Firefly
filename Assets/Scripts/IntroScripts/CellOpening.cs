@@ -44,6 +44,7 @@ public class CellOpening : MonoBehaviour
 		// if the lvl is the first time round
 		if(gameController.GetComponent<GameController> ().lvlCount == 0)
 			StartCoroutine(DoorCoroutine ());
+		spawningKeys.SetActive (false);
 	}
 
 	void Update ()
@@ -62,8 +63,6 @@ public class CellOpening : MonoBehaviour
 		thePlayer.audio.Play ();
 		//Wait for two seconds
 		yield return new WaitForSeconds(6.0f);
-		//Turns off the Keys
-		spawningKeys.SetActive (false);
 		//Turn on the Explosion particle effect
 		explode.SetActive (true);
 		//Shake the Camera
