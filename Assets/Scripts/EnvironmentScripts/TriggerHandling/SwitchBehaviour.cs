@@ -18,6 +18,7 @@ public class SwitchBehaviour : MonoBehaviour {
 			foreach(GameObject d in ds)
 			{
 				d.GetComponent<OpenDoor> ().MoveDoor();
+				GameObject.Find ("GameController").GetComponent<LevelState>().PrisonDoor =true;
 			}	
 		}
 	}

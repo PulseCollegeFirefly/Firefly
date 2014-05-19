@@ -28,6 +28,7 @@ public class LevelLoader : MonoBehaviour {
 
 			// Inc the Level count
 			gameController.GetComponent<GameController> ().incLvl();
+			gameController.GetComponent<LevelState>().CurrentLevel = levelToLoad;
 
 			// Set Scene ending
 			sceneEnding = true;

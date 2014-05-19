@@ -97,6 +97,7 @@ public class CellOpening : MonoBehaviour
 		thePlayer.GetComponent<Rigidbody>().useGravity = true;
 		thePlayer.audio.clip = audio2;
 		thePlayer.audio.Play ();
+		GameObject.Find ("GameController").GetComponent<LevelState>().CellOpening = true;
 	}
 
 	// Release mouse lock
