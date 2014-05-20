@@ -15,17 +15,21 @@ public class LevelState : MonoBehaviour
 	{
 		if(CurrentLevel == "Level01")
 		{
-			if (CellOpening == true && CellOpeningOff == false)
+			if (GameObject.Find ("CellDoorBroken") !=null)
 			{
-				GameObject.Find ("CellDoorBroken").SetActive (false);
-				CellOpeningOff = true;
-
+				if (CellOpening == true && CellOpeningOff == false)
+				{
+					GameObject.Find ("CellDoorBroken").SetActive (false);
+					CellOpeningOff = true;
+				}
 			}
-			if (PrisonDoor == true && PrisonDoorOff == false)
+			if (GameObject.FindGameObjectWithTag ("Switch1") != null)
 			{
-
-				GameObject.Find ("PrisonDoor").SetActive (false);
-				PrisonDoorOff = true;
+				if (PrisonDoor == true && PrisonDoorOff == false)
+				{
+					GameObject.FindGameObjectWithTag ("Switch1").SetActive (false);
+					PrisonDoorOff = true;
+				}
 			}
 		}
 	}	
