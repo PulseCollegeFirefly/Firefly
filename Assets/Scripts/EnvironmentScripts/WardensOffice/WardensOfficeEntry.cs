@@ -7,10 +7,15 @@ public class WardensOfficeEntry : MonoBehaviour {
 	public GameObject fire;
 
 	// Use this for initialization
-	void Awake () {
+	void Awake ()
+	{
 
 		foreach(GameObject rubble in rubbles)
 		{
+			// Set Box Collider Off
+			this.gameObject.GetComponent<BoxCollider> ().enabled = false;
+
+			// Set up rubble objects
 			rubble.rigidbody.useGravity = false;
 			rubble.rigidbody.isKinematic = true;
 			rubble.collider.enabled = false;
@@ -21,7 +26,8 @@ public class WardensOfficeEntry : MonoBehaviour {
 
 	}
 	
-	void OnTriggerExit (Collider p) {
+	void OnTriggerExit (Collider p) 
+	{
 
 		if(p.tag == "Player")
 		{
@@ -36,7 +42,9 @@ public class WardensOfficeEntry : MonoBehaviour {
 			fire.SetActive (true);
 		}
 
-		this.gameObject.GetComponent<BoxCollider> ().isTrigger = false;
+		// Destory the Sphere Collider and enable the Box Collider
+		this.gameObject.GetComponent<BoxCollider> ().enabled = true;
+		Destroy (this.gameObject.GetComponent<SphereCollider> ());
 	}
 
 	private void Switch(GameObject a)
