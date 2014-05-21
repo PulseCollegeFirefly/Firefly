@@ -4,10 +4,24 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: BunkBed
+    100004: Plane001
+    100006: Plane002
     400000: //RootNode
+    400002: BunkBed
+    400004: Plane001
+    400006: Plane002
     2300000: //RootNode
+    2300002: BunkBed
+    2300004: Plane001
+    2300006: Plane002
     3300000: //RootNode
+    3300002: BunkBed
+    3300004: Plane001
+    3300006: Plane002
     4300000: BunkBed
+    4300002: Plane001
+    4300004: Plane002
     9500000: //RootNode
   materials:
     importMaterials: 1

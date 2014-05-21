@@ -6,15 +6,25 @@ ModelImporter:
     100000: Cylinder001
     100002: //RootNode
     100004: Plane001
+    100006: Cylinder002
+    100008: FlagPole
     400000: Cylinder001
     400002: //RootNode
     400004: Plane001
+    400006: Cylinder002
+    400008: FlagPole
     2300000: Cylinder001
     2300002: Plane001
+    2300004: Cylinder002
+    2300006: FlagPole
     3300000: Cylinder001
     3300002: Plane001
+    3300004: Cylinder002
+    3300006: FlagPole
     4300000: Plane001
     4300002: Cylinder001
+    4300004: FlagPole
+    4300006: Cylinder002
     9500000: //RootNode
   materials:
     importMaterials: 1

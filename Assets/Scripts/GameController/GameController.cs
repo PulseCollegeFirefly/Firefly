@@ -10,6 +10,9 @@ public class GameController : MonoBehaviour {
 	void Start ()
 	{
 		DontDestroyOnLoad(this.gameObject);
+		Application.targetFrameRate = 26;
+
+		QualitySettings.vSyncCount = 2;
 
 		// This Value Controls Health
 		setHealth (100);
