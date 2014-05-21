@@ -52,7 +52,7 @@ public class PlayerObjectPickUp : MonoBehaviour {
 						{
 							hit.collider.gameObject.audio.Play();	
 						}
-						GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().AddItem(hit.collider.gameObject);
+						GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().AddItem(hit.collider.gameObject, hit.collider.name+"Inv");
 						GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl>().UpdateObjects();
 
 					}
