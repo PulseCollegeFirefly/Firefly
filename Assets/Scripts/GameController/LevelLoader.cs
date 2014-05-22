@@ -33,11 +33,11 @@ public class LevelLoader : MonoBehaviour {
 			//Resets Booleans for turning off renderers on re-entry to level01
 			if (levelToLoad == "Level01")
 			{
-				if (gameController.GetComponent<LevelState>().PrisonDoor = true)
+				if (gameController.GetComponent<LevelState>().PrisonDoor == true)
 				{
 					gameController.GetComponent<LevelState>().PrisonDoorOff = false;
 				}
-				if (gameController.GetComponent<LevelState>().CellOpening = true)
+				if (gameController.GetComponent<LevelState>().CellOpening == true)
 				{
 					gameController.GetComponent<LevelState>().CellOpeningOff = false;
 				}

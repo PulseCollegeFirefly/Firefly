@@ -35,7 +35,7 @@ public class LevelState : MonoBehaviour
 				}
 			}
 
-			// Turn off Torch
+			// Turn off Torch if picked up
 			if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem("TorchInv"))
 			{
 				if(GameObject.Find ("Torch") !=null)

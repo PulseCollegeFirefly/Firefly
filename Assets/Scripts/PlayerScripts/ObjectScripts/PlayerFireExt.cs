@@ -6,6 +6,7 @@ public class PlayerFireExt : MonoBehaviour {
 	// Key Parts
 	private GameObject fireExt;
 	private GameObject activeItem;
+	private ParticleSystem steam;
 	
 	void Awake () {
 		
@@ -13,6 +14,9 @@ public class PlayerFireExt : MonoBehaviour {
 		fireExt = this.gameObject;
 		fireExt.renderer.enabled = false;
 		fireExt.GetComponent<BoxCollider> ().enabled = false;
+
+		// Reference Steam
+		steam = GameObject.FindGameObjectWithTag("Steam").GetComponent<ParticleSystem> ();
 	}
 	
 	void CheckActiveItem ()
@@ -31,15 +35,37 @@ public class PlayerFireExt : MonoBehaviour {
 			fireExt.renderer.enabled = true;
 			fireExt.GetComponent<BoxCollider> ().enabled = true;
 
-			if(Input.GetButtonDown("Interact") && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObjectPickUp> ().interact)
+			if(Input.GetButton("Interact"))
 			{
-				Destroy (GameObject.Find("EnterWardinsOffice"));
+				Debug.Log("Pressed");
+				if (steam != null)
+					steam.Play ();
+
+				if(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObjectPickUp> ().interact)
+				{
+					GameObject enterWardinsOffice = GameObject.Find ("EnterWardinsOffice");
+
+					if(enterWardinsOffice != null)
+					{
+						enterWardinsOffice.GetComponent<WardensOfficeEntry> ().setFire(false);
+
+						Destroy (GameObject.Find ("FireTriggerExit"));
+						Destroy (steam);
+						Destroy (enterWardinsOffice);
+					}
+				}	
 			}
+			else
+				if(steam != null)
+					steam.Stop ();
 		}
 		else
 		{
 			fireExt.renderer.enabled = false;
 			fireExt.GetComponent<BoxCollider> ().enabled = false;
+
+			if(steam != null)
+				steam.Stop ();
 		}
 	}
 }

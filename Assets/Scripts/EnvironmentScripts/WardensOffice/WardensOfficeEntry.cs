@@ -5,11 +5,11 @@ public class WardensOfficeEntry : MonoBehaviour {
 
 	public GameObject[] rubbles;
 	public GameObject fire;
+	public GameObject fireDamage;
 
 	// Use this for initialization
 	void Awake ()
 	{
-
 		foreach(GameObject rubble in rubbles)
 		{
 			// Set Box Collider Off
@@ -23,6 +23,9 @@ public class WardensOfficeEntry : MonoBehaviour {
 			// Render
 			Switch(rubble);
 		}
+
+		// turn off fire damage
+		fireDamage.SetActive (false);
 
 	}
 	
@@ -39,7 +42,8 @@ public class WardensOfficeEntry : MonoBehaviour {
 
 				Switch (rubble);
 			}
-			fire.SetActive (true);
+			setFire (true);
+			fireDamage.SetActive (true);
 		}
 
 		// Destory the Sphere Collider and enable the Box Collider
@@ -55,5 +59,10 @@ public class WardensOfficeEntry : MonoBehaviour {
 		{
 			r.enabled = !r.enabled;
 		}
+	}
+
+	public void setFire(bool b)
+	{
+		fire.SetActive(b);
 	}
 }
