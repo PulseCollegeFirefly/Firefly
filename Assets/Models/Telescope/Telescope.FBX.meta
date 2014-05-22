@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: bace6e76e6b1ca04da2d1bdcbef0d592
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: Base
     100002: ChamferCyl004
@@ -102,5 +102,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 

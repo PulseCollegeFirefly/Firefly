@@ -4,7 +4,7 @@ using System.Collections;
 public class IntroSelect : MonoBehaviour {
 
 	public float offset;
-	public Texture introTexture;
+	public Transform lookAtTarget;
 
 	private float screenHeight;
 	private float screenWidth;
@@ -14,6 +14,12 @@ public class IntroSelect : MonoBehaviour {
 		// Cache Screen Height and Width
 		screenHeight = Screen.height;
 		screenWidth = Screen.width;
+	}
+
+	void Update ()
+	{
+		transform.LookAt(lookAtTarget);
+		transform.Translate(Vector3.right * Time.deltaTime);
 	}
 	
 	void OnGUI () {
