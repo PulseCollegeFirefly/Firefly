@@ -9,8 +9,8 @@ public class IntroSelect : MonoBehaviour {
 	private float screenHeight;
 	private float screenWidth;
 
-	void Awake () {
-
+	void Awake ()
+	{
 		// Cache Screen Height and Width
 		screenHeight = Screen.height;
 		screenWidth = Screen.width;
@@ -18,12 +18,13 @@ public class IntroSelect : MonoBehaviour {
 
 	void Update ()
 	{
+		// Move Camera
 		transform.LookAt(lookAtTarget);
 		transform.Translate(Vector3.right * Time.deltaTime);
 	}
 	
-	void OnGUI () {
-
+	void OnGUI ()
+	{
 		// Load First Level
 		if (GUI.Button(new Rect((screenWidth/2)-50, (screenHeight/2)+offset, 100, 50), "Start"))
 			Application.LoadLevel("Level01");

@@ -11,7 +11,8 @@ public class PlayerGUI : MonoBehaviour {
 	private float screenHeight;
 	private float screenWidth;
 
-	void Start () {
+	void Start ()
+	{
 		// Cache Screen Height and Width
 		screenHeight = Screen.height;
 		screenWidth = Screen.width;

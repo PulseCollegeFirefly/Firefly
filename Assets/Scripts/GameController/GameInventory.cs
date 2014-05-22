@@ -5,14 +5,14 @@ public class GameInventory : MonoBehaviour {
 
 	private GameObject gameController;
 
-	void Start () {
-
+	void Start ()
+	{
 		// Don't Destroy on Load.
 		DontDestroyOnLoad(this.gameObject);	
 	}
 
-	public void AddItem (GameObject itemPickup, string name) {
-
+	public void AddItem (GameObject itemPickup, string name)
+	{
 		// Make Child off the inventory
 		itemPickup.transform.parent = this.gameObject.transform;
 
@@ -28,8 +28,8 @@ public class GameInventory : MonoBehaviour {
 		itemPickup.rigidbody.isKinematic = true;
 	}
 
-	public bool findItem (string item) {
-
+	public bool findItem (string item)
+	{
 		// Foreach child item in the Inventory
 		foreach (Transform child in this.gameObject.transform)
 		{

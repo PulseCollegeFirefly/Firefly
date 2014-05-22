@@ -13,8 +13,10 @@ public class LevelState : MonoBehaviour
 
 	void Update () 
 	{
+		// If Level 1
 		if(CurrentLevel == "Level01")
 		{
+			// If the cell has already open turn it off
 			if (GameObject.Find ("CellDoorBroken") !=null)
 			{
 				if (CellOpening == true && CellOpeningOff == false)
@@ -23,6 +25,7 @@ public class LevelState : MonoBehaviour
 					CellOpeningOff = true;
 				}
 			}
+
 			if (GameObject.FindGameObjectWithTag ("Switch1") != null)
 			{
 				if (PrisonDoor == true && PrisonDoorOff == false)
@@ -30,6 +33,13 @@ public class LevelState : MonoBehaviour
 					GameObject.FindGameObjectWithTag ("Switch1").SetActive (false);
 					PrisonDoorOff = true;
 				}
+			}
+
+			// Turn off Torch
+			if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem("TorchInv"))
+			{
+				if(GameObject.Find ("Torch") !=null)
+					GameObject.Find ("Torch").SetActive (false);
 			}
 		}
 	}	
