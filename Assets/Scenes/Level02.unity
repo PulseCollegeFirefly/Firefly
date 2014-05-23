@@ -9409,7 +9409,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &461500969
 Transform:
@@ -9433,8 +9433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7271ecc7b0a8740b0b62b062f38a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  damageOffset: 2
+  damage: 5
+  damageOffset: 3
 --- !u!1 &465037977
 GameObject:
   m_ObjectHideFlags: 0
@@ -30111,8 +30111,8 @@ Transform:
   - {fileID: 662187380}
   - {fileID: 303757159}
   - {fileID: 604419460}
-  - {fileID: 1825675592}
   - {fileID: 1559839301}
+  - {fileID: 1825675592}
   - {fileID: 1648859011}
   - {fileID: 678850136}
   m_Father: {fileID: 0}
@@ -35838,8 +35838,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.52999997
-  m_Center: {x: 0, y: 0, z: 1.88}
+  m_Radius: 1.23000002
+  m_Center: {x: 0, y: 0, z: 1.33000004}
 --- !u!1 &2035356584
 GameObject:
   m_ObjectHideFlags: 0

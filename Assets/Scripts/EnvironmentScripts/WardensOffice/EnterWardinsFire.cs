@@ -23,7 +23,6 @@ public class EnterWardinsFire : MonoBehaviour {
 		if(other.tag == "Player") {
 			playerHealth.SetEvDamage(damage, damageOffset);
 			playerHealthGUI.flash = true;
-			Debug.Log ("Entered Fire");
 		}
 	}
 	
@@ -32,7 +31,6 @@ public class EnterWardinsFire : MonoBehaviour {
 		if(other.tag == "Player") {
 			playerHealth.SetEvDamage(0, 0);
 			playerHealthGUI.flash = false;
-			Debug.Log ("Left Fire");
 		}
 	}
 

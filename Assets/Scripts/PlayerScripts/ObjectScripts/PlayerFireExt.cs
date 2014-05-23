@@ -37,20 +37,21 @@ public class PlayerFireExt : MonoBehaviour {
 
 			if(Input.GetButton("Interact"))
 			{
-				Debug.Log("Pressed");
 				if (steam != null)
 					steam.Play ();
 
+				// If object player is interacting with something
 				if(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObjectPickUp> ().interact)
 				{
 					GameObject enterWardinsOffice = GameObject.Find ("EnterWardinsOffice");
 
+					// If it's not already destried destroy :-)
 					if(enterWardinsOffice != null)
 					{
 						enterWardinsOffice.GetComponent<WardensOfficeEntry> ().setFire(false);
 
 						Destroy (GameObject.Find ("FireTriggerExit"));
-						Destroy (steam);
+						//Destroy (steam);
 						Destroy (enterWardinsOffice);
 					}
 				}	
