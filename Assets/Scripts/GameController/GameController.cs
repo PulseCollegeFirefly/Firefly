@@ -5,8 +5,10 @@ public class GameController : MonoBehaviour {
 	
 	private float health=100; 
 	private float timer;
+	private float fogLevel;
 
 	public float lvlCount;
+	public float fogOffset;
 
 	void Start ()
 	{
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour {
 		// This Value Controls Health
 		setHealth (100);
 		lvlCount = 0;
+		fogLevel = 0;
 	}
 
 	void Update ()
@@ -48,5 +51,14 @@ public class GameController : MonoBehaviour {
 
 	public float lvl () {
 		return lvlCount;
-	}	
+	}
+
+	// Get and Set Fog Level
+	public float getFogLevel () {
+		return fogLevel;
+	}
+
+	public void setFoglevel (float f) {
+		fogLevel = f;
+	}
 }

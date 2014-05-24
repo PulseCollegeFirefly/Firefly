@@ -51,6 +51,7 @@ public class WardensOfficeEntry : MonoBehaviour {
 		Destroy (this.gameObject.GetComponent<SphereCollider> ());
 	}
 
+
 	private void Switch(GameObject a)
 	{
 		Renderer[] renderers = a.GetComponentsInChildren<Renderer>();
@@ -64,5 +65,15 @@ public class WardensOfficeEntry : MonoBehaviour {
 	public void setFire(bool b)
 	{
 		fire.SetActive(b);
+	}
+
+	void OnTriggerEnter (Collider p)
+	{
+		OnTriggerExit (p);
+	}
+
+	void OnTriggerStay (Collider p)
+	{
+		OnTriggerExit (p);
 	}
 }
