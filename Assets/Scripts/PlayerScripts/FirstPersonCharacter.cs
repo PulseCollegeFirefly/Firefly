@@ -38,20 +38,6 @@ public class FirstPersonCharacter : MonoBehaviour
 		renderer.enabled = false;
 	}
 
-	void OnDisable()
-	{
-		Screen.lockCursor = false;
-	}
-	
-	void Update()
-	{
-		if (Input.GetMouseButtonUp(0))
-		{
-			Screen.lockCursor = lockCursor;
-		}
-	}
-	
-	
 	public void FixedUpdate ()
 	{
 		float speed = runSpeed;

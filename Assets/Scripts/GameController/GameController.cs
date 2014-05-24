@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 
 	public float lvlCount;
 	public float fogOffset;
+	public bool lockCusor;
 
 	void Start ()
 	{
@@ -21,12 +22,30 @@ public class GameController : MonoBehaviour {
 		setHealth (100);
 		lvlCount = 0;
 		fogLevel = 0;
+		lockCusor = false;
 	}
 
 	void Update ()
 	{
 		// Game Timer
 		timer += Time.deltaTime;
+
+		// If user clicks lock mouse
+		if (lockCusor)
+		{
+			Screen.lockCursor = true;
+		}
+
+		if(Application.loadedLevelName != "IntroScene" && Input.GetMouseButtonUp(0))
+		{
+			lockCusor = true;
+		}
+	}
+
+	void OnDisable ()
+	{
+		lockCusor = false;
+		Screen.lockCursor = false;
 	}
 
 	// Get and Set Health

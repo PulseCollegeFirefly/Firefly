@@ -47,12 +47,6 @@ public class CellOpening : MonoBehaviour
 		spawningKeys.SetActive (false);
 	}
 
-	void Update ()
-	{
-		Screen.lockCursor = true;
-	}
-
-
 	public IEnumerator DoorCoroutine()		
 	{	
 		//Turns off the FirstPersonCharacter Script, prevents movement using the keys, but the mouse still looks around
@@ -97,11 +91,5 @@ public class CellOpening : MonoBehaviour
 		thePlayer.audio.clip = audio2;
 		thePlayer.audio.Play ();
 		GameObject.Find ("GameController").GetComponent<LevelState>().CellOpening = true;
-	}
-
-	// Release mouse lock
-	void OnDisable()
-	{
-		Screen.lockCursor = false;
 	}
 }

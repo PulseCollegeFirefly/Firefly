@@ -29136,6 +29136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlCount: 0
   fogOffset: 200
+  lockCusor: 0
 --- !u!4 &1645149830
 Transform:
   m_ObjectHideFlags: 0
