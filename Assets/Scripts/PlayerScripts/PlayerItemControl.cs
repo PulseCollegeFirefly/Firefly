@@ -7,11 +7,12 @@ public class PlayerItemControl : MonoBehaviour {
 	public GameObject[] heldItems;
 
 	private GameObject gameInventory;
+	private GameObject gameController;
 	private int numObjects;
 	private int currentObject;
 	
 	void Start () {
-		activeItem = null;
+
 		numObjects = 0;
 		currentObject = 0;
 		gameInventory = GameObject.FindGameObjectWithTag("Inventory");

@@ -5,7 +5,8 @@ public class GameController : MonoBehaviour {
 	
 	private float health=100; 
 	private float timer;
-	public int lvlCount;
+
+	public float lvlCount;
 
 	void Start ()
 	{
@@ -42,9 +43,10 @@ public class GameController : MonoBehaviour {
 	// Get and Set lvlCount
 	public void incLvl () {
 		lvlCount++;
+
 	}
 
-	public int lvl () {
+	public float lvl () {
 		return lvlCount;
-	}
+	}	
 }
