@@ -31,6 +31,7 @@ public class PlayerInventoryGUI : MonoBehaviour {
 		{
 			// Begin Inventory Display
 			GUI.BeginGroup(new Rect(0, 0, screenWidth, screenHeight));
+			GUI.DrawTexture(new Rect (0, 0, screenWidth, screenHeight), texture);
 			GUI.Box(new Rect(0, 0, screenWidth, screenHeight/10), "Inventory", largeFont);
 			
 			// Display Enclosing Box
