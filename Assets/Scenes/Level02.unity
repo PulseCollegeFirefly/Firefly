@@ -9534,7 +9534,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 461500967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.236311913, y: -.541606903, z: -.432150364}
+  m_LocalPosition: {x: -.236311913, y: -.541606903, z: -1.02633619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2020882400}
@@ -30344,6 +30344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeTexture: {fileID: 2800000, guid: f289257190b4ae641a096cc323671f02, type: 3}
   defaultTexture: {fileID: 2800000, guid: 9dd690d69be80f2479fb1456cac6d874, type: 3}
+  activeTex: 0
 --- !u!114 &1507939230
 MonoBehaviour:
   m_ObjectHideFlags: 0

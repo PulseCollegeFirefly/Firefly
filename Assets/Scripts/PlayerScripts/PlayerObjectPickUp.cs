@@ -30,22 +30,19 @@ public class PlayerObjectPickUp : MonoBehaviour {
 			// Set interact
 			interact = hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp");
 
-			// Set GUI Texture to Active
-			if(interact)
-				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(true);
-			else
-				this.gameObject.GetComponent<PlayerGUI>().SetActiveTexture(false);
-
 			//
 			// Interact
 			//
-
-			if(Input.GetButtonDown("Interact"))
+			if(interact)
 			{
-				if(interact)
+				// If Item is collectable
+				if(hit.collider.tag == "PickUp")
 				{
-					// If Item is collectable
-					if(hit.collider.tag == "PickUp")
+					// Set Active Texture
+					GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
+
+					// If interact pick up the object
+					if(Input.GetButtonDown("Interact"))
 					{
 						// Add to Inventory
 						if(hit.collider.gameObject.audio)
@@ -58,6 +55,8 @@ public class PlayerObjectPickUp : MonoBehaviour {
 					}
 				}
 			}
+			else
+				GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = false;
 		}
 	}
 }

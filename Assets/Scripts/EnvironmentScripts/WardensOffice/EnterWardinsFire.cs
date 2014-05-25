@@ -36,7 +36,9 @@ public class EnterWardinsFire : MonoBehaviour {
 
 	void OnDestroy ()
 	{
-		playerHealth.SetEvDamage(0, 0);
-		playerHealthGUI.flash = false;
+		if(playerHealth != null)
+			playerHealth.SetEvDamage(0, 0);
+		if(playerHealthGUI != null)
+			playerHealthGUI.flash = false;
 	}
 }

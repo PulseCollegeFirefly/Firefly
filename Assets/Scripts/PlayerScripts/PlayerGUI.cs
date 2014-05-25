@@ -6,6 +6,8 @@ public class PlayerGUI : MonoBehaviour {
 	public Texture activeTexture;
 	public Texture defaultTexture;
 
+	public bool activeTex;
+
 	private Texture currentTexture;
 	private float screenHeight;
 	private float screenWidth;
@@ -37,6 +39,11 @@ public class PlayerGUI : MonoBehaviour {
 	void Update ()
 	{
 		CheckForCoolness ();
+
+		if(player.GetComponent<PlayerObjectPickUp> ().interact && activeTex)
+			SetActiveTexture(true);
+		else
+			SetActiveTexture(false);
 	}
 
 	void OnGUI ()

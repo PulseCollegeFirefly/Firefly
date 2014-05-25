@@ -21,17 +21,35 @@ public class KeyOpenLock : MonoBehaviour {
 	{
 		if(other.tag == "Player")
 		{
-			if(Input.GetButtonDown("Interact"))
+			if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired) && GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem != null)
 			{
-				if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired) && GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem != null)
+				if(GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem.name == keyRequired)
 				{
-					if(GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem.name == keyRequired)
+					GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
+					if(Input.GetButtonDown("Interact"))
 					{
+
 						moveDoor = true;
+						Destroy (this.gameObject.GetComponent<SphereCollider>());
+						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = false;
 					}
 				}
+				else 
+				{
+					GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI> ().activeTex = false;
+				}
+			}
+			else 
+			{
+				GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI> ().activeTex = false;
 			}
 		}
+	}
+
+	void OnTriggerExit (Collider p)
+	{
+		if(p.tag == "Player")
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI> ().activeTex = false;
 	}
 
 	private void RotateDoor(Vector3 rotate, float time)
