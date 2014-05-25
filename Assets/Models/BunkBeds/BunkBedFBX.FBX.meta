@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7e4a701d0e2448a4eb95dfbe2746a24e
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
     100002: BunkBed
@@ -22,11 +22,14 @@ ModelImporter:
     4300000: BunkBed
     4300002: Plane001
     4300004: Plane002
+    6400000: BunkBed
+    6400002: Plane001
+    6400004: Plane002
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 2
+    materialSearch: 2
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -41,9 +44,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00800000038
+    globalScale: .100000001
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -74,5 +77,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 
