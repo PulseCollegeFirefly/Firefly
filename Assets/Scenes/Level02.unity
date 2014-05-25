@@ -12023,7 +12023,7 @@ GameObject:
   - 54: {fileID: 622145858}
   - 65: {fileID: 622145859}
   m_Layer: 0
-  m_Name: WardensKey
+  m_Name: WardenKeys
   m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23459,7 +23459,6 @@ Transform:
   - {fileID: 1255197224}
   - {fileID: 1479599674}
   - {fileID: 1690856018}
-  - {fileID: 1225246775}
   - {fileID: 1889221536}
   m_Father: {fileID: 1392541976}
 --- !u!114 &1148504503
@@ -24343,64 +24342,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1361783833}
   m_GameObject: {fileID: 1222954778}
   m_Mesh: {fileID: 4300000, guid: 821d6c310e89a2646a360927790eb164, type: 3}
---- !u!1 &1225246774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100032, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
-  m_PrefabInternal: {fileID: 1292145623}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1225246775}
-  - 33: {fileID: 1225246777}
-  - 23: {fileID: 1225246776}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1225246775
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400032, guid: 6f2ac11babf10ba44a8f78c32f4e4454, type: 2}
-  m_PrefabInternal: {fileID: 1292145623}
-  m_GameObject: {fileID: 1225246774}
-  m_LocalRotation: {x: 0, y: -.995565653, z: 0, w: .094069615}
-  m_LocalPosition: {x: 1.23915374, y: -.600000024, z: 6.49861717}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1148504502}
---- !u!23 &1225246776
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300020, guid: 6f2ac11babf10ba44a8f78c32f4e4454,
-    type: 2}
-  m_PrefabInternal: {fileID: 1292145623}
-  m_GameObject: {fileID: 1225246774}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
---- !u!33 &1225246777
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300018, guid: 6f2ac11babf10ba44a8f78c32f4e4454,
-    type: 2}
-  m_PrefabInternal: {fileID: 1292145623}
-  m_GameObject: {fileID: 1225246774}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1248123995
 GameObject:
   m_ObjectHideFlags: 0
@@ -33467,6 +33408,10 @@ Prefab:
       propertyPath: m_TagString
       value: PickUp
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fc5db598fcdaa904b939a2e94f743f8b, type: 3}
+      propertyPath: m_Name
+      value: WardenKeys
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: fc5db598fcdaa904b939a2e94f743f8b, type: 3}
     - {fileID: 6400000, guid: fc5db598fcdaa904b939a2e94f743f8b, type: 3}
@@ -35019,7 +34964,7 @@ Transform:
   m_PrefabInternal: {fileID: 1292145623}
   m_GameObject: {fileID: 1889221535}
   m_LocalRotation: {x: -.90398699, y: -2.70752381e-08, z: -5.72449785e-08, w: .427560002}
-  m_LocalPosition: {x: .300991386, y: -.667239428, z: 1.16177487}
+  m_LocalPosition: {x: .300991386, y: -.538563371, z: 1.16177487}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1148504502}
