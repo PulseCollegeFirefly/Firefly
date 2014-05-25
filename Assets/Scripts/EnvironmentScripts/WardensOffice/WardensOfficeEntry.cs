@@ -27,6 +27,9 @@ public class WardensOfficeEntry : MonoBehaviour {
 		// turn off fire damage
 		fireDamage.SetActive (false);
 
+		// Set up box collider
+		this.gameObject.GetComponent<BoxCollider> ().isTrigger = false;
+		this.gameObject.GetComponent<BoxCollider> ().enabled = false;
 	}
 	
 	void OnTriggerExit (Collider p) 

@@ -291,5 +291,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Level01
-  fadeSpeed: 1.5
-  waitTime: 10
+  fadeSpeed: 2
+  waitTime: 14
