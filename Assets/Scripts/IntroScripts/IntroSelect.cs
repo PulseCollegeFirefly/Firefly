@@ -29,7 +29,7 @@ public class IntroSelect : MonoBehaviour {
 		if (GUI.Button(new Rect((screenWidth/2)-50, (screenHeight/2)+offset, 100, 50), "Start"))
 		{
 			GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().lockCusor = true;
-			Application.LoadLevel("Level01");
+			Application.LoadLevel("MovementTutorial");
 		}
 	}
 }
