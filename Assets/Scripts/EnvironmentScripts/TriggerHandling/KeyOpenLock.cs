@@ -21,11 +21,14 @@ public class KeyOpenLock : MonoBehaviour {
 	{
 		if(other.tag == "Player")
 		{
-			if(GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired) && GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem != null)
+			if((GameObject.FindGameObjectWithTag("Inventory").GetComponent<GameInventory>().findItem(keyRequired) && GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem != null) || keyRequired == "Secret")
 			{
-				if(GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem.name == keyRequired)
-				{
-					GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
+				if(keyRequired == "Secret" || GameObject.FindGameObjectWithTag("ActiveItem").GetComponent<PlayerItemControl> ().activeItem.name == keyRequired)
+				{	
+					// Don't highlight secret doors
+					if(keyRequired != "Secret")
+						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
+
 					if(Input.GetButtonDown("Interact"))
 					{
 

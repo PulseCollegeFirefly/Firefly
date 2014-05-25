@@ -40219,8 +40219,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 648746169}
   - 65: {fileID: 648746170}
+  - 114: {fileID: 648746171}
+  - 135: {fileID: 648746172}
   m_Layer: 0
-  m_Name: CellDoor
+  m_Name: CellDoorSecret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40233,14 +40235,14 @@ Transform:
   m_PrefabInternal: {fileID: 1596896114}
   m_GameObject: {fileID: 648746168}
   m_LocalRotation: {x: -9.43220835e-10, y: -.00421294989, z: 3.32443473e-09, w: -.999991119}
-  m_LocalPosition: {x: 5.13887024, y: 1.07292056, z: 3.9189744}
-  m_LocalScale: {x: 1.31820738, y: 1.4585954, z: 1.45859385}
+  m_LocalPosition: {x: -10.8437462, y: .959704638, z: -5.78769684}
+  m_LocalScale: {x: 1.31820738, y: 1.4585954, z: 1.45859373}
   m_Children:
   - {fileID: 2123783104}
   - {fileID: 1863166875}
   - {fileID: 257912745}
   - {fileID: 1426633718}
-  m_Father: {fileID: 1749733880}
+  m_Father: {fileID: 903326194}
 --- !u!65 &648746170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40252,7 +40254,32 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1.54999995, z: .109999999}
-  m_Center: {x: -.0900000036, y: .0299999993, z: 0}
+  m_Center: {x: .00999999978, y: 0, z: 0}
+--- !u!114 &648746171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648746168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31e499c4cff72f40b0cf50fe7e2df65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyRequired: Secret
+  speed: 1
+--- !u!135 &648746172
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648746168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .629999995
+  m_Center: {x: -.129999995, y: -.49000001, z: .0500000007}
 --- !u!1 &649198738
 GameObject:
   m_ObjectHideFlags: 0
@@ -49161,6 +49188,7 @@ Transform:
   m_LocalPosition: {x: 33.7037849, y: 1.15886521, z: -.318154573}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 648746169}
   - {fileID: 1049217305}
   - {fileID: 806503609}
   - {fileID: 2050164309}
@@ -59471,6 +59499,7 @@ GameObject:
   - 4: {fileID: 1073338076}
   - 33: {fileID: 1073338078}
   - 23: {fileID: 1073338077}
+  - 64: {fileID: 1073338079}
   m_Layer: 0
   m_Name: HiddenTunnel
   m_TagString: Untagged
@@ -59485,7 +59514,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073338075}
   m_LocalRotation: {x: -.5, y: -.5, z: -.5, w: .5}
-  m_LocalPosition: {x: 173.126129, y: 14.9243002, z: -123.516151}
+  m_LocalPosition: {x: 173.126129, y: 13.6946774, z: -123.516159}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 94618663}
@@ -59518,6 +59547,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073338075}
+  m_Mesh: {fileID: 4300512, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!64 &1073338079
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073338075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300512, guid: b2dc02cb0d424a74987041582b186894, type: 3}
 --- !u!1 &1074163381
 GameObject:
@@ -60778,6 +60820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeTexture: {fileID: 2800000, guid: f289257190b4ae641a096cc323671f02, type: 3}
   defaultTexture: {fileID: 2800000, guid: 9dd690d69be80f2479fb1456cac6d874, type: 3}
+  activeTex: 0
 --- !u!114 &1110801129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87119,19 +87162,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1749733880}
+    m_TransformParent: {fileID: 903326194}
     m_Modifications:
     - target: {fileID: 400002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.13887024
+      value: -10.8437462
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07292056
+      value: .959704638
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.9189744
+      value: -5.78769684
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
       propertyPath: m_LocalRotation.x
@@ -87159,11 +87202,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.45859385
+      value: 1.45859373
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
       propertyPath: m_Name
-      value: CellDoor
+      value: CellDoorSecret
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 4cf7bbb1ff4a06d4fb2d1a995efb18ec, type: 3}
@@ -94242,7 +94285,6 @@ Transform:
   - {fileID: 516188451}
   - {fileID: 201176949}
   - {fileID: 157604483}
-  - {fileID: 648746169}
   - {fileID: 323743723}
   - {fileID: 267720363}
   m_Father: {fileID: 0}
