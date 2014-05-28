@@ -9,10 +9,12 @@ public class LevelState : MonoBehaviour
 	public bool DyingSoldier = false;
 	public bool CellOpening = false;
 	public bool CellOpeningOff = false;
-
+	public GameObject npc;
+	
 
 	void Update () 
 	{
+		npc = GameObject.FindGameObjectWithTag ("soldier");
 		// If Level 1
 		if(CurrentLevel == "Level01")
 		{
@@ -40,6 +42,16 @@ public class LevelState : MonoBehaviour
 			{
 				if(GameObject.Find ("Torch") !=null)
 					GameObject.Find ("Torch").SetActive (false);
+			}
+
+			if(DyingSoldier == true)
+			{
+				Debug.Log ("Success");
+				if(GameObject.Find ("FirstFireTrigger") !=null)
+				{
+					GameObject.Find ("FirstFireTrigger").GetComponent<FirstFireTrigger>().npc.SetActive (true);
+					GameObject.Find ("FirstFireTrigger").SetActive (false);
+				}
 			}
 		}
 	}	
