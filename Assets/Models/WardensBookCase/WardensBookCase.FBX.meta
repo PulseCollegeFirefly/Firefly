@@ -1,13 +1,57 @@
 fileFormatVersion: 2
 guid: f5078225d225fa645a5c717b7d800241
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Box001
+    100004: Box038
+    100006: Box039
+    100008: Box040
+    100010: Box041
+    100012: Box042
+    100014: Box043
+    100016: Box044
+    100018: Box045
     400000: //RootNode
+    400002: Box001
+    400004: Box038
+    400006: Box039
+    400008: Box040
+    400010: Box041
+    400012: Box042
+    400014: Box043
+    400016: Box044
+    400018: Box045
     2300000: //RootNode
+    2300002: Box001
+    2300004: Box038
+    2300006: Box039
+    2300008: Box040
+    2300010: Box041
+    2300012: Box042
+    2300014: Box043
+    2300016: Box044
+    2300018: Box045
     3300000: //RootNode
+    3300002: Box001
+    3300004: Box038
+    3300006: Box039
+    3300008: Box040
+    3300010: Box041
+    3300012: Box042
+    3300014: Box043
+    3300016: Box044
+    3300018: Box045
     4300000: Box001
+    4300002: Box038
+    4300004: Box039
+    4300006: Box040
+    4300008: Box041
+    4300010: Box042
+    4300012: Box043
+    4300014: Box044
+    4300016: Box045
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -60,4 +104,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 
