@@ -13,8 +13,8 @@ public class KeyOpenLock : MonoBehaviour {
 	void Update ()
 	{
 		if (moveDoor)
-			Destroy (this.gameObject);
-			//RotateDoor(new Vector3(0, 90, 0), speed);
+			//Destroy (this.gameObject);
+			RotateDoor(new Vector3(0, 240, 0), speed);
 	}
 
 	void OnTriggerStay (Collider other)
@@ -57,12 +57,12 @@ public class KeyOpenLock : MonoBehaviour {
 
 	private void RotateDoor(Vector3 rotate, float time)
 	{
-		Quaternion initialRot = transform.localRotation;
-		Quaternion targetRot = transform.localRotation * Quaternion.Euler(rotate);
+		Quaternion initialRot = transform.parent.localRotation;
+		Quaternion targetRot = transform.parent.localRotation * Quaternion.Euler(rotate);
 		float t = 0f;
 		while (t < 1.0)
 		{
-			transform.localRotation = Quaternion.Slerp(initialRot, targetRot, t);
+			transform.parent.localRotation = Quaternion.Slerp(initialRot, targetRot, t);
 			t += Time.deltaTime / time;
 		}
 		moveDoor = false;
