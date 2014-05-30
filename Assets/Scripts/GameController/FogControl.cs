@@ -3,19 +3,26 @@ using System.Collections;
 
 public class FogControl : MonoBehaviour {
 
+	public float changeMargin;
+
 	private float offset;
 	private float currentFogLevel;
 	private float playerHealth;
+	private GameObject gameController;
 
 	void Start () {
-		offset = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().fogOffset;
+		// Reference Game Controller
+		gameController = GameObject.FindGameObjectWithTag("GameController");
+		offset = gameController.GetComponent<GameController> ().fogOffset;
+
+		// Turn Off fog.
 		RenderSettings.fog = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// Update the Variables
-		playerHealth = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().getHealth();
+		playerHealth = gameController.GetComponent<GameController> ().getHealth();
 		//currentFogLevel = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().getFogLevel();
 
 		// Check the Fog Level
@@ -25,6 +32,7 @@ public class FogControl : MonoBehaviour {
 	void checkFogLevel (float pH)
 	{
 		float fogLvl = (100 - pH)/offset;
-		GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().setFoglevel(fogLvl);
+
+		gameController.GetComponent<GameController> ().setFoglevel(fogLvl);
 	}
 }

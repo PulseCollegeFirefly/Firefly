@@ -3,20 +3,23 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 	
-	private float health=100; 
+	private float health = 100f; 
 	private float timer;
 	private float fogLevel;
+	private float fogTarget = 0f;
 
 	public float lvlCount;
 	public float fogOffset;
 	public bool lockCusor;
+
+	public float fogChangeMargin;
 
 	void Start ()
 	{
 		DontDestroyOnLoad(this.gameObject);
 		Application.targetFrameRate = 26;
 
-		QualitySettings.vSyncCount = 2;
+		QualitySettings.vSyncCount = 1;
 
 		// This Value Controls Health
 		setHealth (100);
@@ -82,9 +85,20 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void setFoglevel (float f) {
-		if (f > fogLevel)
-			fogLevel = f;
+		if(f > fogTarget)
+			fogTarget = f;
 
+		if (fogTarget > getFogLevel())
+		{
+
+			if(Mathf.Abs (fogTarget - getFogLevel()) > fogChangeMargin)
+				fogLevel = Mathf.Lerp(getFogLevel(), fogTarget, 0.001f);
+
+			else
+				fogLevel = fogTarget;
+				
+		}
 		RenderSettings.fogDensity = fogLevel;
+		Debug.Log(fogLevel);
 	}
 }
