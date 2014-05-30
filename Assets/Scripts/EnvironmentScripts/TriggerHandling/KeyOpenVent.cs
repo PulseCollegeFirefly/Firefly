@@ -1,22 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KeyOpenLock : MonoBehaviour {
+public class KeyOpenVent : MonoBehaviour {
 
 	// Key Required
 	public string keyRequired;
-	public float speed = 1f;
-
-	private bool moveDoor = false;
-	private float startTime;
+	
+	private bool moveVent = false;
 	
 	void Update ()
 	{
-		if (moveDoor)
-
-			RotateDoor(new Vector3(0, 240, 0), speed);
+		if (moveVent)
+		{
+			turnOnRigidbody();
+		}
 	}
-
+	
 	void OnTriggerStay (Collider other)
 	{
 		if(other.tag == "Player")
@@ -28,11 +27,11 @@ public class KeyOpenLock : MonoBehaviour {
 					// Don't highlight secret doors
 					if(keyRequired != "Secret")
 						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
-
+					
 					if(Input.GetButtonDown("Interact"))
 					{
-
-						moveDoor = true;
+						
+						moveVent = true;
 						Destroy (this.gameObject.GetComponent<SphereCollider>());
 						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = false;
 					}
@@ -48,23 +47,17 @@ public class KeyOpenLock : MonoBehaviour {
 			}
 		}
 	}
-
+	
 	void OnTriggerExit (Collider p)
 	{
 		if(p.tag == "Player")
 			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI> ().activeTex = false;
 	}
 
-	private void RotateDoor(Vector3 rotate, float time)
+	private void turnOnRigidbody()
 	{
-		Quaternion initialRot = transform.parent.localRotation;
-		Quaternion targetRot = transform.parent.localRotation * Quaternion.Euler(rotate);
-		float t = 0f;
-		while (t < 1.0)
-		{
-			transform.parent.localRotation = Quaternion.Slerp(initialRot, targetRot, t);
-			t += Time.deltaTime / time;
-		}
-		moveDoor = false;
+		rigidbody.useGravity = true;
+		rigidbody.isKinematic = false;
+		moveVent = false;
 	}
 }

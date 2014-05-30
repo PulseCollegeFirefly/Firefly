@@ -1,22 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KeyOpenLock : MonoBehaviour {
+public class RotateTap : MonoBehaviour {
+
+	public GameObject tunnelBlock;
+	public float fogLvl = 0.85f;
+	public GameObject[] fans;
 
 	// Key Required
 	public string keyRequired;
-	public float speed = 1f;
-
-	private bool moveDoor = false;
-	private float startTime;
+	public float speed = 0.1f;
 	
+	private bool moveTap = false;
+	private float startTime;	 
+
 	void Update ()
 	{
-		if (moveDoor)
+		if (moveTap)
+		{
+			Rotate(new Vector3(0, 240, 0), speed);
+			turnOffFans();
 
-			RotateDoor(new Vector3(0, 240, 0), speed);
+			// Set new fog lvl after fans are turned Off.
+			GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().setFoglevel(fogLvl);
+		}
 	}
-
+	
 	void OnTriggerStay (Collider other)
 	{
 		if(other.tag == "Player")
@@ -28,12 +37,13 @@ public class KeyOpenLock : MonoBehaviour {
 					// Don't highlight secret doors
 					if(keyRequired != "Secret")
 						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
-
+					
 					if(Input.GetButtonDown("Interact"))
 					{
-
-						moveDoor = true;
+						
+						moveTap = true;
 						Destroy (this.gameObject.GetComponent<SphereCollider>());
+						Destroy (tunnelBlock);
 						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = false;
 					}
 				}
@@ -48,14 +58,14 @@ public class KeyOpenLock : MonoBehaviour {
 			}
 		}
 	}
-
+	
 	void OnTriggerExit (Collider p)
 	{
 		if(p.tag == "Player")
 			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI> ().activeTex = false;
 	}
-
-	private void RotateDoor(Vector3 rotate, float time)
+	
+	private void Rotate(Vector3 rotate, float time)
 	{
 		Quaternion initialRot = transform.parent.localRotation;
 		Quaternion targetRot = transform.parent.localRotation * Quaternion.Euler(rotate);
@@ -65,6 +75,14 @@ public class KeyOpenLock : MonoBehaviour {
 			transform.parent.localRotation = Quaternion.Slerp(initialRot, targetRot, t);
 			t += Time.deltaTime / time;
 		}
-		moveDoor = false;
+		moveTap = false;
+	}
+
+	private void turnOffFans ()
+	{
+		foreach(GameObject fan in fans)
+		{
+			fan.GetComponent<FanRotator> ().enabled = false;
+		}
 	}
 }

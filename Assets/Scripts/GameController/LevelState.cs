@@ -14,7 +14,6 @@ public class LevelState : MonoBehaviour
 
 	void Update () 
 	{
-		npc = GameObject.FindGameObjectWithTag ("soldier");
 		// If Level 1
 		if(CurrentLevel == "Level01")
 		{
@@ -53,6 +52,11 @@ public class LevelState : MonoBehaviour
 					GameObject.Find ("FirstFireTrigger").SetActive (false);
 				}
 			}
+			if (GameObject.Find ("StartScripts") !=null)
+			{
+				GameObject.Find ("StartScripts").SetActive (false);
+			}
+
 		}
 	}	
 }

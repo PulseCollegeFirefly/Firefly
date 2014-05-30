@@ -27,6 +27,10 @@ public class GameController : MonoBehaviour {
 
 	void Update ()
 	{
+		// Destroy on Game reload
+		if(Application.loadedLevelName == "IntroScene" && lvlCount > 0)
+			Destroy (this.gameObject);
+
 		// Game Timer
 		timer += Time.deltaTime;
 
@@ -78,6 +82,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void setFoglevel (float f) {
-		fogLevel = f;
+		if (f > fogLevel)
+			fogLevel = f;
+
+		RenderSettings.fogDensity = fogLevel;
 	}
 }
