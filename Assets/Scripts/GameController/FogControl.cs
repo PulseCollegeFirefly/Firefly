@@ -25,9 +25,6 @@ public class FogControl : MonoBehaviour {
 	void checkFogLevel (float pH)
 	{
 		float fogLvl = (100 - pH)/offset;
-		Debug.Log (fogLvl);
-		RenderSettings.fogDensity = fogLvl;
-
 		GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().setFoglevel(fogLvl);
 	}
 }

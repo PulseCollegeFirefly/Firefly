@@ -132,10 +132,10 @@ SceneSettings:
 --- !u!104 &2
 RenderSettings:
   m_Fog: 1
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogColor: {r: .227941155, g: .227941155, b: .227941155, a: 1}
   m_FogMode: 2
   m_FogDensity: .0500000007
-  m_LinearFogStart: 0
+  m_LinearFogStart: 1
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
   m_SkyboxMaterial: {fileID: 0}

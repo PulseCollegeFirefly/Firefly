@@ -78,6 +78,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void setFoglevel (float f) {
-		fogLevel = f;
+		if (f > fogLevel)
+			fogLevel = f;
+
+		RenderSettings.fogDensity = fogLevel;
 	}
 }
