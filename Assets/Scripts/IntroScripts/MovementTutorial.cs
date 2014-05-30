@@ -20,16 +20,9 @@ public class MovementTutorial : MonoBehaviour {
 
 		guiColor = Color.white;
 		guiColor.a = 0;
-		startTime = Time.deltaTime;
 
 		guiTexture.color = guiColor;
 		guiTexture.pixelInset = new Rect (0,0, Screen.width, Screen.height);
-	}
-
-	void OnGUI ()
-	{
-		//GUI.depth = -1;
-		//GUI.DrawTexture( new Rect(0,0, screenWidth, screenHeight), guiTexture, ScaleMode.StretchToFill, true);
 	}
 
 	void Update ()
@@ -41,7 +34,7 @@ public class MovementTutorial : MonoBehaviour {
 		if(sceneEnding && !sceneStarting)
 			EndScene ();
 
-		if(Time.deltaTime - startTime <= waitTime)
+		if(Input.GetKeyUp(KeyCode.Space))
 			sceneEnding = true;
 
 		guiTexture.color = guiColor;
@@ -81,7 +74,7 @@ public class MovementTutorial : MonoBehaviour {
 		FadeToClear();
 		
 		// if almost black
-		if(guiColor.a <= 0.05f)
+		if(guiColor.a <= 0.01f)
 		{
 			guiTexture.color = Color.black;
 			Application.LoadLevel(levelToLoad);
