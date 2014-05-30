@@ -2703,6 +2703,10 @@ Prefab:
       propertyPath: fogOffset
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 0428284b7be1a1b4ea2cff6c6ee97b60, type: 2}
+      propertyPath: fogChangeMargin
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0428284b7be1a1b4ea2cff6c6ee97b60, type: 2}
   m_RootGameObject: {fileID: 1645149827}
@@ -39225,7 +39229,7 @@ MonoBehaviour:
   lvlCount: 0
   fogOffset: 200
   lockCusor: 0
-  fogChangeMargin: 0
+  fogChangeMargin: .0500000007
 --- !u!4 &1645149830
 Transform:
   m_ObjectHideFlags: 0
