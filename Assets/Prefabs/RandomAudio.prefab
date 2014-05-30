@@ -8,8 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: RandomAudio
   m_TagString: Untagged
@@ -97,7 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00a7fd9aca38ff439aaf3d90101a24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrisonSound: []
+  PrisonSound:
+  - {fileID: 8300000, guid: a2bbc11b263dcba499809c3025c6f0d3, type: 3}
+  - {fileID: 8300000, guid: fbab2d4d752164a4f8c2795c5abcee3b, type: 3}
+  - {fileID: 8300000, guid: 8cb2b2332a3d3554498abe9963dff9a9, type: 3}
+  - {fileID: 8300000, guid: 47d0ebaa43ccb6242a4591b765cf804f, type: 3}
+  - {fileID: 8300000, guid: 48a24084ad92cf74c83e2d5bd6101f8d, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
