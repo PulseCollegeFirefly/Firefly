@@ -49334,6 +49334,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1095714196}
   m_GameObject: {fileID: 873968732}
   m_Mesh: {fileID: 4300006, guid: 2a271b313128d4f47ad5175b1e25a8b8, type: 3}
+--- !u!1 &874011392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: bdaddaa003ba82f4c8339ddccedf615b, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 874011393}
+  - 33: {fileID: 874011395}
+  - 23: {fileID: 874011394}
+  m_Layer: 0
+  m_Name: End level door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &874011393
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: bdaddaa003ba82f4c8339ddccedf615b, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874011392}
+  m_LocalRotation: {x: .5, y: .5, z: .5, w: -.5}
+  m_LocalPosition: {x: 1.52764225, y: .482099056, z: -5.48307228}
+  m_LocalScale: {x: 1.36378193, y: 1.36378193, z: 1.36378193}
+  m_Children: []
+  m_Father: {fileID: 1270788160}
+--- !u!23 &874011394
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: bdaddaa003ba82f4c8339ddccedf615b,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874011392}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 2302b31c15d08dc438b20b278daee6e3, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &874011395
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: bdaddaa003ba82f4c8339ddccedf615b,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 874011392}
+  m_Mesh: {fileID: 4300024, guid: bdaddaa003ba82f4c8339ddccedf615b, type: 3}
 --- !u!1 &878454129
 GameObject:
   m_ObjectHideFlags: 0
@@ -62969,6 +63027,7 @@ Transform:
   - {fileID: 94618663}
   - {fileID: 1104071576}
   - {fileID: 429933711}
+  - {fileID: 1270788160}
   - {fileID: 2138091983}
   - {fileID: 1927427714}
   - {fileID: 1322997742}
@@ -70236,6 +70295,49 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268519642}
   m_Mesh: {fileID: 4300106, guid: b2dc02cb0d424a74987041582b186894, type: 3}
+--- !u!1 &1270788159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: bdaddaa003ba82f4c8339ddccedf615b, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1270788160}
+  - 95: {fileID: 1270788161}
+  m_Layer: 0
+  m_Name: OfficeDoors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270788160
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: bdaddaa003ba82f4c8339ddccedf615b, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270788159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.2712393, y: .477887154, z: 31.4001961}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 874011393}
+  m_Father: {fileID: 1125832211}
+--- !u!95 &1270788161
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: bdaddaa003ba82f4c8339ddccedf615b,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270788159}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: bdaddaa003ba82f4c8339ddccedf615b, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &1271314400
 GameObject:
   m_ObjectHideFlags: 0
@@ -83268,7 +83370,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483188297}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
@@ -113114,6 +113216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d57b13bbfca3047895bdc2a4e8ff68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeMargin: 0
 --- !u!4 &2080387302
 Transform:
   m_ObjectHideFlags: 0

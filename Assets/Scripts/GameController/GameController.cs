@@ -99,6 +99,5 @@ public class GameController : MonoBehaviour {
 				
 		}
 		RenderSettings.fogDensity = fogLevel;
-		Debug.Log(fogLevel);
 	}
 }

@@ -70,11 +70,24 @@ ModelImporter:
     4300020: GuardsDoor001
     4300022: JanitorsDoor001
     4300024: End level door
+    6400000: End level door
+    6400002: GuardsDoor001
+    6400004: JanitorsDoor001
+    6400006: Line002
+    6400008: Line003
+    6400010: Line005
+    6400012: Line006
+    6400014: Line007
+    6400016: Line008
+    6400018: WardensDoor
+    6400020: window002
+    6400022: window003
+    6400024: window1
     9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -91,7 +104,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00100000005
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

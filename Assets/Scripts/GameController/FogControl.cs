@@ -23,7 +23,6 @@ public class FogControl : MonoBehaviour {
 	void Update () {
 		// Update the Variables
 		playerHealth = gameController.GetComponent<GameController> ().getHealth();
-		//currentFogLevel = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController> ().getFogLevel();
 
 		// Check the Fog Level
 		checkFogLevel (playerHealth);
