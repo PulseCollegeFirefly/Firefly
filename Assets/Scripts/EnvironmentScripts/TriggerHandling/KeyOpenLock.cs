@@ -6,17 +6,29 @@ public class KeyOpenLock : MonoBehaviour {
 	// Key Required
 	public string keyRequired;
 	public float speed = 1f;
+	public float degrees = 90f;
 
 	public bool tutorialCanBePlayed {get; private set;}
 
 	public bool moveDoor = false;
 	private float startTime;
-	
+
+	private Quaternion initialRot;
+	private Quaternion targetRot;
+
+	void Start ()
+	{
+		targetRot = transform.parent.localRotation * Quaternion.Euler(new Vector3(0,degrees,0));
+	}
+
 	void Update ()
 	{
 		if (moveDoor)
-
-			RotateDoor(new Vector3(0, 240, 0), speed);
+		{
+			Quaternion currentRot = transform.parent.localRotation;
+			float step = speed * Time.deltaTime;
+			transform.parent.localRotation = Quaternion.RotateTowards(currentRot, targetRot, step);
+		}
 	}
 
 	void OnTriggerStay (Collider other)
@@ -58,18 +70,5 @@ public class KeyOpenLock : MonoBehaviour {
 	{
 		if(p.tag == "Player")
 			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI> ().activeTex = false;
-	}
-
-	private void RotateDoor(Vector3 rotate, float time)
-	{
-		Quaternion initialRot = transform.parent.localRotation;
-		Quaternion targetRot = transform.parent.localRotation * Quaternion.Euler(rotate);
-		float t = 0f;
-		while (t < 1.0)
-		{
-			transform.parent.localRotation = Quaternion.Slerp(initialRot, targetRot, t);
-			t += Time.deltaTime / time;
-		}
-		moveDoor = false;
 	}
 }

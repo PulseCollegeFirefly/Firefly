@@ -43592,6 +43592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyRequired: Secret
   speed: 1
+  degrees: 90
   moveDoor: 0
 --- !u!135 &648746172
 SphereCollider:
@@ -50234,7 +50235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyRequired: WardenKeysInv
-  speed: 3
+  speed: 45
+  degrees: -120
   moveDoor: 0
 --- !u!135 &806503611
 SphereCollider:
@@ -65088,7 +65090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyRequired: Guards KeysInv
-  speed: .100000001
+  speed: 45
+  degrees: -120
   moveDoor: 0
 --- !u!65 &1049217308
 BoxCollider:
@@ -110092,6 +110095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyRequired: WardenKeysInv
   speed: .100000001
+  degrees: 90
   moveDoor: 0
 --- !u!135 &1802992174
 SphereCollider:
