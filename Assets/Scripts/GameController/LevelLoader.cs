@@ -23,7 +23,6 @@ public class LevelLoader : MonoBehaviour {
 		{
 			// Enable the fader.
 			fader.guiTexture.enabled = true;
-			//fader.GetComponent<SceneFadeInOut> ().levelToLoad = levelToLoad;
 			player.GetComponent<FirstPersonCharacter> ().enabled = false;
 
 			// Inc the Level count
@@ -34,14 +33,12 @@ public class LevelLoader : MonoBehaviour {
 			if (levelToLoad == "Level01")
 			{
 				if (gameController.GetComponent<LevelState>().PrisonDoor == true)
-				{
 					gameController.GetComponent<LevelState>().PrisonDoorOff = false;
-				}
+
 				if (gameController.GetComponent<LevelState>().CellOpening == true)
-				{
 					gameController.GetComponent<LevelState>().CellOpeningOff = false;
-				}
 			}
+
 			// Set Scene ending
 			sceneEnding = true;
 		}

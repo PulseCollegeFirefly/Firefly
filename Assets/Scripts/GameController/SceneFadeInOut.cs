@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SceneFadeInOut : MonoBehaviour {
 
-	public float fadeSpeed = 0.2f;
+	public float fadeSpeed;
 
 	private bool sceneStarting = true;
 
@@ -37,7 +37,7 @@ public class SceneFadeInOut : MonoBehaviour {
 		FadeToClear();
 
 		// If Almost clear
-		if(guiTexture.color.a <= 0.03f)
+		if(guiTexture.color.a <= 0.15f)
 		{
 			// set to clear
 			guiTexture.color = Color.clear;
