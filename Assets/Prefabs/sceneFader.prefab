@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   - 131: {fileID: 13100000}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: sceneFader
   m_TagString: Fader
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ff7dfeb9a04284b9a0ecc1482e0490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 1
+  fadeSpeed: .200000003
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
