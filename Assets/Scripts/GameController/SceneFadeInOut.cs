@@ -37,7 +37,7 @@ public class SceneFadeInOut : MonoBehaviour {
 		FadeToClear();
 
 		// If Almost clear
-		if(guiTexture.color.a <= 0.15f)
+		if(guiTexture.color.a <= 0.03f)
 		{
 			// set to clear
 			guiTexture.color = Color.clear;

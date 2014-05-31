@@ -12015,7 +12015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ff7dfeb9a04284b9a0ecc1482e0490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 1
+  fadeSpeed: .200000003
 --- !u!4 &465105085
 Transform:
   m_ObjectHideFlags: 0
@@ -12616,7 +12616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e17e96307db2b1f44913c730b4481f68, type: 2}
       propertyPath: fadeSpeed
-      value: 1
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e17e96307db2b1f44913c730b4481f68, type: 2}
@@ -40658,6 +40658,9 @@ MonoBehaviour:
   DyingSoldier: 0
   CellOpening: 0
   CellOpeningOff: 0
+  ValveOpen: 0
+  JanitorRoomOpen: 0
+  UpstairsComplete: 0
   npc: {fileID: 0}
 --- !u!114 &1645149829
 MonoBehaviour:

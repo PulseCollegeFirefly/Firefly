@@ -12,7 +12,6 @@ public class PlayerScrewDriver : MonoBehaviour {
 		// Reference Torch Model and turn render off
 		screwDriver = this.gameObject;
 		screwDriver.renderer.enabled = false;
-		screwDriver.GetComponent<BoxCollider> ().enabled = false;
 	}
 	
 	void CheckActiveItem ()
@@ -27,14 +26,10 @@ public class PlayerScrewDriver : MonoBehaviour {
 		
 		// Check if the player has the torch in their hand
 		if(activeItem != null && this.gameObject.name == activeItem.name)
-		{
 			screwDriver.renderer.enabled = true;
-			screwDriver.GetComponent<BoxCollider> ().enabled = true;
-		}
+		
 		else
-		{
 			screwDriver.renderer.enabled = false;
-			screwDriver.GetComponent<BoxCollider> ().enabled = false;
-		}
+		
 	}
 }

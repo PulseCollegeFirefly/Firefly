@@ -13,7 +13,6 @@ public class PlayerFireExt : MonoBehaviour {
 		// Reference Torch Model and turn render off
 		fireExt = this.gameObject;
 		fireExt.renderer.enabled = false;
-		fireExt.GetComponent<BoxCollider> ().enabled = false;
 
 		// Reference Steam
 		steam = GameObject.FindGameObjectWithTag("Steam").GetComponent<ParticleSystem> ();
@@ -33,7 +32,6 @@ public class PlayerFireExt : MonoBehaviour {
 		if(activeItem != null && this.gameObject.name == activeItem.name)
 		{
 			fireExt.renderer.enabled = true;
-			fireExt.GetComponent<BoxCollider> ().enabled = true;
 
 			if(Input.GetButton("Interact"))
 			{
@@ -63,7 +61,6 @@ public class PlayerFireExt : MonoBehaviour {
 		else
 		{
 			fireExt.renderer.enabled = false;
-			fireExt.GetComponent<BoxCollider> ().enabled = false;
 
 			if(steam != null)
 				steam.Stop ();

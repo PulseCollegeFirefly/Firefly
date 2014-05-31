@@ -13,7 +13,6 @@ public class PlayerGuardsKeys : MonoBehaviour {
 		// Reference Torch Model and turn render off
 		key = this.gameObject;
 		key.renderer.enabled = false;
-		key.GetComponent<BoxCollider> ().enabled = false;
 	}
 	
 	void CheckActiveItem ()
@@ -28,14 +27,10 @@ public class PlayerGuardsKeys : MonoBehaviour {
 		
 		// Check if the player has the torch in their hand
 		if(activeItem != null && this.gameObject.name == activeItem.name)
-		{
 			key.renderer.enabled = true;
-			key.GetComponent<BoxCollider> ().enabled = true;
-		}
+
 		else
-		{
 			key.renderer.enabled = false;
-			key.GetComponent<BoxCollider> ().enabled = false;
-		}
+		
 	}
 }
