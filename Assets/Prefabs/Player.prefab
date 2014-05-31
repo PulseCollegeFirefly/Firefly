@@ -353,8 +353,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.09221148, y: 1.81303835, z: 2.06831312}
+  m_LocalRotation: {x: 0, y: .995565653, z: 0, w: .0940696746}
+  m_LocalPosition: {x: 1.7457006, y: 1.33853638, z: .511713386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -1523,7 +1523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6ade1e63563a043b977c2fd7e20afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarTexture: {fileID: 2800000, guid: 235f16318aee6924fb1fc34726e0cead, type: 3}
+  healthBarTexture: {fileID: 2800000, guid: 3884dde58e00834499696f919caddd09, type: 3}
   fadeSpeed: 2
   flash: 0
 --- !u!114 &11400022
