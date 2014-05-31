@@ -12015,7 +12015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ff7dfeb9a04284b9a0ecc1482e0490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: .200000003
+  fadeSpeed: 1
 --- !u!4 &465105085
 Transform:
   m_ObjectHideFlags: 0
@@ -39072,14 +39072,14 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 2
   m_TargetTexture: {fileID: 0}
   m_HDR: 1
   m_OcclusionCulling: 1
@@ -39090,7 +39090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531879143}
   m_LocalRotation: {x: .151351377, y: .307083607, z: -.0203310493, w: .939350367}
-  m_LocalPosition: {x: -14.4006405, y: 2.19132137, z: -4.40194225}
+  m_LocalPosition: {x: -13.9167318, y: 2.19132137, z: -3.89054155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40617,6 +40617,7 @@ MonoBehaviour:
   ValveOpen: 0
   JanitorRoomOpen: 0
   UpstairsComplete: 0
+  GuardDoor: 0
   npc: {fileID: 0}
 --- !u!114 &1645149829
 MonoBehaviour:

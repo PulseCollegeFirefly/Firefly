@@ -15,4 +15,10 @@ public class FanHeadShake : MonoBehaviour {
 		if(p.tag == "Player")
 			player.GetComponent<PlayerHeadShake> ().shakeHead();
 	}
+
+	void OnTriggerStay (Collider p)
+	{
+		if(p.tag == "Player")
+			player.GetComponent<PlayerHeadShake> ().shakeHead();
+	}
 }
