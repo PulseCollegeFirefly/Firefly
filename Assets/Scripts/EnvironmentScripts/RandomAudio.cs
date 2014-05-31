@@ -5,6 +5,7 @@ public class RandomAudio : MonoBehaviour
 {
 	public AudioClip[] PrisonSound;
 	bool isRunning = false;
+	public float pause = 10.0f;
 
 
 	// Use this for initialization
@@ -26,7 +27,7 @@ public class RandomAudio : MonoBehaviour
 	}
 	public IEnumerator RandomSound ()
 	{
-		yield return new WaitForSeconds(10.0f);
+		yield return new WaitForSeconds(pause);
 		isRunning = false;
 	}
 }
