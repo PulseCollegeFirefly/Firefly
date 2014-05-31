@@ -9,6 +9,9 @@ public class LevelState : MonoBehaviour
 	public bool DyingSoldier = false;
 	public bool CellOpening = false;
 	public bool CellOpeningOff = false;
+	public bool ValveOpen = false;
+	public bool JanitorRoomOpen = false;
+	public bool UpstairsComplete = false;
 	public GameObject npc;
 	
 
@@ -24,6 +27,8 @@ public class LevelState : MonoBehaviour
 				{
 					GameObject.Find ("CellDoorBroken").SetActive (false);
 					CellOpeningOff = true;
+					GameObject.Find ("FireControl").GetComponent<FireControl>().LevelFires[0].SetActive (true);
+					GameObject.Find ("MainLight").SetActive (false);
 				}
 			}
 
