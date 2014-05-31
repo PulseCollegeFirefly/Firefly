@@ -11,11 +11,16 @@ public class Tutorial : MonoBehaviour {
 	private GameObject player;
 	private float screenWidth;
 	private float screenHeight;
-	private bool tutorialStart = false;
+	private bool tutorialPlay = false;
 	private Color guiColor;
 	private float timer;
 
-	void Awake () {
+	private string msg = "";
+
+	private bool pickUpPlayed = false;
+	private bool interactPlayed = false;
+
+	void Start () {
 		// Find Player
 		player = GameObject.FindGameObjectWithTag("Player");
 
@@ -31,26 +36,51 @@ public class Tutorial : MonoBehaviour {
 
 		// Set timer to zero
 		timer = 0;
+
+		msg = "";
 	}
 
 	void Update () {
-		if(player.GetComponent<PlayerObjectPickUp> ().interact)
-			tutorialStart = true;
 
-		if(tutorialStart)
+		// If Player finds an object to pick up
+		if(player.GetComponent<PlayerObjectPickUp> ().pickUp && !pickUpPlayed)
+		{
+			msg = "When Indicator turns Red, \nObjects can be picked up with \nusing the Left Mouse Click.";
+			tutorialPlay = true;
+			pickUpPlayed = true;
+		}
+
+		if(GameObject.Find ("GuardDoor").GetComponent<KeyOpenLock> ().tutorialCanBePlayed && pickUpPlayed)
+		{
+			msg = "Items held in your hand, \ncan be used to interact with \nobjects in the world.";
+			tutorialPlay = true;
+			interactPlayed = true;
+		}
+
+
+		// Play tutorial
+		if(tutorialPlay)
 			TutorialRun ();
 
+		// When alpha reachs one, start timer
 		if(guiColor.a == 1)
 			timer += Time.deltaTime;
 
+		// Set alpha to 0 when its reachs end
 		if(timer >= timeEnd)
-			Destroy (this.gameObject);
+		{
+			guiColor.a = 0;
+			timer = 0;
+			tutorialPlay = false;
+			if(interactPlayed)
+				Destroy(this.gameObject);
+		}
 	}
 
 	void OnGUI ()
 	{
 		GUI.color = guiColor;
-		GUI.Box( new Rect((screenWidth/2)+offset, (screenHeight/2)+offset, 195, 55), "When Indicator turns Red, \nObjects can be interacted with \nusing the Left Mouse Click.", font);
+		GUI.Box( new Rect((screenWidth/2)+offset, (screenHeight/2)+offset, 195, 55), msg, font);
 	}
 
 	void TutorialRun ()

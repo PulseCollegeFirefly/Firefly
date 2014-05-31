@@ -6,7 +6,8 @@ public class PlayerObjectPickUp : MonoBehaviour {
 	public GameObject handLocation;
 	public float pickupDistance;
 
-	public bool interact {get; private set;} 
+	public bool interact {get; private set;}
+	public bool pickUp {get; private set;}
 
 	private Vector3 rayLocation;
 	private bool holding = false;
@@ -29,6 +30,9 @@ public class PlayerObjectPickUp : MonoBehaviour {
 		{
 			// Set interact
 			interact = hit.distance <= pickupDistance && (hit.collider.tag == "Interactable" || hit.collider.tag == "PickUp");
+
+			// Set pick up
+			pickUp = hit.distance <= pickupDistance && hit.collider.tag == "PickUp";
 
 			//
 			// Interact

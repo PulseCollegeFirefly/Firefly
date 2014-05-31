@@ -7,6 +7,8 @@ public class KeyOpenLock : MonoBehaviour {
 	public string keyRequired;
 	public float speed = 1f;
 
+	public bool tutorialCanBePlayed {get; private set;}
+
 	private bool moveDoor = false;
 	private float startTime;
 	
@@ -27,7 +29,10 @@ public class KeyOpenLock : MonoBehaviour {
 				{	
 					// Don't highlight secret doors
 					if(keyRequired != "Secret")
+					{
 						GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGUI>().activeTex = true;
+						tutorialCanBePlayed = true;
+					}
 
 					if(Input.GetButtonDown("Interact"))
 					{
