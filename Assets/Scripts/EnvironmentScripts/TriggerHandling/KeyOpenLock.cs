@@ -9,7 +9,7 @@ public class KeyOpenLock : MonoBehaviour {
 
 	public bool tutorialCanBePlayed {get; private set;}
 
-	private bool moveDoor = false;
+	public bool moveDoor = false;
 	private float startTime;
 	
 	void Update ()

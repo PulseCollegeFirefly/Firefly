@@ -12,7 +12,9 @@ public class LevelState : MonoBehaviour
 	public bool ValveOpen = false;
 	public bool JanitorRoomOpen = false;
 	public bool UpstairsComplete = false;
+	public bool GuardDoor = false;
 	public GameObject npc;
+
 	
 
 	void Update () 
@@ -20,6 +22,15 @@ public class LevelState : MonoBehaviour
 		// If Level 1
 		if(CurrentLevel == "Level01")
 		{
+			if (GameObject.Find("GuardDoor") !=null)
+			{
+				if (GuardDoor == false)
+				{
+					GameObject.Find ("GuardDoor").GetComponent<KeyOpenLock>().moveDoor = true;
+					GuardDoor = true;
+				}
+			}
+			
 			// If the cell has already open turn it off
 			if (GameObject.Find ("CellDoorBroken") !=null)
 			{
@@ -46,6 +57,8 @@ public class LevelState : MonoBehaviour
 			{
 				if(GameObject.Find ("Torch") !=null)
 					GameObject.Find ("Torch").SetActive (false);
+				if(GameObject.Find ("TorchLight") !=null)
+					GameObject.Find ("TorchLight").SetActive (false);
 			}
 
 			if(DyingSoldier == true)
