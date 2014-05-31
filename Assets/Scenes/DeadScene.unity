@@ -137,7 +137,6 @@ GameObject:
   - 4: {fileID: 77910550}
   - 111: {fileID: 77910552}
   - 114: {fileID: 77910551}
-  - 114: {fileID: 77910553}
   m_Layer: 0
   m_Name: dyingSoldier
   m_TagString: soldier
@@ -216,17 +215,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &77910553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 77910549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e08e60f8d372def4087fdc341c8f93cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &99672569
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,11 +280,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99672569}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.54436111, y: 8.31131744, z: -2.23257852}
+  m_LocalRotation: {x: -.376595825, y: 0, z: 0, w: .926377714}
+  m_LocalPosition: {x: -4.54436111, y: 5.44947243, z: 5.975348}
   m_LocalScale: {x: .0914678127, y: .0914678127, z: .246564552}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1553632385}
 --- !u!1 &103443636
 GameObject:
   m_ObjectHideFlags: 0
@@ -4700,6 +4688,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1331137848}
   - 108: {fileID: 1331137849}
+  - 114: {fileID: 1331137850}
   m_Layer: 0
   m_Name: Point light
   m_TagString: Untagged
@@ -4714,7 +4703,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1331137847}
   m_LocalRotation: {x: -.996823668, y: -7.97683031e-10, z: 3.48235774e-10, w: -.0796407461}
-  m_LocalPosition: {x: -.094572708, y: 1.15417147, z: .752046466}
+  m_LocalPosition: {x: -.0945727974, y: 1.33969057, z: .381008685}
   m_LocalScale: {x: 1.02219808, y: 1.02219808, z: 1.02219701}
   m_Children: []
   m_Father: {fileID: 1631983388}
@@ -4754,6 +4743,57 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &1331137850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1331137847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723274b822865ed4d9ed2a504c0ca79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variablize: .100000001
+--- !u!1 &1343440437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1343440438}
+  - 114: {fileID: 1343440439}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343440438
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343440437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.96298599}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1553632385}
+  m_Father: {fileID: 0}
+--- !u!114 &1343440439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343440437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08e60f8d372def4087fdc341c8f93cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388479706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,10 +5156,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1553632380}
   m_LocalRotation: {x: .376595825, y: 0, z: 0, w: .926377714}
-  m_LocalPosition: {x: 0, y: 8.57682228, z: -7.0669179}
+  m_LocalPosition: {x: 0, y: 8.57682037, z: -7.35235405}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 99672572}
+  m_Father: {fileID: 1343440438}
 --- !u!1 &1618070433
 GameObject:
   m_ObjectHideFlags: 0
