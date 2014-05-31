@@ -64,14 +64,12 @@ public class PlayerGUI : MonoBehaviour {
 	{
 		if (gameController.GetComponent<GameController> ().lvl () % 2 == 0 || gameController.GetComponent<GameController> ().lvl () == 0)
 		{
-			Debug.Log ("Level 1");
 			player.GetComponentInChildren<SSAOEffect> ().enabled = false;
 			Bloom.enabled = false;
 			Vignetting.enabled = false;
 		}
 		else
 		{
-			Debug.Log ("Level 2");
 			player.GetComponentInChildren<SSAOEffect> ().enabled = false;
 			Bloom.enabled = true;
 			Vignetting.enabled = true;

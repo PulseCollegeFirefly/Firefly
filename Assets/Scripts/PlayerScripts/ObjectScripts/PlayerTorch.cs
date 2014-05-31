@@ -22,7 +22,6 @@ public class PlayerTorch : MonoBehaviour {
 		// Reference Torch Model and turn render off
 		torch = this.gameObject;
 		torch.renderer.enabled = false;
-		torch.GetComponent<BoxCollider> ().enabled = false;
 	}
 
 	void CheckActiveItem ()
@@ -40,13 +39,11 @@ public class PlayerTorch : MonoBehaviour {
 		{
 			torchLight.enabled = true;
 			torch.renderer.enabled = true;
-			torch.GetComponent<BoxCollider> ().enabled = true;
 		}
 		else
 		{
 			torchLight.enabled = false;
 			torch.renderer.enabled = false;
-			torch.GetComponent<BoxCollider> ().enabled = false;
 		}
 	}
 }

@@ -45,7 +45,6 @@ public class LevelState : MonoBehaviour
 
 			if(DyingSoldier == true)
 			{
-				Debug.Log ("Success");
 				if(GameObject.Find ("FirstFireTrigger") !=null)
 				{
 					GameObject.Find ("FirstFireTrigger").GetComponent<FirstFireTrigger>().npc.SetActive (true);
