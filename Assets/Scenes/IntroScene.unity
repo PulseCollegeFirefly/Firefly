@@ -40490,6 +40490,8 @@ MonoBehaviour:
   CellOpeningOff: 0
   ValveOpen: 0
   JanitorRoomOpen: 0
+  WrenchDoorOpen: 0
+  RitaDoorOpen: 0
   UpstairsComplete: 0
   GuardDoor: 0
   npc: {fileID: 0}
