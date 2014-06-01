@@ -22,10 +22,21 @@ public class LevelState : MonoBehaviour
 		// If Level 1
 		if(CurrentLevel == "Level01")
 		{
-			if(GameObject.Find("WardenKeysInv") !=null)
+			if(GameObject.Find ("JanitorDoor") !=null && JanitorRoomOpen == true)
 			{
-				UpstairsComplete = true;
+				GameObject.Find ("JanitorDoor").GetComponent<KeyOpenLock>().moveDoor = true;
 			}
+
+			foreach (Transform child in GameObject.Find ("Inventory").transform)
+			{
+				// If it equals the the string search return true
+				if(child.name == "WardenKeysInv")
+				{
+					UpstairsComplete = true;	
+				}
+			}
+							
+
 			if (GameObject.Find("GuardDoor") !=null)
 			{
 				if (GuardDoor == false)
@@ -80,6 +91,7 @@ public class LevelState : MonoBehaviour
 		}
 		if (CurrentLevel == "Level02") 
 		{
+			GuardDoor = false;
 			if (UpstairsComplete == true)
 			{
 				GameObject.Find ("FireControl").GetComponent<FireControl>().LevelFires[0].SetActive (true);

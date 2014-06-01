@@ -28,6 +28,10 @@ public class KeyOpenLock : MonoBehaviour {
 			Quaternion currentRot = transform.parent.localRotation;
 			float step = speed * Time.deltaTime;
 			transform.parent.localRotation = Quaternion.RotateTowards(currentRot, targetRot, step);
+			if (this.transform.name == "JanitorDoor") 
+			{
+				GameObject.Find ("GameController").GetComponent<LevelState>().JanitorRoomOpen = true;
+			}
 		}
 	}
 
