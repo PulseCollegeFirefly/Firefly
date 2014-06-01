@@ -32,6 +32,14 @@ public class KeyOpenLock : MonoBehaviour {
 			{
 				GameObject.Find ("GameController").GetComponent<LevelState>().JanitorRoomOpen = true;
 			}
+			if (this.transform.name == "WrenchDoor")
+			{
+				GameObject.Find ("GameController").GetComponent<LevelState>().WrenchDoorOpen = true;
+			}
+			if (this.transform.name == "CellDoorSecret")
+			{
+				GameObject.Find ("GameController").GetComponent<LevelState>().RitaDoorOpen = true;
+			}
 		}
 	}
 

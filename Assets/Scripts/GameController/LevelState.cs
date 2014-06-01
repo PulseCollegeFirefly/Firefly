@@ -11,6 +11,8 @@ public class LevelState : MonoBehaviour
 	public bool CellOpeningOff = false;
 	public bool ValveOpen = false;
 	public bool JanitorRoomOpen = false;
+	public bool WrenchDoorOpen = false;
+	public bool RitaDoorOpen = false;
 	public bool UpstairsComplete = false;
 	public bool GuardDoor = false;
 	public GameObject npc;
@@ -25,6 +27,16 @@ public class LevelState : MonoBehaviour
 			if(GameObject.Find ("JanitorDoor") !=null && JanitorRoomOpen == true)
 			{
 				GameObject.Find ("JanitorDoor").GetComponent<KeyOpenLock>().moveDoor = true;
+			}
+
+			if(GameObject.Find ("WrenchDoor") !=null && WrenchDoorOpen == true)
+			{
+				GameObject.Find ("WrenchDoor").GetComponent<KeyOpenLock>().moveDoor = true;
+			}
+
+			if(GameObject.Find ("CellDoorSecret") !=null && RitaDoorOpen == true)
+			{
+				GameObject.Find ("CellDoorSecret").GetComponent<KeyOpenLock>().moveDoor = true;
 			}
 
 			foreach (Transform child in GameObject.Find ("Inventory").transform)
