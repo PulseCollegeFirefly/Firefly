@@ -22,6 +22,10 @@ public class LevelState : MonoBehaviour
 		// If Level 1
 		if(CurrentLevel == "Level01")
 		{
+			if(GameObject.Find("WardenKeysInv") !=null)
+			{
+				UpstairsComplete = true;
+			}
 			if (GameObject.Find("GuardDoor") !=null)
 			{
 				if (GuardDoor == false)
@@ -73,7 +77,13 @@ public class LevelState : MonoBehaviour
 			{
 				GameObject.Find ("StartScripts").SetActive (false);
 			}
-
+		}
+		if (CurrentLevel == "Level02") 
+		{
+			if (UpstairsComplete == true)
+			{
+				GameObject.Find ("FireControl").GetComponent<FireControl>().LevelFires[0].SetActive (true);
+			}
 		}
 	}	
 }
