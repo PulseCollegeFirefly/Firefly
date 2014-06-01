@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 135: {fileID: 13500000}
   - 114: {fileID: 11400000}
   - 82: {fileID: 8200000}
+  - 65: {fileID: 6500000}
   m_Layer: 0
   m_Name: AudioTrigger
   m_TagString: Untagged
@@ -25,10 +25,22 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .23924154, y: -.100080013, z: -.0392613411}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.53585219, y: -.100080013, z: 3.58671713}
+  m_LocalScale: {x: .104577959, y: 2.03971434, z: 1.26205325}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!65 &6500000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -98,19 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5c46d3bd5243c4c9b542137b7755c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
---- !u!135 &13500000
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  audioClip: {fileID: 8300000, guid: 25be54caaaa661b4a98312734c2f4b22, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
