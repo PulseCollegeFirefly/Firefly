@@ -16,7 +16,7 @@ public class IntroSelect : MonoBehaviour {
 		screenWidth = Screen.width;
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 		// Move Camera
 		transform.LookAt(lookAtTarget);
