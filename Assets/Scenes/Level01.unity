@@ -44105,6 +44105,7 @@ GameObject:
   - 65: {fileID: 648746170}
   - 114: {fileID: 648746171}
   - 82: {fileID: 648746172}
+  - 135: {fileID: 648746173}
   m_Layer: 0
   m_Name: CellDoorSecret
   m_TagString: Untagged
@@ -44212,6 +44213,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!135 &648746173
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648746168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &649198738
 GameObject:
   m_ObjectHideFlags: 0
