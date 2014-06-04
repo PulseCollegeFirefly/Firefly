@@ -9450,6 +9450,7 @@ GameObject:
   - 23: {fileID: 301630040}
   - 114: {fileID: 301630039}
   - 82: {fileID: 301630038}
+  - 65: {fileID: 301630042}
   m_Layer: 0
   m_Name: ReEntryFire
   m_TagString: Fire
@@ -9577,6 +9578,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1672850687}
   m_GameObject: {fileID: 301630036}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &301630042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301630036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.26999998, y: 3.77999997, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &301980126
 GameObject:
   m_ObjectHideFlags: 0
