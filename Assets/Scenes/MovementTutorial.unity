@@ -211,15 +211,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e17e96307db2b1f44913c730b4481f68, type: 2}
       propertyPath: m_Color.r
-      value: .786764741
+      value: .308823526
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e17e96307db2b1f44913c730b4481f68, type: 2}
       propertyPath: m_Color.g
-      value: .682634115
+      value: .27930364
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e17e96307db2b1f44913c730b4481f68, type: 2}
       propertyPath: m_Color.b
-      value: .682634115
+      value: .27930364
       objectReference: {fileID: 0}
     - target: {fileID: 13100000, guid: e17e96307db2b1f44913c730b4481f68, type: 2}
       propertyPath: m_Color.a
@@ -241,7 +241,7 @@ GameObject:
   - 4: {fileID: 1516056910}
   - 131: {fileID: 1516056908}
   - 114: {fileID: 1516056911}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MovementTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GUITexture:
   m_GameObject: {fileID: 1516056907}
   m_Enabled: 1
   m_Texture: {fileID: 2800000, guid: 81682a501e192f74e92b0cccce710644, type: 3}
-  m_Color: {r: .786764741, g: .682634115, b: .682634115, a: 1}
+  m_Color: {r: .308823526, g: .27930364, b: .27930364, a: 1}
   m_PixelInset:
     serializedVersion: 2
     x: 0

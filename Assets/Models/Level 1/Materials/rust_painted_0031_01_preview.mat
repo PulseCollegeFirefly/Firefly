@@ -18,20 +18,20 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 2800000, guid: 3b6e6c2b93923704abc277e9c2b41783, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 2, y: 2}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
           m_Texture: {fileID: 2800000, guid: adb7885daf8745f4db39bee49c37ad98, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 2, y: 2}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Shininess
-        second: .0300000031
+        second: .207257256
     m_Colors:
       data:
         first:

@@ -11,7 +11,7 @@ public class PlayerWrench : MonoBehaviour {
 		
 		// Reference Torch Model and turn render off
 		wrench = this.gameObject;
-		Switch (wrench, false);
+		wrench.renderer.enabled = false;
 	}
 	
 	void CheckActiveItem ()
@@ -26,19 +26,10 @@ public class PlayerWrench : MonoBehaviour {
 		
 		// Check if the player has the torch in their hand
 		if(activeItem != null && this.gameObject.name == activeItem.name)
-			Switch(wrench, true);
+			wrench.renderer.enabled = true;
 		
 		else
-			Switch(wrench, false);
-	}
-
-	private void Switch(GameObject a, bool b)
-	{
-		Renderer[] renderers = a.GetComponentsInChildren<Renderer>();
+			wrench.renderer.enabled = false;
 		
-		foreach (Renderer r in renderers)
-		{
-			r.enabled = b;
-		}
 	}
 }
